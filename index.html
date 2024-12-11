@@ -1,12 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Groupe Enigma</p>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MINTopia</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <!--   HEADER   -->
+      <header class="header">
+        <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
+        <span class="fa fa-bars"></span>
+        <nav class="header_menu">
+          <a href="mathe.html">Mathe</a>
+          <a href="Naturwissenschaft.html">Naturwissenschafen</a>
+          <a href="informatik.html">Informatik</a>
+          <a href="mystery_box.html">Mystery-box</a>
+        </nav>
+
+      </header>
+
+      <!--   BECHREIBUNG   -->
+      <section class="beschreibung">
+        <div class="header_title">MINTopia</div>
+        <p>
+          Willst du der nächste Einstein werden? Auf unserer Seite kannst du die
+          Welt der MINT-Fächer entdecken – und das mit Spaß! Lass uns gemeinsam
+          die Geheimnisse der Wissenschaft entschlüsseln und vielleicht wirst du
+          eines Tages der Genialste unter den Genies.“
+        </p>
+      </section>
+
+      <!--   MINT-ELEMENTE   -->
+      <section class="mint-section">
+        <article class="mint-item">
+            <figure>
+              <a href="#">
+                <img src="images/Mathe.jpg" alt="Mathe" />
+              </a>
+              <figcaption>
+                <a href="#">Mathe</a>
+              </figcaption>
+            </figure>
+        </article>
+        <article class="mint-item">
+          <figure>
+            <a href="#">
+              <img src="images/Naturwissenschaft.jpg" alt="Naturwissenschaft" />
+            </a>
+            <figcaption>
+              <a href="#"> Naturwissenschaft</a>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="mint-item">
+          <figure>
+            <a href="#">
+              <img src="images/informatik.jpg" alt="Informatik" />
+            </a>
+            <figcaption>
+              <a href="#"> Informatik </a>
+            </figcaption>
+          </figure>
+        </article>
+        <article class="mint-item">
+          <figure>
+            <a href="#">
+              <img src="images/mystery-box.jpg" alt="Mystery-box" />
+            </a>
+            <figcaption>
+              <a href="#">Mystery-box</a>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <!-- FUN FACT SECTION -->
+      <section class="fun-fact">
+        <p>Wusstest du Das ?</p>
+      </section>
+
+      <!--  FOOTER-->
+      <p>Footer</p>
+    </div>
+    <script src="styles/style.js"></script>
+  </body>
 </html>
