@@ -13,8 +13,7 @@ body{
     width: 100%;
 }
 
-.container{
-    display: grid;
+[class$="container"]{
     grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas: 
         "header"
@@ -29,7 +28,7 @@ body{
     height: auto;
 }
 /*Header*/
-.header{
+[class$="header"]{
     grid-area: header;
     display: flex;
     flex-direction: column;
@@ -91,7 +90,7 @@ body{
 
 /*Beschreibung*/
 
-.beschreibung{
+[class$="beschreibung"]{
     position: relative;
     grid-area: beschreibung;
     
@@ -178,4 +177,51 @@ footer{
         grid-template-columns: repeat(4, 1fr);
     }   
   }
-  
+
+  /*START--------------------Mathe.css----------------------------*/
+.Mathe_container{
+    grid-template: 
+    "header"
+    "beschreibung"
+    "inhalt"
+    "footer";
+    background-color: navajowhite;
+
+}
+
+.Mathe_header{
+    grid-area: header;
+    background-color: red;
+}
+.Mathe_beschreibung{
+    background-color: orange;
+    width:100%;
+    height:2em;
+}
+
+.Mathe_content{
+    grid-area: inhalt;
+    background-color: blue;
+    width: 90%;
+    height: 30em;
+    margin: 2em auto;
+
+}
+/*inside Mathe_content*/
+
+
+.Mathe_footer{
+    grid-area: footer;
+    background-color: green;
+    width: 100%;
+    height: 10em;
+    border-radius: none;
+
+}
+/*END---------------------Mathe.css-------------------------------*/
+
+
+
+
+
+
