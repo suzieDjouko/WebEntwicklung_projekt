@@ -1,15 +1,12 @@
-let hammburger_menu = document.querySelector(".fa-bars")
-let header_menu = document.querySelector(".header_menu")
+let hamburgerMenu = document.querySelector(".fa-bars");
+let headerMenu = document.querySelector(".header_menu");
 
 
-hammburger_menu.addEventListener("click",function(){
-    if (header_menu.style.display === "none") {
-        hammburger_menu.style.display = "none";
-        header_menu.style.display = "block";
+hamburgerMenu.addEventListener("click", function () {
+    let isMenuActive = headerMenu.classList.toggle("active");
+    /*Ajoute la classe active  si elle n'est pas definie et la supprine si elle l'est */
 
-    } else {
-        header_menu.style.display = "block";
-        
-    }
-   
-});
+    hamburgerMenu.setAttribute("aria-expanded", isMenuActive);
+    headerMenu.setAttribute("aria-hidden", !isMenuActive);
+    
+  });
