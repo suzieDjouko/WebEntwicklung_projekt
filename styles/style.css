@@ -3,13 +3,30 @@
     margin: 0;
     padding: 0;
 }
+ol {
+    list-style: decimal;
+    margin-left: 1.5rem;
+  }
+  
+  ul {
+    list-style: disc;
+    margin-left: 1.5rem;
+  }
+  li{
+    margin-bottom: 0.5rem;
+  }
 
 body{
+
     font-family: Arial , sans-serif;
+    font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+    font-size: 16px;
     width: 100%;
+    height: 100vh;
+    background-color: #fef6e4;
 }
 
-[class$= "container"]{
+.container{
     display: grid;
     grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas: 
@@ -23,6 +40,8 @@ body{
     background-color: rgb(166, 183, 210);
     width: 100%;
     height: auto;
+   
+    
 }
 /*Header*/
 [class$="header"]{
@@ -38,17 +57,19 @@ body{
     height: 12em;
     background-position: center;
     background-size: cover;
-    
+   
 }
 .header_menu{   
     display: none;
     flex-direction: column;
     position: absolute;
+    align-items: flex-start;
     top: 3rem;
     right: 1rem;
-    font-size: 1.5em;
+    padding: 1rem;
+    gap: 0.5rem;
     background: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent */
-    border-radius: 0.5em;
+    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 70%;
     z-index: 1000;
@@ -89,9 +110,6 @@ body{
 }
 
 
-
-
-
 .header_menu a:hover {
     color: #f87619; 
     transform: translateX(2px); 
@@ -123,7 +141,7 @@ body{
     color: #f87619;
 }
 
-.header_title{
+[class$="title"]{
     position: absolute;
     top: -1.5em;
     font-size: 1.2rem;
@@ -141,12 +159,15 @@ body{
 [class$="beschreibung"]{
     position: relative;
     grid-area: beschreibung;
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 1rem;
     border-radius: 10px;
     line-height: 1.3em;
     border: 1.5px groove #333;
     background-color: bisque;
     margin-top: 1.5em;
+    height: auto;
 
 }
 
@@ -207,56 +228,494 @@ footer{
 
   }
 
+
+/*Naturvissenschaft*/
+
+.naturwissenschaft_container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "header"
+        "beschreibung"
+        "experiment"
+        "mint"
+        "quiz"
+        "fun-fact"
+        "footer";
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    height: 100vh;
+    
+}
+
+  .naturwissenschaft_beschreibung {
+    grid-area: beschreibung;
+    padding: 1rem;
+    background-color: bisque;
+    border-radius: 8px;
+    margin: 2rem auto;
+    text-align: center;
+    
+  }
+  .naturwissenschaft_mint {
+    grid-area: mint;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    background-color: #ef89ef;
+    padding: 1rem;
+    
+  }
+  .water_rise{
+    grid-area: experiment;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #e8f5e9; /* Vert clair pour différencier */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.naturwissenschaft_quiz {
+    position: relative;
+    grid-area: quiz;
+    background-color: #f9f9f9;
+    background-color: #0077be;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
+}
+.naturwissenschaft_funfact {
+    grid-area: fun-fact;
+    background-color: #f4f9fd;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+  }
+  
+  
+  
+.naturwissenschaft_container .fa-bars:hover , .naturwissenschaft_container .header_menu a:hover{
+    color: green;
+
+}
+.naturwissenschaft_container .header_menu a::after{
+    background-color: green;
+}
+.naturwissenschaft_container .header_menu a i{
+    color: #077a37;
+}
+.h3_title,.naturwissenschaft_title{
+    background-color: green;
+    font-size: 1.2em;
+   
+}
+.h3_title{
+    top: 0;
+}
+.hidden {
+    display: none;
+}
+/* Section spécifique à l'expérience */
+
+
+.water_rise h2 {
+    font-size: 1.8rem;
+    color: #2e7d32; /* Vert foncé */
+    margin-bottom: 1rem;
+}
+
+.water_rise p {
+    color: #333;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Conteneur de l'expérience */
+.water_rise_exp {
+    margin: 1rem auto;
+    max-width: 400px;
+}
+
+.exp_area {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #cfe2f3; /* Bleu clair */
+    border: 2px solid #333;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Eau, bougie et verre */
+.water {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #0077be; /* Bleu de l'eau */
+}
+
+.candle {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 70px;
+    background-color: #ffcc00;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.flame {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #ff4500;
+    border-radius: 50%;
+    display: none; /* La flamme est éteinte par défaut */
+    animation: flicker 0.2s infinite alternate;
+}
+
+.glass {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid #ccc;
+    transition: width 1s, height 1s;
+}
+
+.hidden {
+    display: none;
+}
+
+button#lightCandle {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button#lightCandle:hover {
+    background-color: #ffae00;
+}
+
+
+  
+#answer{
+    background-color: #e3f2fd;
+    border-left: 5px solid #42a5f5;
+    font-weight: bold;
+    color: #1e88e5;
+    padding: 1rem;
+    margin-top: 1rem;
+    line-height: 1.6;
+    border-radius: 5px;
+    margin-bottom: 0.8em;
+    transition: all 0.3 ease;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#reveal-button{
+  background-color: #077a37;
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 0.7em;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+
+}
+#reveal-button:hover{
+    background-color: #08642e;
+}
+
+.naturwissenschaft_mint{
+    grid-area: mint;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+    padding: 2rem 1.5rem;
+    background-color: rgb(252, 250, 254);
+    position: relative;
+    margin-top: 3rem;
+
+}
+[class^="experiment_content"]{
+    position: relative;
+
+}
+
+
+[class$="experiment"]{
+    background-color: rgb(195, 221, 203);
+    padding: 1em;
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.experiment-description>h4 , .naturwissenschaft_lektion h4{
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0.8em 0;
+
+}
+
+iframe {
+    border: 5px solid green;
+    border-radius: 15px;
+}
+
+
+.experiment-description{
+    align-items: left;
+    margin-top: 1em;
+
+}
+
+footer {
+    background-color:bisque;
+    color: rgb(7, 7, 7);
+    padding: 1em;
+    font-size: 1.2rem;
+}
+
+#audio-container{
+    position: absolute;
+    right: 1em;
+    top:-3em;
+    background-color: #f8c471;
+    border-radius: 1.5em;
+    padding: 0.6rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center; 
+}
+#audio-container button {
+    background-color: #3498db;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+    
+  }
+  #audio-container button:hover {
+    transform: scale(1.1);
+  }
+
+  /* Section Quiz */
+  
+  
+  
+  .quiz_title {
+    font-size: 1.5rem;
+  }
+  .quiz_item {
+    margin-bottom: 1.5rem;
+  }
+  .quiz_item p{
+    margin-bottom: 1rem;
+  }
+  
+  .quiz_item h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  .quiz_item ul {
+    list-style: none;
+    padding: 0;
+  }
+  .quiz_item li {
+    margin-bottom: 0.8rem;
+  }
+  .quiz_item input {
+    margin-right: 0.5rem;
+  }
+  #quiz_submit {
+    display: block;
+    margin: 3em auto;
+    padding: 0.8rem 2rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  #quiz_submit:hover {
+    background-color: #388e3c;
+  }
+  
+  #quiz_result {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  /* Fun Fact Section */
+
+  .funfact_title {
+    font-size: 1.8rem;
+    color: #007acc;
+    margin-bottom: 1.5rem;
+  }
+  
+  .funfact_list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .funfact_list li {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #eaf5fd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .funfact_list li strong {
+    color: #007acc;
+  }
+  
+  .funfact_list li:nth-child(even) {
+    background-color: #dff0fc;
+  }
+  
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
 @media screen and (min-width:768px){
     .fa-bars{
         display: none !important;
     }
     [class$="header"]{
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
     }
-    
+
 
     .header_menu {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: nowrap;
+        position: static;
+        gap:1rem;
+        width:auto;
         background-color: #fff;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        
-      
         margin-left: 1em;
-        width: 95%;
-
-        padding: 1rem;
-        
-   
+        box-shadow: none;
+        padding: 1.2rem;
         
       }
     
       .header_menu a {
-        padding: 0 1rem;
         border: none;
-        white-space: nowr;
+        white-space: nowrap;
       }
       
     
-    [class$= "container"]{
-        grid-template-columns: 1fr 1fr;
+    .naturwissenschaft_container{
+        grid-template-columns: repeat(8, 1fr); /* 8 colonnes */
         grid-template-areas:
-            "header header"
-            "beschreibung beschreibung" 
-            "mint mint"
-             "fun-fact fun-fact"
-            "footer footer"
-
-        ;
+            "header header header header header header header header"
+            "beschreibung beschreibung beschreibung beschreibung experiment experiment experiment experiment"
+            "mint mint mint quiz quiz fun-fact fun-fact fun-fact"
+            "footer footer footer footer footer footer footer footer";
+    }
+       
     } 
-    .mint-section{
-        grid-template-columns: repeat(4, 1fr);
-    }   
-  }
+    .naturwissenschaft_mint{
+        grid-template-columns: repeat(2, 1fr);
+        
+    }  
+
   
+  
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 18px;
+      margin: 0 auto;
+
+    }
+    [class$="beschreibung"]{
+        font-size: 1.6em;
+    }
+  
+    .naturwissenschaft_container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "header header header header header header header header header header header header"
+            "beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung experiment experiment experiment experiment experiment"
+            "mint mint mint mint mint mint quiz quiz quiz fun-fact fun-fact fun-fact"
+           "footer footer footer footer footer footer footer footer footer footer footer footer";
+    
+      }
+      .naturwissenschaft_beschreibung>*{
+       margin-bottom: 2rem;
+      }
+    .naturwissenschaft_mint {
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 2rem;
+    }
+  
+  }
+  @media screen and (min-width: 1440px) {
+    
+    .naturwissenschaft_container {
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-areas:
+            "header header header header header header header header header header header header"
+            "beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung experiment experiment experiment experiment experiment"
+            "mint mint mint mint mint mint quiz quiz quiz quiz fun-fact fun-fact"
+            "footer footer footer footer footer footer footer footer footer footer footer footer";
+
+            max-width: 1400px;
+            margin: 0 auto;
+    }
+
+
+    
+  }
