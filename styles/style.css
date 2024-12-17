@@ -436,32 +436,28 @@ body{
     }
     [class$="header"]{
         flex-direction: row;
-        align-items: flex-start;
-        height: 35em;
-
+        justify-content: flex-end;
+        align-items: center;
     }
 
 
     .header_menu {
         display: flex;
-        position: sticky;
         flex-direction: row;
-        width:100%;
-        justify-content: space-around;
-        border-radius: none;
-        order: 1;
-        top: 0rem;
-        right: 0rem;
-        gap: 0rem;
-       
+        position: static;
+        gap:1rem;
+        width:auto;
+        background-color: #fff;
+        margin-left: 1em;
+        box-shadow: none;
+        padding: 1.2rem;
+        
       }
     
       .header_menu a {
         border: none;
         white-space: nowrap;
       }
-      
-    
     .container{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
