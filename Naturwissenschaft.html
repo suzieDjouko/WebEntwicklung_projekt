@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Entdecke die Welt der MINT-Fächer für Grundschüler mit spannenden Experimenten, Quizzen und interaktiven Inhalten."
+    />
+    <meta
+      name="keywords"
+      content="MINT, Mathematik, Informatik, Naturwissenschaften, Technik, Grundschüler"
+    />
+    <meta name="author" content="Enigma" />
+
+    <title>Naturwissenschaft MINTopia - Begeisterung für MINT</title>
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body id="naturwissenschaft_page">
+    <div class="naturwissenschaft_container">
+      <!--HEADER-->
+      <header class="Naturwissenschaft_header">
+        <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
+        <button
+          class="header_hamburger-menu"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <nav class="header_menu" aria-hidden="true">
+          <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
+          <a href="mathe.html"><i class="fa fa-calculator"></i> Mathe</a>
+
+          <a href="informatik.html"
+            ><i class="fa fa-laptop-code"></i> Informatik</a
+          >
+          <a href="mystery_box.html"><i class="fa fa-gift"></i> Mystery-box</a>
+        </nav>
+      </header>
+
+      <!--INTRODUCTION-->
+
+      <section class="naturwissenschaft_beschreibung">
+        <h1 class="naturwissenschaft_title">Naturwissenschaft</h1>
+        <section>
+          <p>
+            Weißt du, warum der Himmel blau ist? Oder wie Wolken entstehen?
+            <button id="reveal-button">Antwort zeigen</button>
+          </p>
+          <p id="answer" class="hidden">
+            🌈 Der Himmel ist blau, weil das Sonnenlicht durch die Luftmoleküle
+            gestreut wird. Besonders das blaue Licht wird stärker gestreut als
+            die anderen Farben.
+            <strong>Das nennt man Rayleigh-Streuung!</strong> Interessant, oder?
+            🌟
+          </p>
+        </section>
+
+        <p>
+          warum schwimmt ein schweres Schiff auf dem Wasser? Auf dieser Seite
+          findest du einfache Antworten auf solche Fragen. Zusammen schauen wir
+          uns die Wunder der Natur an und lernen, wie alles funktioniert.
+          Bereite dich auf tolle Experimente vor, die du selbst ausprobieren
+          kannst, und spannende Erklärungen, die dir die Natur verständlich
+          machen!
+        </p>
+      </section>
+      
+      <!--EXPERIMENTE-->
+      <section class="water_rise">
+        <h2>Warum steigt Wasser hoch?</h2>
+        <p>
+            Hast du dich schon einmal gefragt, warum Wasser in einem Glas steigen kann, wenn eine Kerze darunter brennt? 
+            Lass es uns gemeinsam herausfinden und das Experiment ausprobieren!
+        </p>
+        <div class="water_rise_exp">
+            <div class="exp_area">
+                <div class="water"></div>
+                <div class="candle" id="candle">
+                    <div class="flame" id="flame"></div>
+                </div>
+                <div class="glass" id="glass"></div>
+            </div>
+            <button id="lightCandle">Kerze anzünden</button>
+            <p id="result_text" class="hidden">
+                Das Wasser steigt, weil der Sauerstoff verbrennt und ein Unterdruck entsteht!
+            </p>
+        </div>
+    </section>
+    
+      
+
+      <section class="naturwissenschaft_mint">
+        <div id="audio-container">
+          <button id="audio-toggle" aria-label="Musik ein-/ausschalten">
+            <i id="audio-icon" class="fas fa-volume-up"></i>
+          </button>
+          <span id="audio-status">Musik eingeschaltet</span>
+        </div>
+
+        <div class="experiment_content1 mint-item">
+          <article class="rainbow_experiment">
+            <figure class="experiment-video">
+              <figcaption class="h3_title">
+                Ein Regenbogen zwischen zwei Gläsern
+              </figcaption>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/IYvvBr0bYHI?si=b5i-vcBuevO65XsE"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </figure>
+          </article>
+
+          <article class="experiment-description">
+            <p class="intro-text">
+              ✨ <strong>Mach mit bei diesem bunten Experiment!</strong>
+            </p>
+            <h4 class="instructions">🔧 Anleitung:</h4>
+            <ol class="instructions-list">
+              <li>Schneide das Küchenpapier in einen langen Streifen.</li>
+              <li>Male bunte Streifen an beide Enden des Papiers.</li>
+              <li>Fülle die Gläser zur Hälfte mit Wasser.</li>
+              <li>
+                Tauche beide Enden des Papiers in die Gläser und beobachte, wie
+                sich die Farben treffen.
+              </li>
+            </ol>
+            <h4 class="observation">👀 Beobachtung:</h4>
+            <p class="observation-text">
+              Das Wasser steigt durch das Papier auf und bringt die Farben mit.
+              In der Mitte entsteht ein wunderschöner Regenbogen!
+            </p>
+          </article>
+          <section class="naturwissenschaft_lektion">
+            <h4 class="lesson">🤔 Warum passiert das?</h4>
+            <p class="lesson-text">
+              Dieses Experiment zeigt, wie Wasser durch die Kapillarwirkung
+              transportiert wird – genauso, wie Pflanzen Wasser von den Wurzeln
+              in die Blätter ziehen. Wissenschaft kann faszinierend sein, oder?
+            </p>
+          </section>
+        </div>
+        <div class="experiment_content2 mint-item">
+          <article class="lavalampe-experiment">
+            <figure class="experiment-video">
+              <figcaption class="h3_title">Lavalampe - Experimente</figcaption>
+
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/NLboffFQtVw?si=wCIOZLiRY2PutJkX"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </figure>
+          </article>
+          <article class="experiment-description">
+            <p class="intro-text">
+              ✨ <strong>Mach mit bei diesem faszinierenden Experiment!</strong>
+            </p>
+            <h4 class="instructions">🔧Anleitung:</h4>
+            <ol>
+              <li>
+                Fülle ein durchsichtiges Gefäß etwa zu einem Viertel mit Wasser.
+              </li>
+              <li>Gib Pflanzenöl hinzu, bis das Gefäß fast voll ist.</li>
+              <li>
+                Füge einige Tropfen Lebensmittelfarbe hinzu und beobachte, wie
+                sie das Wasser färbt.
+              </li>
+              <li>
+                Wirf ein Stück Brausetablette in das Gefäß und beobachte, wie
+                die Blasen das gefärbte Wasser nach oben tragen und ein
+                Lavalampe-Effekt entsteht.
+              </li>
+            </ol>
+            <h4 class="observation">👀Beobachtung:</h4>
+            <p>
+              Das Wasser und das Öl vermischen sich nicht. Die Brausetablette
+              erzeugt Kohlendioxidblasen, die das gefärbte Wasser durch das Öl
+              nach oben tragen. Sobald die Blasen platzen, sinkt das Wasser
+              wieder nach unten – ein kontinuierlicher "Lava"-Effekt!
+            </p>
+          </article>
+
+          <article class="naturwissenschaft_lektion">
+            <h4 class="lesson">🤔Warum passiert das?</h4>
+            <p>
+              Dieses Experiment zeigt zwei wichtige physikalische Prinzipien:
+            </p>
+            <ul>
+              <li>
+                **Dichteunterschiede**: Wasser und Öl vermischen sich nicht, da
+                ihre Dichten unterschiedlich sind.
+              </li>
+              <li>
+                **Chemische Reaktion**: Die Brausetablette reagiert mit dem
+                Wasser und erzeugt Kohlendioxid, das den Lavalampe-Effekt
+                verursacht.
+              </li>
+            </ul>
+            <p>
+              Wissenschaft kann so spannend sein! Mit diesem Experiment lernen
+              wir, wie Dichte und chemische Reaktionen zusammenarbeiten, um
+              erstaunliche Phänomene zu schaffen.
+            </p>
+          </article>
+        </div>
+        <div class="experiment_content3 mint-item">
+          <article class="bueroklammer-experiment">
+            <figure class="experiment-video">
+              <figcaption class="h3_title">
+                Die schwimmende Büroklammer
+              </figcaption>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/VQ-XCf26fvk?si=BJvo3JKZNtfKsyDa"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </figure>
+          </article>
+          <article class="experiment-description">
+            <p class="intro-text">
+              ✨
+              <strong
+                >Entdecke, wie eine Büroklammer auf Wasser schwimmen
+                kann!</strong
+              >
+            </p>
+            <h4 class="instructions">🔧Anleitung:</h4>
+            <ol>
+              <li>Fülle das Glas oder die Schale mit Wasser.</li>
+              <li>
+                Lege ein kleines Stück Küchenpapier vorsichtig auf die
+                Wasseroberfläche.
+              </li>
+              <li>
+                Platziere eine Büroklammer behutsam auf das Papier, sodass sie
+                nicht untergeht.
+              </li>
+              <li>
+                Warte einige Sekunden, bis das Papier vollständig durchnässt ist
+                und untergeht oder entferne es vorsichtig, ohne die Büroklammer
+                zu berühren.
+              </li>
+              <li>
+                Beobachte, wie die Büroklammer auf der Wasseroberfläche
+                schwimmt!
+              </li>
+            </ol>
+            <h4 class="observation">👀Beobachtung:</h4>
+            <p>
+              Obwohl die Büroklammer aus Metall besteht und dichter als Wasser
+              ist, bleibt sie aufgrund der Oberflächenspannung des Wassers auf
+              der Oberfläche. Das Wasser bildet eine Art "Haut", die leichte
+              Gegenstände trägt.
+            </p>
+          </article>
+
+          <article class="naturwissenschaft_lektion">
+            <h4 class="lesson">🤔Warum passiert das?</h4>
+            <p>
+              Dieses Experiment veranschaulicht das Phänomen der
+              **Oberflächenspannung**:
+            </p>
+            <ul>
+              <li>
+                **Kohäsion**: Wassermoleküle ziehen sich gegenseitig an, wodurch
+                eine elastische Oberfläche entsteht.
+              </li>
+              <li>
+                **Tragfähigkeit**: Diese Spannung ermöglicht es leichten
+                Objekten, wie der Büroklammer, auf dem Wasser zu schwimmen,
+                solange die Oberfläche nicht gestört wird.
+              </li>
+            </ul>
+            <p>
+              Dieses einfache Experiment zeigt, wie physikalische Kräfte im
+              Alltag wirken und erklärt, warum beispielsweise Wasserläufer auf
+              Wasseroberflächen laufen können.
+            </p>
+          </article>
+        </div>
+        <div class="experiment_content4 mint-item">
+          <article class="Eiinderflache-experiment">
+            <figure class="experiment-video">
+              <figcaption class="h3_title">
+                Ein hartgekochtes gepelltes Ei gelangt Trick in die Glasflasche.
+              </figcaption>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/OAA0zJfMa88?si=dkFZJCDH14uGPChV"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              >
+              </iframe>
+            </figure>
+          </article>
+          <article class="experiment-description">
+            <p class="intro-text">
+              <strong>✨Mach mit bei diesem spannenden Experiment!</strong>
+            </p>
+            <h4 class="instructions">🔧Anleitung:</h4>
+            <ol>
+              <li>Lege ein gekochtes, geschältes Ei bereit.</li>
+              <li>
+                Wähle eine Glasflasche mit einem Hals, der etwas schmaler ist
+                als das Ei.
+              </li>
+              <li>
+                Zünde ein Stück Papier oder eine kleine Kerze an und lasse sie
+                kurz brennen.
+              </li>
+              <li>
+                Lege das brennende Papier in die Flasche und setze sofort das Ei
+                oben auf den Flaschenhals.
+              </li>
+              <li>
+                Beobachte, wie das Ei langsam in die Flasche gezogen wird!
+              </li>
+            </ol>
+            <h4 class="observation">👀Beobachtung:</h4>
+            <p>
+              Das Feuer im Inneren der Flasche verbraucht Sauerstoff, wodurch
+              der Luftdruck in der Flasche sinkt. Der äußere Luftdruck drückt
+              das Ei in die Flasche – ein erstaunliches Phänomen!
+            </p>
+          </article>
+
+          <article class="naturwissenschaft_lektion">
+            <h4 class="lesson">🤔Warum passiert das?</h4>
+            <p>Dieses Experiment zeigt, wie Luftdruck funktioniert:</p>
+            <ul>
+              <li>
+                **Verbrauch von Sauerstoff:** Die Flamme im Inneren der Flasche
+                verbrennt Sauerstoff, was den Druck im Inneren reduziert.
+              </li>
+              <li>
+                **Luftdruck-Unterschied:** Der höhere äußere Luftdruck drückt
+                das Ei in die Flasche, um das Gleichgewicht wiederherzustellen.
+              </li>
+            </ul>
+            <p>
+              Dieses Experiment ist ein großartiges Beispiel dafür, wie
+              Luftdruck und Temperatur zusammenwirken. Wissenschaft ist überall
+              – sogar in der Luft, die wir atmen!
+            </p>
+          </article>
+        </div>
+      </section>
+      
+      <!--QUIZ SECTION-->
+      <section class="naturwissenschaft_quiz">
+        <h2 class="quiz_title">🧠 Teste dein Wissen!</h2>
+        <div class="quiz_item">
+          <h4>Frage 1:</h4>
+          <p>Warum schwimmt eine Büroklammer auf der Wasseroberfläche?</p>
+          <ul>
+            <li>
+              <input type="radio" id="q1a" name="q1" value="a" />
+              <label for="q1a">Weil Wasser die Büroklammer anzieht.</label>
+            </li>
+            <li>
+              <input type="radio" id="q1b" name="q1" value="b" />
+              <label for="q1b"
+                >Wegen der Oberflächenspannung des Wassers.</label
+              >
+            </li>
+            <li>
+              <input type="radio" id="q1c" name="q1" value="c" />
+              <label for="q1c"
+                >Weil die Büroklammer leichter als Wasser ist.</label
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="quiz_item">
+          <h4>Frage 2:</h4>
+          <p>
+            Was passiert, wenn du ein Ei in eine Flasche setzt und ein
+            brennendes Papier benutzt?
+          </p>
+          <ul>
+            <li>
+              <input type="radio" id="q2a" name="q2" value="a" />
+              <label for="q2a">Das Ei schmilzt.</label>
+            </li>
+            <li>
+              <input type="radio" id="q2b" name="q2" value="b" />
+              <label for="q2b"
+                >Das Ei wird durch den Luftdruck in die Flasche gezogen.</label
+              >
+            </li>
+            <li>
+              <input type="radio" id="q2c" name="q2" value="c" />
+              <label for="q2c">Das Ei springt aus der Flasche heraus.</label>
+            </li>
+          </ul>
+        </div>
+        
+
+        <div class="quiz_item">
+          <h4>Frage 3:</h4>
+          <p>Warum vermischen sich Öl und Wasser nicht?</p>
+          <ul>
+            <li>
+              <input type="radio" id="q3a" name="q3" value="a" />
+              <label for="q3a">Weil sie unterschiedliche Farben haben.</label>
+            </li>
+            <li>
+              <input type="radio" id="q3b" name="q3" value="b" />
+              <label for="q3b"
+                >Weil Öl leichter als Wasser ist und eine geringere Dichte
+                hat.</label
+              >
+            </li>
+            <li>
+              <input type="radio" id="q3c" name="q3" value="c" />
+              <label for="q3c">Weil Wasser und Öl sich anziehen.</label>
+            </li>
+          </ul>
+        </div>
+        <div class="quiz_item">
+          <h4>Frage 4:</h4>
+          <p>Warum ist der Himmel blau?</p>
+          <ul>
+            <li>
+              <input type="radio" id="q4a" name="q4" value="a" />
+              <label for="q4a">Weil die Sonne blaues Licht aussendet.</label>
+            </li>
+            <li>
+              <input type="radio" id="q4b" name="q4" value="b" />
+              <label for="q4b"
+                >Weil blaues Licht durch die Atmosphäre gestreut wird.</label
+              >
+            </li>
+            <li>
+              <input type="radio" id="q4c" name="q4" value="c" />
+              <label for="q4c">Weil die Luft blau gefärbt ist.</label>
+            </li>
+          </ul>
+        </div>
+
+        <button id="quiz_submit">Antworten prüfen</button>
+        <p id="quiz_result" class="hidden"></p>
+      </section>
+      
+
+      <section class="naturwissenschaft_funfact">
+        <h2 class="funfact_title">🌟 Wusstest du schon?</h2>
+        <ul class="funfact_list">
+          <li>
+            <strong>🐙 Wusstest du?</strong> Ein Oktopus hat drei Herzen. Zwei
+            pumpen Blut zu den Kiemen, und eines pumpt es durch den Rest des
+            Körpers.
+          </li>
+          <li>
+            <strong>😂 Witz:</strong> Warum können Geister so schlecht lügen?
+            Weil man durch sie hindurchsehen kann!
+          </li>
+          <li>
+            <strong>🦠 Fun Fact:</strong> Dein Körper besteht aus mehr Bakterien
+            als menschlichen Zellen. Keine Sorge – die meisten von ihnen sind
+            hilfreich!
+          </li>
+          <li>
+            <strong>🌋 Wusstest du?</strong> Der höchste Berg der Welt ist nicht
+            der Mount Everest. Unter Wasser ist der Mauna Kea auf Hawaii höher!
+          </li>
+          <li>
+            <strong>😂 Witz:</strong> Warum hat das Elektron Angst vor dem
+            Atomkern? Weil es auf Abstand bleiben muss!
+          </li>
+          <li>
+            <strong>🐦 Fun Fact:</strong> Kolibris sind die einzigen Vögel, die
+            rückwärts fliegen können.
+          </li>
+          <li>
+            <strong>🌌 Wusstest du?</strong> Ein Tag auf der Venus ist länger
+            als ein Jahr auf der Venus. Das liegt daran, dass sie sich so
+            langsam dreht!
+          </li>
+          <li>
+            <strong>😂 Witz:</strong> Warum sind Chemiker so gute Freunde? Sie
+            haben immer die perfekte Reaktion!
+          </li>
+          <li>
+            <strong>☀️ Fun Fact:</strong> Die Sonne macht 99,86 % der Masse des
+            gesamten Sonnensystems aus.
+          </li>
+          <li>
+            <strong>😂 Witz:</strong> Warum funktioniert mein Witz über das
+            Universum nicht? Es war nicht anziehend genug.
+          </li>
+        </ul>
+      </section>
+
+      <footer class="Naturwissenschaft_footer">
+        <p>&copy; 2024 MINTopia. Alle Rechte vorbehalten.</p>
+      </footer>
+    </div>
+    <script src="styles/style.js"></script>
+  </body>
+</html>
