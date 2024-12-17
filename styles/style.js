@@ -1,10 +1,11 @@
-
 let hamburgerMenu = document.querySelector(".fa-bars");
 let headerMenu = document.querySelector(".header_menu");
 let lightCandleButton = document.getElementById('lightCandle');
+let resetButton = document.getElementById('resetExperiment');
 let flame = document.getElementById('flame');
 let glass = document.getElementById('glass');
 let resultText = document.getElementById('result_text');
+let water = document.querySelector('.water'); 
 let isCandleLight = false;
 
 
@@ -108,14 +109,31 @@ lightCandleButton.addEventListener("click", function(){
         putGlass();
     }
 });
+
+resetButton.addEventListener("click",resetExperiment);
 //setTimeout(callbackFunction, delay); deslay en milliseconde
+
 function putGlass(){
+
     glass.style.width = '120px'
     glass.style.height = '200px'
     setTimeout(function() {
-        let water = document.querySelector('.water'); 
         water.style.height = '150px'; 
         resultText.classList.remove('hidden');
+        resetButton.style.display = 'inline-block';
+        lightCandleButton.style.display = 'none';
     }, 2000); 
     
+}
+function resetExperiment(){
+    flame.style.display ="none";
+    glass.style.width = '0';
+    glass.style.height = '0';
+    water.style.height = '100px';
+    resultText.classList.add("hidden");
+    lightCandleButton.style.display = 'inline-block';
+    lightCandleButton.textContent = 'Kerze anzünden';
+    resetButton.style.display = 'none';
+    isCandleLight = false;
+
 }

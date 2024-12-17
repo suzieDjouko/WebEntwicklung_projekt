@@ -92,27 +92,30 @@
                 </div>
                 <div class="glass" id="glass"></div>
             </div>
-            <button id="lightCandle">Kerze anzünden</button>
+            <div class="water_rise_buttons">
+                <button id="lightCandle">Kerze anzünden</button>
+                <button id="resetExperiment">Experiment zurücksetzen</button>
+            </div>
             <p id="result_text" class="hidden">
                 Das Wasser steigt, weil der Sauerstoff verbrennt und ein Unterdruck entsteht!
             </p>
         </div>
+        <div id="audio-container">
+            <button id="audio-toggle" aria-label="Musik ein-/ausschalten">
+              <i id="audio-icon" class="fas fa-volume-up"></i>
+            </button>
+            <span id="audio-status">Musik eingeschaltet</span>
+          </div>
     </section>
     
       
 
       <section class="naturwissenschaft_mint">
-        <div id="audio-container">
-          <button id="audio-toggle" aria-label="Musik ein-/ausschalten">
-            <i id="audio-icon" class="fas fa-volume-up"></i>
-          </button>
-          <span id="audio-status">Musik eingeschaltet</span>
-        </div>
 
-        <div class="experiment_content1 mint-item">
+        <div class="experiment_content">
           <article class="rainbow_experiment">
             <figure class="experiment-video">
-              <figcaption class="h3_title">
+              <figcaption class="naturwissenschaft_title">
                 Ein Regenbogen zwischen zwei Gläsern
               </figcaption>
               <iframe
@@ -157,10 +160,10 @@
             </p>
           </section>
         </div>
-        <div class="experiment_content2 mint-item">
+        <div class="experiment_content">
           <article class="lavalampe-experiment">
             <figure class="experiment-video">
-              <figcaption class="h3_title">Lavalampe - Experimente</figcaption>
+              <figcaption class="naturwissenschaft_title">Lavalampe - Experimente</figcaption>
 
               <iframe
                 width="100%"
@@ -227,10 +230,10 @@
             </p>
           </article>
         </div>
-        <div class="experiment_content3 mint-item">
+        <div class="experiment_content">
           <article class="bueroklammer-experiment">
             <figure class="experiment-video">
-              <figcaption class="h3_title">
+              <figcaption class="naturwissenschaft_title">
                 Die schwimmende Büroklammer
               </figcaption>
               <iframe
@@ -308,10 +311,10 @@
             </p>
           </article>
         </div>
-        <div class="experiment_content4 mint-item">
+        <div class="experiment_content">
           <article class="Eiinderflache-experiment">
             <figure class="experiment-video">
-              <figcaption class="h3_title">
+              <figcaption class="naturwissenschaft_title">
                 Ein hartgekochtes gepelltes Ei gelangt Trick in die Glasflasche.
               </figcaption>
               <iframe

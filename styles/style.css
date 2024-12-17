@@ -250,37 +250,37 @@ footer{
   .naturwissenschaft_beschreibung {
     grid-area: beschreibung;
     padding: 1rem;
-    background-color: bisque;
-    border-radius: 8px;
     margin: 2rem auto;
     text-align: center;
     
   }
   .naturwissenschaft_mint {
-    grid-area: mint;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 1rem;
-    background-color: #ef89ef;
-    padding: 1rem;
+   display: flex;
+   flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    background-color: #dedcde;
+    margin-top: 3rem;
+    width: 100%;
     
   }
   .water_rise{
     grid-area: experiment;
     margin: 0 auto;
     text-align: center;
-    background-color: #e8f5e9; /* Vert clair pour différencier */
+    background-color: #e8f5e9; 
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 .naturwissenschaft_quiz {
     position: relative;
     grid-area: quiz;
     background-color: #f9f9f9;
-    background-color: #0077be;
+    background-color: #3f8dba;
     padding: 2rem;
-    margin-top: 2rem;
+    margin: 2rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
  
@@ -296,8 +296,6 @@ footer{
     position: relative;
   }
   
-  
-  
 .naturwissenschaft_container .fa-bars:hover , .naturwissenschaft_container .header_menu a:hover{
     color: green;
 
@@ -308,24 +306,27 @@ footer{
 .naturwissenschaft_container .header_menu a i{
     color: #077a37;
 }
-.h3_title,.naturwissenschaft_title{
+.naturwissenschaft_title{
     background-color: green;
-    font-size: 1.2em;
+    color: white;
+    top: 0;
    
 }
-.h3_title{
-    top: 0;
+h1.naturwissenschaft_title{
+    top:-2em;
 }
+
 .hidden {
     display: none;
 }
 /* Section spécifique à l'expérience */
 
 
+
 .water_rise h2 {
     font-size: 1.8rem;
     color: #2e7d32; /* Vert foncé */
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .water_rise p {
@@ -337,13 +338,13 @@ footer{
 /* Conteneur de l'expérience */
 .water_rise_exp {
     margin: 1rem auto;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 .exp_area {
     position: relative;
-    width: 300px;
-    height: 400px;
+    width: 200px;
+    height: 250px;
     background-color: #cfe2f3; /* Bleu clair */
     border: 2px solid #333;
     margin: 0 auto;
@@ -402,20 +403,42 @@ footer{
     display: none;
 }
 
-button#lightCandle {
-    margin-top: 1rem;
+.water_rise_buttons{
+    display: flex;
+    flex-direction: row;
+    gap:1.5rem
+}
+.water_rise_buttons > button{
+    flex: 1; /*les boutons prennet la meme largeur*/
+    margin: 1rem auto;
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background-color: #ffcc00;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s , transform 0.2s ease;
 }
+button#lightCandle{
+    background-color: #ffcc00;
+}
+
+button#resetExperiment {
+    display: none;
+    background-color: #007acc;
+}
+
 
 button#lightCandle:hover {
     background-color: #ffae00;
+    transform: translateY(-3px);
+
+
 }
+button#resetExperiment:hover {
+    background-color: #005f99;
+    transform: translateY(-3px);
+}
+
 
 
   
@@ -449,19 +472,11 @@ button#lightCandle:hover {
     background-color: #08642e;
 }
 
-.naturwissenschaft_mint{
-    grid-area: mint;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2em;
-    padding: 2rem 1.5rem;
-    background-color: rgb(252, 250, 254);
-    position: relative;
-    margin-top: 3rem;
 
-}
 [class^="experiment_content"]{
     position: relative;
+    width: 100%;
+    margin:  0 auto;
 
 }
 
@@ -474,11 +489,15 @@ button#lightCandle:hover {
     
 }
 
-.experiment-description>h4 , .naturwissenschaft_lektion h4{
+.experiment_description>h4 , .naturwissenschaft_lektion h4 , .instructions{
     font-size: 1em;
     font-weight: bold;
     margin: 0.8em 0;
 
+}
+p.intro-text {
+    font-size: 1.2em;
+    margin: 1em auto;
 }
 
 iframe {
@@ -487,7 +506,7 @@ iframe {
 }
 
 
-.experiment-description{
+.experiment_description{
     align-items: left;
     margin-top: 1em;
 
@@ -503,7 +522,6 @@ footer {
 #audio-container{
     position: absolute;
     right: 1em;
-    top:-3em;
     background-color: #f8c471;
     border-radius: 1.5em;
     padding: 0.6rem;
@@ -560,6 +578,8 @@ footer {
   }
   .quiz_item input {
     margin-right: 0.5rem;
+    transform: scale(1.5);/*agrandit les cercles du radio btn*/
+    cursor: pointer;
   }
   #quiz_submit {
     display: block;
@@ -590,6 +610,7 @@ footer {
     font-size: 1.8rem;
     color: #007acc;
     margin-bottom: 1.5rem;
+    
   }
   
   .funfact_list {
@@ -655,22 +676,22 @@ footer {
         border: none;
         white-space: nowrap;
       }
-      
-    
-    .naturwissenschaft_container{
-        grid-template-columns: repeat(8, 1fr); /* 8 colonnes */
-        grid-template-areas:
-            "header header header header header header header header"
-            "beschreibung beschreibung beschreibung beschreibung experiment experiment experiment experiment"
-            "mint mint mint quiz quiz fun-fact fun-fact fun-fact"
-            "footer footer footer footer footer footer footer footer";
-    }
-       
-    } 
-    .naturwissenschaft_mint{
+
+      .naturwissenschaft_mint{
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap:1.5rem;
+        margin: 0 auto;
+        padding: 2rem;
         
     }  
+    .water_rise{
+        margin-bottom: 2rem;
+    }
+   
+     
+    
+}
 
   
   
@@ -683,38 +704,60 @@ footer {
     [class$="beschreibung"]{
         font-size: 1.6em;
     }
-  
-    .naturwissenschaft_container {
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-areas:
-            "header header header header header header header header header header header header"
-            "beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung experiment experiment experiment experiment experiment"
-            "mint mint mint mint mint mint quiz quiz quiz fun-fact fun-fact fun-fact"
-           "footer footer footer footer footer footer footer footer footer footer footer footer";
-    
+    .naturwissenschaft_mint {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 2rem;
       }
-      .naturwissenschaft_beschreibung>*{
+  
+    
+    .naturwissenschaft_beschreibung>*{
        margin-bottom: 2rem;
       }
-    .naturwissenschaft_mint {
-      grid-template-columns: repeat(2, 1fr); 
-      gap: 2rem;
+
+        /* Les deux premières expériences en grille */
+    .naturwissenschaft_mint > .experiment_content:nth-child(-n+2) {
+        grid-column: span 1; /* Chaque élément occupe une colonne */
     }
-  
+    
+        /* Les deux dernières expériences en Flexbox */
+    .naturwissenschaft_mint > .experiment_content:nth-child(n+3) {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            flex-direction: row;
+            gap: 2rem; /* Espacement entre les deux */
+            grid-column: 1 / -1; /* Prend toute la largeur */
+    
+    }
+    
+    .naturwissenschaft_mint > .experiment_content:nth-child(n+3) > article {
+            flex: 1; /* Divise l'espace en deux colonnes égales */
+         
+    } 
+    .naturwissenschaft_mint > .experiment_content:nth-child(n+3) > figure {
+        width: 100%;
+        height: auto;
+       
+       
+    }
+    
+
+    
+    [class^="experiment_content"] {
+        padding: 1.5rem;
+        background-color: #f8f9fa; 
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
   }
   @media screen and (min-width: 1440px) {
     
     .naturwissenschaft_container {
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-areas:
-            "header header header header header header header header header header header header"
-            "beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung beschreibung experiment experiment experiment experiment experiment"
-            "mint mint mint mint mint mint quiz quiz quiz quiz fun-fact fun-fact"
-            "footer footer footer footer footer footer footer footer footer footer footer footer";
-
             max-width: 1400px;
             margin: 0 auto;
     }
+
 
 
     
