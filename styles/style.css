@@ -1,6 +1,3 @@
-*{
-    display: grid;
-}
 
 *, *::after,*::before{
     box-sizing: border-box;
@@ -13,7 +10,7 @@ body{
     width: 100%;
 }
 
-[class$="container"]{
+.container{
     grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas: 
         "header"
@@ -210,7 +207,139 @@ footer{
 
   }
 
-@media screen and (min-width:768px){
+  
+  /*START--------------------Mathe.css----------------------------*/
+  
+  /*---------------Main-container_Box------------------*/
+.Mathe_container{
+    display: grid;
+    grid-template: 
+    "header"
+    "beschreibung"
+    "bruchzahl"
+    "geometrie"
+    "uebung"
+    "footer";
+    background-color:rgb(135, 216, 158);
+    width: 100%;
+    row-gap: 1em;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.05em;
+    line-height: 1.5; /* 1.5 times the font size for body text */
+}
+h1{
+    font-size: 2rem; /* Adjust as needed */
+    font-weight: bold;
+}
+
+.Mathe_container ul>li{
+    display: list-item;
+    list-style-type: disc;
+    margin-inline-start: 4em;
+}
+.Mathe_container ol>li{
+    display: list-item;
+    margin-inline-start: 2em;
+}
+.content_Mathe_uebung ol>ol{
+    display: list-item;
+    margin-inline-start: 2em;
+}
+/*---------------Header_Box------------------*/
+.Mathe_header{
+    grid-area: header;
+    background:
+    url(../images/Bild12.jpg);
+    background-position: center;
+    background-size: cover;
+   
+}
+
+/*---------------Description_Box------------------*/
+.Mathe_beschreibung{
+    padding-top: 2em;
+    background-color: hsl(210, 100%, 90%);
+    width:100%;
+    height:auto;
+}
+
+/*.Mathe_beschreibung>*/
+
+.Mathe_beschreibung>ul li a:hover{
+    text-decoration: none;
+    color: orange;
+    font-family: arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+
+/*---------------Content_Box------------------*/
+
+/*for all boxes together in Mathe_content*/
+[class^="content_Mathe"]{
+    position: relative;
+    height: auto;
+    margin: auto 1em;
+    margin-top: 2em;
+    background-color: rgba(204, 255, 229, 1);
+    line-height: 1.6;
+    font-family: "Fredoka One", sans-serif;
+
+}
+[class^="content_Mathe"] div:nth-of-type(2),form{
+    margin: auto 1em;
+}
+/*underline span in Mathe_content*/
+[class^="content_Mathe"]>div>ol>ul>li span{
+    text-decoration: underline;
+}
+
+/*for uniq content element in Math_content*/
+[class$="Mathe_bruchzahl"]{
+    display: flex;
+    grid-area: bruchzahl;
+}
+
+[class$="Mathe_geometrie"]{
+    grid-area: geometrie;
+}
+
+[class$="Mathe_uebung"]{
+    grid-area: uebung;
+    background-color: rgba(255, 253, 204, 1);
+}
+
+/*Videos in Mathe_content*/
+[class*="Mathe_video"]{
+
+    margin-top: 1em;
+    background-color:rgba(255, 165, 0, 1);
+}
+[class*="Mathe_video"] iframe{
+    width: 100%;
+    min-height: 20em;
+}
+[class*="Mathe_video"] >figcaption{
+    border-top: 0.4em solid red;
+    background-color:rgba(255, 165, 0, 1);
+
+}
+/*---------------Footer_Box------------------*/
+.Mathe_footer{
+    background-color: green;
+    width: 100%;
+    height: 10em;
+    border-radius: none;
+    grid-area: footer;
+
+}
+/*END---------------------Mathe.css-------------------------------*/
+
+
+@media screen and (min-width:600px){
     .fa-bars{
         display: none !important;
     }
@@ -218,6 +347,7 @@ footer{
         flex-direction: row;
         justify-content: center;
         align-items: center;
+        height: 35em;
     }
     
 
@@ -247,7 +377,7 @@ footer{
       }
       
     
-    [class$= "container"]{
+    .container{
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
             "header header"
@@ -258,55 +388,14 @@ footer{
 
         ;
     } 
+
     .mint-section{
         grid-template-columns: repeat(4, 1fr);
-    }   
-  }
-
-  /*START--------------------Mathe.css----------------------------*/
-.Mathe_container{
-    grid-template: 
-    "header"
-    "beschreibung"
-    "inhalt"
-    "footer";
-    background-color: navajowhite;
-
+    }  
+    
+ /*START--------------------Mathe.css----------------------------*/
+ [class*="Mathe_video"]{
+    padding: 0 2em;
+    margin-top: 1em;
 }
-
-.Mathe_header{
-    grid-area: header;
-    background-color: red;
 }
-.Mathe_beschreibung{
-    background-color: orange;
-    width:100%;
-    height:2em;
-}
-
-.Mathe_content{
-    grid-area: inhalt;
-    background-color: blue;
-    width: 90%;
-    height: 30em;
-    margin: 2em auto;
-
-}
-/*inside Mathe_content*/
-
-
-.Mathe_footer{
-    grid-area: footer;
-    background-color: green;
-    width: 100%;
-    height: 10em;
-    border-radius: none;
-
-}
-/*END---------------------Mathe.css-------------------------------*/
-
-
-
-
-
-
