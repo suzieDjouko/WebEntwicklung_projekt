@@ -19,10 +19,12 @@ ol {
 body{
 
     font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+    min-width: 350px;
     font-size: 16px;
     width: 100%;
     height: 100vh;
     background-color: #fef6e4;
+    
 }
 
 .container{
@@ -229,7 +231,7 @@ body{
         "experiment"
         "mint"
         "quiz"
-        "fun-fact"
+        "fun_fact"
         "footer";
     background-color: rgb(245, 245, 245);
     width: 100%;
@@ -238,7 +240,7 @@ body{
     
 }
 .naturwissenschaft_header{
-    background-image: url('../images/scientist3.jpg');
+    background-image: url('../images/scientist1.jpg');
     height: 18rem;
 
 
@@ -283,7 +285,7 @@ body{
  
 }
 .naturwissenschaft_funfact {
-    grid-area: fun-fact;
+    grid-area: fun_fact;
     background-color: #f4f9fd;
     padding: 2rem;
     margin-top: 2rem;
@@ -503,6 +505,7 @@ footer {
 #audio-container{
     position: absolute;
     right: 1em;
+    top:-1em;
     background-color: #f8c471;
     border-radius: 1.5em;
     padding: 0.6rem;
@@ -708,6 +711,14 @@ footer {
             border-radius: 10px;
     
     }
+    .funfact_list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: 1fr;
+        gap:2em
+
+    }
+    
 
 
 
@@ -719,7 +730,10 @@ footer {
             margin: 0 auto;
 
     }
-    
+    .funfact_list{
+        grid-template-columns: repeat(3,1fr);
+       
+    }
 
     
   }
