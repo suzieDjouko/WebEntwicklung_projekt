@@ -17,17 +17,19 @@ hamburgerMenu.addEventListener("click", function () {
     headerMenu.setAttribute("aria-hidden", !isMenuActive);
     
   });
-  function closeMenu(event){
-      // Vérifie si le clic est en dehors du menu et du bouton hamburger
+
+document.addEventListener("click", function(event){
+     // Vérifie si le clic est en dehors du menu et du bouton hamburger
       //event.target contient l'element sur lequel on clique
       //La propriété target dans un événement JavaScript représente l'élément sur lequel l'événement a été déclenché.
+    
     if(!headerMenu.contains(event.target) && !hamburgerMenu.contains(event.target)){
         headerMenu.classList.remove("active");
         hamburgerMenu.classList.setAttribute("aria-expanded",false)
         hamburgerMenu.setAttribute("aria-hidden",true);
     }
-  }
-  document.addEventListener("click",closeMenu);
+
+})
 
 if(document.body.id === 'naturwissenschaft_page'){
 

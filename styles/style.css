@@ -18,7 +18,6 @@ ol {
 
 body{
 
-    font-family: Arial , sans-serif;
     font-family: 'Comic Sans MS', 'Poppins', sans-serif;
     font-size: 16px;
     width: 100%;
@@ -39,7 +38,7 @@ body{
     gap: 1rem;
     background-color: rgb(166, 183, 210);
     width: 100%;
-    height: auto;
+    height: 100vh;
    
     
 }
@@ -52,9 +51,8 @@ body{
     align-items: flex-end; 
     width: 100%;
     padding: 0.5rem 1rem;
-    border-radius: 8px;
     background-image: url('../images/headerbackground.jpg');
-    height: 12em;
+    height: 18rem;
     background-position: center;
     background-size: cover;
    
@@ -88,6 +86,7 @@ body{
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
+    font-size: 1.3rem;
    
 }
 
@@ -219,15 +218,6 @@ body{
 
   }
 
-footer{
-    grid-area: footer;
-    text-align: center;
-    background-color: #bfbfbf;
-    padding: 1rem;
-    border-radius: 8px;
-
-  }
-
 
 /*Naturvissenschaft*/
 
@@ -244,7 +234,14 @@ footer{
     background-color: rgb(245, 245, 245);
     width: 100%;
     height: 100vh;
+
     
+}
+.naturwissenschaft_header{
+    background-image: url('../images/scientist3.jpg');
+    height: 18rem;
+
+
 }
 
   .naturwissenschaft_beschreibung {
@@ -358,7 +355,7 @@ h1.naturwissenschaft_title{
     bottom: 0;
     width: 100%;
     height: 100px;
-    background-color: #0077be; /* Bleu de l'eau */
+    background-color: #0077be;
 }
 
 .candle {
@@ -439,8 +436,6 @@ button#resetExperiment:hover {
     transform: translateY(-3px);
 }
 
-
-
   
 #answer{
     background-color: #e3f2fd;
@@ -475,26 +470,17 @@ button#resetExperiment:hover {
 
 [class^="experiment_content"]{
     position: relative;
-    width: 100%;
-    margin:  0 auto;
-
-}
-
-
-[class$="experiment"]{
-    background-color: rgb(195, 221, 203);
-    padding: 1em;
-    display: flex;
-    flex-direction:column;
     
 }
 
-.experiment_description>h4 , .naturwissenschaft_lektion h4 , .instructions{
+
+.experiment_description>h4 , .naturwissenschaft_lektion h4 , .instructions,.observation{
     font-size: 1em;
     font-weight: bold;
     margin: 0.8em 0;
 
 }
+
 p.intro-text {
     font-size: 1.2em;
     margin: 1em auto;
@@ -503,13 +489,8 @@ p.intro-text {
 iframe {
     border: 5px solid green;
     border-radius: 15px;
-}
-
-
-.experiment_description{
-    align-items: left;
-    margin-top: 1em;
-
+    width:100%;
+    height:315px;
 }
 
 footer {
@@ -714,51 +695,31 @@ footer {
        margin-bottom: 2rem;
       }
 
-        /* Les deux premières expériences en grille */
-    .naturwissenschaft_mint > .experiment_content:nth-child(-n+2) {
-        grid-column: span 1; /* Chaque élément occupe une colonne */
-    }
-    
-        /* Les deux dernières expériences en Flexbox */
-    .naturwissenschaft_mint > .experiment_content:nth-child(n+3) {
-            display: flex;
-            justify-content: center; 
-            align-items: center;
-            flex-direction: row;
-            gap: 2rem; /* Espacement entre les deux */
+   
+    .experiment_content {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin: 0 1.5rem;
+            padding: 1.5rem;
+            gap: 2rem; 
             grid-column: 1 / -1; /* Prend toute la largeur */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            border-radius: 10px;
     
     }
-    
-    .naturwissenschaft_mint > .experiment_content:nth-child(n+3) > article {
-            flex: 1; /* Divise l'espace en deux colonnes égales */
-         
-    } 
-    .naturwissenschaft_mint > .experiment_content:nth-child(n+3) > figure {
-        width: 100%;
-        height: auto;
-       
-       
-    }
-    
 
-    
-    [class^="experiment_content"] {
-        padding: 1.5rem;
-        background-color: #f8f9fa; 
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    
+
+
   }
   @media screen and (min-width: 1440px) {
     
     .naturwissenschaft_container {
             max-width: 1400px;
             margin: 0 auto;
+
     }
-
-
+    
 
     
   }
