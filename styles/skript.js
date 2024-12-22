@@ -25,11 +25,12 @@ document.addEventListener("click", function(event){
     
     if(!headerMenu.contains(event.target) && !hamburgerMenu.contains(event.target)){
         headerMenu.classList.remove("active");
-        hamburgerMenu.classList.setAttribute("aria-expanded",false)
-        hamburgerMenu.setAttribute("aria-hidden",true);
+        hamburgerMenu.classList.setAttribute("aria-expanded",false);
+        headerMenu.classList.setAttribute("aria-hidden",true);
     }
+    console.log(event.target);
 
-})
+});
 
 if(document.body.id === 'naturwissenschaft_page'){
 
@@ -79,7 +80,11 @@ if(document.body.id === 'naturwissenschaft_page'){
     });
 
 }
-document.getElementById("quiz_submit").addEventListener("click", () => {
+
+
+let submit = document.getElementById("quiz_submit");
+
+submit.addEventListener("click", () => {
     const answers = {
       q1: "b",
       q2: "b", 

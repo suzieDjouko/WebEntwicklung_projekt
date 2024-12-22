@@ -71,7 +71,7 @@ body{
     background: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 70%;
+    width: 75%;
     z-index: 1000;
    
 }
@@ -89,6 +89,7 @@ body{
     transition: color 0.3s ease, transform 0.3s ease;
     position: relative;
     font-size: 1.3rem;
+    white-space: nowrap;
    
 }
 
@@ -234,6 +235,7 @@ body{
         "fun_fact"
         "footer";
     background-color: rgb(245, 245, 245);
+    background-color: white;
     width: 100%;
     height: 100vh;
 
@@ -488,18 +490,59 @@ p.intro-text {
     margin: 1em auto;
 }
 
-iframe {
+.naturwissenschaft_container iframe{
     border: 5px solid green;
     border-radius: 15px;
     width:100%;
     height:315px;
 }
 
-footer {
-    background-color:bisque;
-    color: rgb(7, 7, 7);
-    padding: 1em;
-    font-size: 1.2rem;
+
+/*----------------all footer-------------------------------------*/
+[class*="footer"]{
+  grid-area: footer;
+  display: grid;
+  width: 100%;
+  height: 10em;
+  border-radius: none;
+  grid-area: footer;
+  background-color: rgba(25, 25, 112, 1);
+  color: #ffffff; /* Texte blanc pur */
+  grid-template-rows: auto;
+  grid-template-columns: 1fr;
+  gap: 0.7em;
+  text-align: center;
+  padding-top: 3em;
+}
+[class*="footer"]:last-child{
+  font-size: small;
+}
+
+/*Logo*/
+.folgen{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  
+
+}
+.folgen [class^="fa-brands"]{
+  color: rgba(255, 223, 0, 1); /* Jaune soleil */
+  color: white;
+      font-size: 30px;
+      padding-left: 14px;
+      padding-top: 5px;
+      transition: 0.3s ease;
+  }
+
+.folgen  [class^="fa-brands"]:hover{
+      color: #ff7200;
+  }
+.folgen a{
+      text-decoration: none;
+      color: #fff;
 }
 
 #audio-container{
@@ -620,6 +663,239 @@ footer {
     background-color: #dff0fc;
   }
   
+  /*START--------------------mathe.css----------------------------*/
+  .mathe_title{
+
+    background-color: rgba(0, 123, 255, 1);
+  }
+  .btn{
+    display: block;
+    width: auto;
+    height: 5rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    background:  rgb(255, 255, 255);
+    color: #390dff;
+    font-size: larger;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  .btn:hover{
+    color: rgb(255, 114, 0);
+  }
+  
+  /*---------------Main-container_Box------------------*/
+  
+.mathe_container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template: 
+    "header"
+    "beschreibung"
+    "bruchzahl"
+    "geometrie"
+    "uebung"
+    "footer";
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    row-gap: 1em;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.03rem;
+    line-height: 1.5; /* 1.5 times the font size for body text */
+}
+/*change menu color*/
+.mathe_container .fa-bars:hover , .mathe_container .header_menu a:hover{
+  color: rgba(0, 123, 255, 1);
+
+}
+.mathe_container .header_menu a::after{
+  background-color: rgba(0, 123, 255, 1);
+}
+.mathe_container .header_menu a i{
+  color: rgba(0, 123, 255, 1);
+}
+
+.mathe_container h1{
+    font-size: 2rem; /* Adjust as needed */
+    font-weight: bold;
+    text-align: center;
+}
+.mathe_container h2{
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: bold;
+}
+/*push the list*/
+
+.mathe_container ul>li{
+    display: list-item;
+    list-style-type: disc;
+    margin-inline-start: 0.2em;
+}
+.mathe_container ol>li{
+    display: list-item;
+    margin-inline-start: 0.2em;
+}
+
+/*---------------Header_Box------------------*/
+.mathe_header {
+    background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(../images/bild05.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*---------------Description_Box------------------*/
+.mathe_beschreibung{
+    grid-area: beschreibung;
+    background-color: rgba(253, 253, 107, 0.812);
+    border-left: 4px solid rgba(0, 123, 255, 1); /* Accent bleu vif */
+    padding-top: 2em;
+    height:auto;
+    margin-top: 2rem; 
+    font-family: "Quicksand", sans-serif;
+}
+
+.mathe_beschreibung details:hover{
+  cursor: pointer;
+}
+/*.mathe_beschreibung> lists */
+.mathe_beschreibung>ul li{
+    list-style-type: none;
+}
+.mathe_beschreibung>ul li a{
+    text-decoration: none;
+    color:rgba(65, 105, 225, 1);
+    transition: 0.4s ease-in-out;
+}
+.mathe_beschreibung>ul li a:hover{
+    text-decoration: underline;
+    color: orangered;
+    font-family: arial;
+    font-weight: bold;
+    transition: 0.4s ease-in-out;
+}
+
+
+/*---------------Content_Box------------------*/
+
+/*for all boxes together in mathe_content*/
+[class^="content_mathe"]{
+    position: relative;
+    height: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 2rem 0;
+    border-top: 5px solid rgba(0, 123, 255, 1);
+    line-height: 1.6;
+}
+/*change second div in Content Geometrie and Bruchzahl*/
+
+[class*="mathe_einleitung"] div:nth-of-type(2){
+  margin-top: 2rem;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(101, 255, 49, 0.789);
+}
+
+[class*="mathe_einleitung"] div:nth-of-type(2) h1{
+  text-align: start;
+}
+/*underline span in mathe_content*/
+[class^="content_mathe"]>div>ol>ul>li span{
+    text-decoration: underline;
+}
+
+
+/*for uniq content element in Math_content*/
+[class$="mathe_bruchzahl"]{
+    grid-area: bruchzahl;
+
+}
+
+[class$="mathe_geometrie"]{
+    grid-area: geometrie;
+}
+[class$="mathe_uebung"]{
+    grid-area: uebung;
+}
+
+[class$="mathe_uebung"] input{
+    transform: scale(1.3);
+}
+
+[class$="mathe_uebung"] ol ul li{
+    list-style: none;
+}
+
+/*einzelne uebungen boxes*/
+[class^="mathe_Uebung"]{
+    padding-right: 0.5em;
+    margin-top: 2em;
+}
+[class^="mathe_Uebung"] h1{
+  color: rgb(255, 69, 0);
+}
+[class^="mathe_Uebung"] p{
+  margin-bottom: 1rem;
+}
+
+[class^="mathe_Uebung"]>ol>li{
+  background-color: rgba(57, 205, 255, 0.895);
+  border-radius: 6px;
+  padding-left:1em ;
+}
+/*making ol grid*/
+[class^="mathe_Uebung"]>ol{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+}
+/*Geometrie Figuren*/
+
+
+#triangle{
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid green;
+    }
+#square{
+    width: 100px; 
+    height: 100px; 
+    background-color: blue;
+}
+#circle{
+    width: 100px; 
+    height: 100px; 
+    background-color: red; 
+    border-radius: 50%;
+}
+
+
+
+/*Videos in mathe_content*/
+[class*="mathe_video"]{
+    margin-top: 1em;
+    margin-bottom: 1em; 
+    color:  rgb(255, 69, 0);
+    height: auto;
+}
+[class*="mathe_video"] iframe{
+    width: 100%;
+    min-height: 20rem;
+    border-radius: 1rem;
+}
+
+/*---------------Footer_Box------------------*/
+
+/*END---------------------mathe.css-------------------------------*/
+  
   
   @keyframes fadeIn {
     from {
@@ -633,32 +909,34 @@ footer {
   }
 
 @media screen and (min-width:768px){
-    .fa-bars{
-        display: none !important;
+  .fa-bars{
+          display: none !important;
     }
+  
     [class$="header"]{
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
+        height: 100vh;
     }
-
 
     .header_menu {
         display: flex;
         flex-direction: row;
         position: static;
         gap:1rem;
-        width:auto;
         background-color: #fff;
         margin-left: 1em;
         box-shadow: none;
         padding: 1.2rem;
-        
+        width: 85%;
       }
     
+  
       .header_menu a {
         border: none;
         white-space: nowrap;
+        font-size: 13px;
       }
 
       .naturwissenschaft_mint{
@@ -672,9 +950,34 @@ footer {
     .water_rise{
         margin-bottom: 2rem;
     }
-   
-     
+
     
+ /*START--------------------mathe.css----------------------------*/
+ 
+ 
+
+/*---------------Content_Box------------------*/
+
+/*for all boxes together in mathe_content*/
+[class^="content_mathe"]{
+  margin: 2rem;
+  border: 5px solid rgba(0, 123, 255, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Douce ombre */
+}
+
+
+[class^="mathe_Uebung"]>ol{
+
+  grid-template-columns: 1fr 1fr;
+}
+
+[class*="mathe_video"]{
+  padding: 0 2em;
+  margin-top: 1em;
+}
+   
+ 
 }
 
   
@@ -719,21 +1022,69 @@ footer {
 
     }
     
+    .header_menu {
+      width: auto;
+    }
+  
+
+    .header_menu a {
+      font-size: 20px;
+
+    }
+
 
 
 
   }
   @media screen and (min-width: 1440px) {
+   
     
     .naturwissenschaft_container {
+
             max-width: 1400px;
             margin: 0 auto;
 
     }
+    .mathe_container {
+      font-size: larger;
+
+}
+[class^="content_mathe"]{
+margin: 0 10rem;
+}
+/*for all boxes together in mathe_content*/
+[class*="mathe_einleitung"] div:nth-of-type(2){
+  margin-top: 5rem;
+  padding: 5rem;
+  padding-top: 0;
+  background-color: rgba(101, 255, 49, 0.789);
+}
+[class^="content_mathe"]{
+  padding-left: 5rem;
+  padding-right: 5rem;
+  line-height: 2;
+}
+
     .funfact_list{
         grid-template-columns: repeat(3,1fr);
        
     }
 
-    
+ 
+  
+  }
+  @media screen and (min-width: 2560px) {
+.mathe_container{
+  font-size: 30px;
+}
+
+[class*="mathe_video"] iframe{
+  height: 50rem;
+}
+[class*="footer"]{
+
+  height: 20rem;
+
+}
+
   }
