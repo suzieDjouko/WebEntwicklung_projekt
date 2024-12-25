@@ -139,3 +139,4 @@ function resetExperiment(){
     isCandleLight = false;
 
 }
+
