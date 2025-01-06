@@ -29,20 +29,23 @@ body{
 
 .container{
     display: grid;
-    grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas: 
         "header"
         "beschreibung"
-        "mint"
+        "mint1"
+        "mint2"
+        "mint3"
+        "mint4"
         "fun-fact"
         "footer"
     ;
     gap: 1rem;
     background-color: rgb(166, 183, 210);
+    padding: 0 1rem;
     width: 100%;
-    height: 100vh;
+
+    /*height: 100vh;*/
    
-    
 }
 /*Header*/
 [class$="header"]{
@@ -54,11 +57,12 @@ body{
     width: 100%;
     padding: 0.5rem 1rem;
     background-image: url('../images/headerbackground.jpg');
-    height: 12rem;
+    height: 18rem;
     background-position: center;
     background-size: cover;
    
 }
+
 .header_menu{   
     display: none;
     flex-direction: column;
@@ -161,8 +165,8 @@ body{
 [class$="beschreibung"]{
     position: relative;
     grid-area: beschreibung;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 10px;
     line-height: 1.3em;
@@ -175,16 +179,35 @@ body{
 
 /*Mint Section*/
 
-.mint-section{
-    grid-area: mint;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-    padding: 1rem 1.5rem;
-
+.mint1{
+  grid-area: mint1;
+  
+}
+.mint2{
+  grid-area: mint2;
+}
+.mint3{
+  grid-area: mint3;
+}
+.mint4{
+  grid-area: mint4;
 }
 
-.mint-item{
+.mint1,
+.mint2,
+.mint3,
+.mint4 {
+  background-color: #f5f5f5;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+
+[class^="mint"]{    
     text-align: center;
     background-color: #f5f5f5;
     padding-bottom: 1em;
@@ -192,20 +215,27 @@ body{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.mint-item:hover {
+[class^="mint"]:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
   }
   
-.mint-item img {
+[class^="mint"] img {
     width: 100%;
     height: auto;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
+figure {
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
 
   
-.mint-item figcaption {
+[class^="mint"] figcaption {
     margin-top: 10px;
     font-size: 0.9rem;
     color: #333;
@@ -217,7 +247,6 @@ body{
     padding: 1rem;
     border-radius: 8px;
     text-align: center;
-    width: 100%;
 
   }
 
@@ -243,7 +272,6 @@ body{
 }
 .naturwissenschaft_header{
     background-image: url('../images/scientist1.jpg');
-    height: 18rem;
 
 
 }
@@ -502,10 +530,8 @@ p.intro-text {
 [class*="footer"]{
   grid-area: footer;
   display: grid;
-  width: 100%;
   height: 10em;
   border-radius: none;
-  grid-area: footer;
   background-color: rgba(25, 25, 112, 1);
   color: #ffffff; /* Texte blanc pur */
   grid-template-rows: auto;
@@ -545,23 +571,23 @@ p.intro-text {
       color: #fff;
 }
 
-#audio-container{
+#audio_container{
     position: absolute;
     right: 1em;
-    top:-1em;
+    top:-1.9em;
     background-color: #f8c471;
     border-radius: 1.5em;
-    padding: 0.6rem;
+    padding: 0.2rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center; 
 }
-#audio-container button {
+#audio_container button {
     background-color: #3498db;
     border: none;
     border-radius: 50%;
     width: 50px;
-    height: 50px;
+    height: 45px;
     margin-right: 0.5rem;
     display: flex;
     align-items: center;
@@ -573,9 +599,34 @@ p.intro-text {
     transition: transform 0.2s;
     
   }
-  #audio-container button:hover {
+  #audio_container button:hover {
     transform: scale(1.1);
   }
+
+ 
+  #go_up_button {
+    position: fixed;
+    bottom: 25px;
+    right:25px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1172b3;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+  
+  #go_up_button:hover {
+    background-color: #2980b9;
+  }
+  
+
 
   /* Section Quiz */
   
@@ -682,8 +733,6 @@ p.intro-text {
 
 .informatik_header {
   background-image: url('../images/background_informatik.webp');
-  width: 100%;
-  height: 10em;
 
 }
 
@@ -1076,6 +1125,51 @@ summary~p{
   }
 
 @media screen and (min-width:768px){
+
+  .container{
+    grid-template-areas: 
+        "header header"
+        "beschreibung beschreibung"
+        "mint1 mint2"
+        "mint3 mint4"
+        "fun-fact fun-fact"
+        "footer footer";
+        grid-template-columns: 1fr 1fr;
+  }
+  
+  [class$="beschreibung"]{
+    grid-column: span 2;
+    
+  }
+
+  .fun-fact {
+    grid-column: span 2;
+  }
+.mint1,
+.mint2,
+.mint3,
+.mint4 {
+  margin-left: 0rem;
+  margin-right: 0rem;
+}
+
+  .mint1{
+    margin-left: 2rem;
+  }
+  .mint2{
+    margin-right: 2rem;
+  
+  }
+  .mint3{
+    margin-left: 2rem;
+  
+  }
+  .mint4{
+    margin-right: 2rem;
+  
+  }
+  
+
   .fa-bars{
           display: none !important;
     }
@@ -1084,26 +1178,26 @@ summary~p{
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        height: 100vh;
     }
 
     .header_menu {
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-self: center;
         position: static;
-        gap:1rem;
         background-color: #fff;
-        margin-left: 1em;
         box-shadow: none;
-        padding: 1.2rem;
-        width: 85%;
+        width: 100%;
+
+       
       }
     
   
       .header_menu a {
         border: none;
         white-space: nowrap;
-        font-size: 13px;
+        font-size: 1.13rem;
       }
 
       .naturwissenschaft_mint{
@@ -1117,6 +1211,7 @@ summary~p{
     .water_rise{
         margin-bottom: 2rem;
     }
+}
 
 
  /*START--------------------mathe.css----------------------------*/
@@ -1147,11 +1242,47 @@ summary~p{
 .editors {
   grid-template-columns: 1fr;
 }
-}
+
 
   
   
   @media screen and (min-width: 1024px) {
+    .container{
+      grid-template-areas: 
+          "header header header"
+          "beschreibung beschreibung beschreibung"
+          "mint1 mint2 mint3"
+          "mint4 fun-fact fun-fact"
+          "footer footer footer";
+          grid-template-columns: 1fr 1fr 1fr;
+    }
+    .mint1{
+      margin-left: 3em;
+    }
+    .mint2{
+      margin-right: 0em;
+      margin-left: 0 1em;
+    
+    }
+    .mint3{
+      margin-left: 0rem;
+      margin-right: 3em;
+    }
+    .mint4{
+      margin-left: 3em;
+      margin-right: 0;
+    }
+    
+    [class$="beschreibung"]{
+      grid-column: span 3;
+    }
+  
+    .fun-fact {
+      grid-column: span 3;
+      margin-right: 4em;
+
+    }
+    
     body {
       font-size: 18px;
       margin: 0 auto;
@@ -1191,13 +1322,14 @@ summary~p{
 
     }
     
-    .header_menu {
+    .header_menu {  
       width: auto;
     }
   
 
     .header_menu a {
       font-size: 20px;
+      
 
     }
 

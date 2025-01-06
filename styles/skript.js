@@ -7,6 +7,7 @@ let glass = document.getElementById('glass');
 let resultText = document.getElementById('result_text');
 let water = document.querySelector('.water'); 
 let isCandleLight = false;
+let goupbtn = document.querySelector('#go_up_button')
 
 
 hamburgerMenu.addEventListener("click", function () {
@@ -150,3 +151,23 @@ function resetExperiment(){
     isCandleLight = false;
 
 }
+
+window.addEventListener("scroll" , checkHeight);
+
+function checkHeight(){
+    if (window.scrollY > 150) {
+        goupbtn.style.display = 'flex';
+    } else {
+        goupbtn.style.display = 'none';
+    }
+    
+};
+
+goupbtn.addEventListener("click", function(){
+    window.scrollTo({
+        top: 0,
+        behavior:"smooth"
+
+    })
+
+});
