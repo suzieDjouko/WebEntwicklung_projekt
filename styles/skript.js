@@ -82,30 +82,36 @@ if(document.body.id === 'naturwissenschaft_page'){
 }
 
 
-let submit = document.getElementById("quiz_submit");
 
-submit.addEventListener("click", () => {
-    const answers = {
-      q1: "b",
-      q2: "b", 
-      q3: "b", 
-      q4: "b",
-    };
-  
-    let score = 0; 
-  
-    Object.keys(answers).forEach(function(key){
-      let userAnswer = document.querySelector(`input[name="${key}"]:checked`);
-      if (userAnswer && userAnswer.value === answers[key]) {
-        score++;
-      }
-    });
-  
-    const result = document.getElementById("quiz_result");
-    result.textContent = `Du hast ${score} von ${Object.keys(answers).length} Fragen richtig beantwortet!`;
-    result.classList.remove("hidden");
-  });
-  
+let submit = document.getElementById("quiz_submit");
+let  answers = {
+    q1: "b",
+    q2: "b", 
+    q3: "b", 
+    q4: "b"
+};
+
+function funcQuiz() {
+    
+    submit.addEventListener("click", () => {
+      
+        let score = 0; 
+      
+        Object.keys(answers).forEach(function(key){
+          let userAnswer = document.querySelector(`input[name="${key}"]:checked`);
+          if (userAnswer && userAnswer.value === answers[key]) {
+            score++;
+          }
+        });
+      
+        const result = document.getElementById("quiz_result");
+        result.textContent = `Du hast ${score} von ${Object.keys(answers).length} Fragen richtig beantwortet!`;
+        result.classList.remove("hidden");
+      });
+      
+};
+
+
 lightCandleButton.addEventListener("click", function(){
     if (!isCandleLight){
         // allume la flamme
