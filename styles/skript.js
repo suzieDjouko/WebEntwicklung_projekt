@@ -82,19 +82,10 @@ if(document.body.id === 'naturwissenschaft_page'){
 }
 
 
-
-let submit = document.getElementById("quiz_submit");
-let  answers = {
-    q1: "b",
-    q2: "b", 
-    q3: "b", 
-    q4: "b"
-};
-
-function funcQuiz() {
-    
+function funcQuiz(submit, answers, result) {
+    console.log("no")
     submit.addEventListener("click", () => {
-      
+        console.log("yes")
         let score = 0; 
       
         Object.keys(answers).forEach(function(key){
@@ -104,12 +95,49 @@ function funcQuiz() {
           }
         });
       
-        const result = document.getElementById("quiz_result");
         result.textContent = `Du hast ${score} von ${Object.keys(answers).length} Fragen richtig beantwortet!`;
         result.classList.remove("hidden");
       });
       
 };
+
+if(document.body.id === 'naturwissenschaft_page'){
+    const submit = document.getElementById("quiz_submit");
+    const answers = {
+        q1: "b",
+        q2: "b", 
+        q3: "b", 
+        q4: "b"
+};
+    const result = document.getElementById("quiz_result");
+    funcQuiz(submit, answers, result);
+}else if(document.body.id === 'mathe_body'){
+    const submit1 = document.getElementById("mathe_quiz_submit");
+    const answers1 = {
+        u1q1: "Halb",
+        u1q2: "Drittel", 
+        u1q3: "Viertel", 
+        u1q4: "Fünftel",
+        u1q5: "Sechstel",
+        u1q6: "Siebtel",
+        u2q1: "zwei_Halbe",
+        u2q2: "zwei_Drittel", 
+        u2q3: "drei_Viertel", 
+        u2q4: "fünf_Sechstel",
+        u2q5: "sieben_Achtel",
+        u3q1: "D",
+        u3q2: "B", 
+        u3q3: "D", 
+        u3q4: "C",
+        u4q1: "Kreis",
+        u4q2: "dreieck", 
+        u4q3: "rechteck", 
+     
+    };
+    const result1 = document.getElementById("mathe_quiz_result");
+    funcQuiz(submit1, answers1, result1);
+}
+
 
 
 lightCandleButton.addEventListener("click", function(){
