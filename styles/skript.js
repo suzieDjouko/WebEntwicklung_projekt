@@ -8,6 +8,7 @@ let resultText = document.getElementById('result_text');
 let water = document.querySelector('.water'); 
 let isCandleLight = false;
 let goupbtn = document.querySelector('#go_up_button')
+let form_natur = document.querySelector('#form_natur_quiz')
 
 
 hamburgerMenu.addEventListener("click", function () {
@@ -83,10 +84,9 @@ if(document.body.id === 'naturwissenschaft_page'){
 }
 
 
-function funcQuiz(submit, answers, result) {
-    console.log("no")
+function funcQuiz(submit, answers, result, reset) {
     submit.addEventListener("click", () => {
-        console.log("yes")
+        console.log("Quiz Submited")
         let score = 0; 
       
         Object.keys(answers).forEach(function(key){
@@ -98,23 +98,38 @@ function funcQuiz(submit, answers, result) {
       
         result.textContent = `Du hast ${score} von ${Object.keys(answers).length} Fragen richtig beantwortet!`;
         result.classList.remove("hidden");
+        reset.classList.remove("hidden");
       });
+
+    reset.addEventListener("click" , () =>{
+        console.log("Quiz zuruecksetzen")
+        let score= 0;
+        form_natur.reset();
+        reset.classList.add("hidden");
+        result.classList.add("hidden");
+
+
+        })
       
 };
 
 if(document.body.id === 'naturwissenschaft_page'){
-    const submit = document.getElementById("quiz_submit");
-    const answers = {
+    let submit = document.getElementById("quiz_submit");
+    let answers = {
         q1: "b",
         q2: "b", 
         q3: "b", 
         q4: "b"
 };
-    const result = document.getElementById("quiz_result");
-    funcQuiz(submit, answers, result);
+    let result = document.getElementById("quiz_result");
+    let reset = document.getElementById('quiz_reset');
+
+    funcQuiz(submit, answers, result, reset);
+    
+
 }else if(document.body.id === 'mathe_body'){
-    const submit1 = document.getElementById("mathe_quiz_submit");
-    const answers1 = {
+    let submit1 = document.getElementById("mathe_quiz_submit");
+    let answers1 = {
         u1q1: "Halb",
         u1q2: "Drittel", 
         u1q3: "Viertel", 
@@ -135,7 +150,7 @@ if(document.body.id === 'naturwissenschaft_page'){
         u4q3: "rechteck", 
      
     };
-    const result1 = document.getElementById("mathe_quiz_result");
+    let result1 = document.getElementById("mathe_quiz_result");
     funcQuiz(submit1, answers1, result1);
 }
 

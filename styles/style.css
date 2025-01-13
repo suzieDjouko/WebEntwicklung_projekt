@@ -27,7 +27,7 @@ body{
     
 }
 
-.container{
+.index_container{
     display: grid;
     grid-template-areas: 
         "header"
@@ -80,7 +80,7 @@ body{
    
 }
 .header_menu.active {
-    display: flex;
+  display: flex;
    
 }
 .header_menu a{
@@ -232,17 +232,53 @@ a {
 
 .fun-fact{
     grid-area: fun-fact;
-    background-color: #cfcfcf;
-    padding: 1rem;
+    background-color: #dcdcdc;
+    padding: 0.5rem;
     border-radius: 8px;
     text-align: center;
 
   }
 
+  .carousel-item {
+    font-size: 1.2rem;
+    padding: 20px;
+    color: #333;
+    text-align: center;
+    
+  }
+  div.d-flex{
+    align-items:center ;
+    justify-content:center ;
+    height: 200px; 
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    width: auto;
 
-/*Naturvissenschaft*/
+  }
+  
+  .carousel-indicators button {
+    background-color: #c7bdbd;
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: #8b8989;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    
+    
+  }
+  .carousel-control-next,
+  .carousel-control-prev{
+    top: 4em;    
+  }
+
+
+/*-----------------------Naturwissenschaft-----------------------------------*/
 
 .naturwissenschaft_container {
+    display: grid;
     grid-template-areas:
         "header"
         "beschreibung"
@@ -261,7 +297,6 @@ a {
 .naturwissenschaft_header{
     background-image: url('../images/scientist1.jpg');
 
-
 }
 
   .naturwissenschaft_beschreibung {
@@ -272,8 +307,15 @@ a {
     
   }
   .naturwissenschaft_mint {
-   display: flex;
-   flex-direction: column;
+    grid-area: mint;
+    display: grid;
+    /* display:flex;
+    flex-direction: column;*/
+    grid-template-areas: 
+    "mint_1"
+    "mint_2"
+    "mint_3"
+    "mint_4";
     gap: 2rem;
     padding: 2rem 1.5rem;
     background-color: #dedcde;
@@ -633,7 +675,7 @@ p.intro-text {
   .quiz_item h4 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: #181717;
   }
   .quiz_item ul {
     list-style: none;
@@ -641,14 +683,21 @@ p.intro-text {
   }
   .quiz_item li {
     margin-bottom: 0.8rem;
+    color: #2c2b2b;
+
   }
   .quiz_item input {
     margin-right: 0.5rem;
     transform: scale(1.5);/*agrandit les cercles du radio btn*/
     cursor: pointer;
   }
-  #quiz_submit {
-    display: block;
+  #quiz_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #quiz_submit, #quiz_reset {
     margin: 3em auto;
     padding: 0.8rem 2rem;
     background-color: #4caf50;
@@ -662,8 +711,15 @@ p.intro-text {
   #quiz_submit:hover {
     background-color: #388e3c;
   }
+  #quiz_reset{
+    background-color: #9ca09c;
+  }
+  #quiz_reset:hover{
+    background-color: #646564;
+  }
+ 
   
-  #quiz_result {
+  #naturwissenschaft_quiz_result {
     text-align: center;
     margin-top: 1rem;
     font-size: 1.2rem;
@@ -1123,7 +1179,7 @@ summary~p{
   }
 
 @media screen and (min-width:768px){
-  .container{
+  .index_container{
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
         "header header"
@@ -1135,13 +1191,13 @@ summary~p{
     ;
      
 }
-#mint_1,#mint_3{
-  margin-left: 2rem;
-}
+  #mint_1,#mint_3{
+    margin-left: 2rem;
+  }
 
-#mint_2,#mint_4{
-  margin-right: 2rem;
-}
+  #mint_2,#mint_4{
+    margin-right: 2rem;
+  }
 
   .fa-bars{
           display: none !important;
@@ -1154,22 +1210,22 @@ summary~p{
     }
 
     .header_menu {
-        display: flex;
+        /*display: flex;*/
+        display: inline-flex;
         flex-direction: row;
+        flex-wrap: nowrap;
+        /*flex-flow : row nowrap*/
         align-items: center;
         justify-self: center;
         position: static;
         background-color: #fff;
         box-shadow: none;
-        width: 100%;
-
-       
+       /* width: 100%;*/
       }
     
   
       .header_menu a {
         border: none;
-        white-space: nowrap;
         font-size: 1.13rem;
       }
 
@@ -1216,46 +1272,9 @@ summary~p{
   grid-template-columns: 1fr;
 }
 
-
-  
   
   @media screen and (min-width: 1024px) {
-    .container{
-      grid-template-areas: 
-          "header header header"
-          "beschreibung beschreibung beschreibung"
-          "mint1 mint2 mint3"
-          "mint4 fun-fact fun-fact"
-          "footer footer footer";
-          grid-template-columns: 1fr 1fr 1fr;
-    }
-    .mint1{
-      margin-left: 3em;
-    }
-    .mint2{
-      margin-right: 0em;
-      margin-left: 0 1em;
-    
-    }
-    .mint3{
-      margin-left: 0rem;
-      margin-right: 3em;
-    }
-    .mint4{
-      margin-left: 3em;
-      margin-right: 0;
-    }
-    
-    [class$="beschreibung"]{
-      grid-column: span 3;
-    }
-  
-    .fun-fact {
-      grid-column: span 3;
-      margin-right: 4em;
-
-    }
-    
+   
     body {
       font-size: 18px;
       margin: 0 auto;
