@@ -27,17 +27,17 @@ body{
     
 }
 
-.container{
+.index_container{
     display: grid;
     grid-template-areas: 
-        "header"
-        "beschreibung"
+        "index_header"
+        "index_beschreibung"
         "mint_1"
         "mint_2"
         "mint_3"
         "mint_4"
         "fun-fact"
-        "footer"
+        "index_footer"
     ;
     gap: 2rem;
     background-color: rgb(166, 183, 210);
@@ -59,6 +59,15 @@ body{
     background-position: center;
     background-size: cover;
    
+}
+.index_header{
+  grid-area: index_header;
+}
+.index_beschreibung{
+  grid-area: index_beschreibung;
+}
+.index_footer{
+  grid-area: index_footer;
 }
 .header_menu{   
     display: none;
@@ -1173,15 +1182,15 @@ summary~p{
   }
 
 @media screen and (min-width:768px){
-  .container{
+  .index_container{
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
-        "header header"
-        "beschreibung beschreibung"
+        "index_header index_header"
+        "index_beschreibung index_beschreibung"
         "mint_1 mint_2"
         "mint_3 mint_4"
         "fun-fact fun-fact"
-        "footer footer"
+        "index_footer index_footer"
     ;
      
 }
