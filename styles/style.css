@@ -43,12 +43,11 @@ body{
     background-color: rgb(166, 183, 210);
     width: 100%;
     height: auto;
-   
+   justify-content: space-around;
     
 }
 /*Header*/
 [class$="header"]{
-    grid-area: header;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -162,7 +161,6 @@ body{
 
 [class$="beschreibung"]{
     position: relative;
-    grid-area: beschreibung;
     margin-left: 1rem;
     margin-right: 1rem;
     padding: 1rem;
@@ -509,50 +507,96 @@ p.intro-text {
 
 /*----------------all footer-------------------------------------*/
 [class*="footer"]{
-  grid-area: footer;
   display: grid;
   width: 100%;
-  height: 10em;
+  height: auto;
   border-radius: none;
-  grid-area: footer;
-  background-color: rgba(25, 25, 112, 1);
+  background: url(../images/imagefooter.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   color: #ffffff; /* Texte blanc pur */
-  grid-template-rows: auto;
   grid-template-columns: 1fr;
-  gap: 0.7em;
+  grid-template-rows: auto;
+  gap: 1.5em;
   text-align: center;
-  padding-top: 3em;
+  padding-top: 3rem;
+  font-size: 20rem;
 }
 [class*="footer"]:last-child{
   font-size: small;
 }
-
-/*Logo*/
-.folgen{
+/*form in footer*/
+.block{
+  margin-top: 1rem;
+  text-align: start;
+}
+#last{
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  justify-content: space-between;
-  
+  text-align: start;
+}
+#name,#email,#POB,#DOB {
+  max-width: 450px;
+  height: 35px;
+  background: transparent;
+  border-bottom: 1px solid hsl(27, 90%, 90%);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: orange;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  font-family: sans-serif;
 
 }
-.folgen [class^="fa-brands"]{
+#formfoot textarea{
+  margin-top: 10px;
+  min-height: 5rem;
+  background-color: white;
+  color: #2c2c2c;
+  max-width: 500px;
+}
+
+[class*="footer"] #submit{
+  background-color: white;
+  color:hsl(240, 65%, 52%);
+  font-weight: bold;
+  padding: 5px;
+  width: 100px;
+  border-radius: 6px;
+}
+#formfoot{
+  width: 80%;
+  margin:  5px auto;
+  padding: 0 ;
+}
+
+/*Logo*/
+.folgen .contact{
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+.folgen a, .contact a{
   color: rgba(255, 223, 0, 1); /* Jaune soleil */
   color: white;
       font-size: 30px;
-      padding-left: 14px;
+      padding-left: 2rem;
       padding-top: 5px;
       transition: 0.3s ease;
+      text-decoration: none;
   }
-
-.folgen  [class^="fa-brands"]:hover{
+.contact span{
+  font-size: 15px;
+  margin-left: 10px;
+}
+.folgen [class^="fa-brands"]:hover .contact [class^="fa-brands"]:hover{
       color: #ff7200;
   }
-.folgen a{
-      text-decoration: none;
-      color: #fff;
-}
+
+
+/*-----------------------------------------------------------*/
 
 #audio-container{
     position: absolute;
@@ -876,16 +920,10 @@ summary~p{
 .mathe_container{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template: 
-    "header"
-    "beschreibung"
-    "bruchzahl"
-    "geometrie"
-    "uebung"
-    "footer";
+    grid-template-columns: auto;
     background-color: rgb(255, 255, 255);
     width: 100%;
-    gap: 1rem;
+    gap: 4rem;
     font-family: "Comic Sans MS", cursive, sans-serif;
     font-size: 1.2rem;
     letter-spacing: 0.03rem;
@@ -904,12 +942,12 @@ summary~p{
 }
 
 .mathe_container h1{
-    font-size: 2rem; /* Adjust as needed */
+    font-size: 2rem; 
     font-weight: bold;
     text-align: center;
 }
 .mathe_container h2{
-    font-size: 1.5rem; /* Adjust as needed */
+    font-size: 1.5rem; 
     font-weight: bold;
 }
 /*push the list*/
@@ -927,7 +965,6 @@ summary~p{
 /*---------------Header_Box------------------*/
 .mathe_header {
     background: linear-gradient(to top,rgba(0,0,0,0.5)50%,rgba(0,0,0,0.5)50%),url(../images/bild05.jpg);
-    /*background-image: url(../images/Mb2.jpg);*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -935,13 +972,11 @@ summary~p{
 
 /*---------------Description_Box------------------*/
 .mathe_beschreibung{
-    grid-area: beschreibung;
-    background-color: rgba(253, 253, 107, 0.812);
+    background-color: hsl(174, 90%, 90%);
     border-left: 4px solid rgba(0, 123, 255, 1); /* Accent bleu vif */
-    padding-top: 2em;
-    height:auto;
-    margin-top: 2rem; 
+    border-top: 4px solid rgba(0, 123, 255, 1);
     font-family: "Quicksand", sans-serif;
+    margin: 0;
 }
 
 .mathe_beschreibung details:hover{
@@ -953,12 +988,12 @@ summary~p{
 }
 .mathe_beschreibung>ul li a{
     text-decoration: none;
-    color:rgba(65, 105, 225, 1);
+    color:hsl(300, 90%, 90%);
     transition: 0.4s ease-in-out;
 }
 .mathe_beschreibung>ul li a:hover{
     text-decoration: underline;
-    color: orangered;
+    color:rgba(65, 105, 225, 1);
     font-family: arial;
     font-weight: bold;
     transition: 0.4s ease-in-out;
@@ -971,78 +1006,124 @@ summary~p{
 [class^="content_mathe"]{
     position: relative;
     height: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    margin: 2rem 0;
     border-top: 5px solid rgba(0, 123, 255, 1);
     line-height: 1.6;
 }
+
 /*change second div in Content Geometrie and Bruchzahl*/
 
-[class*="mathe_einleitung"] div:nth-of-type(2){
-  margin-top: 2rem;
+#geometrie div:nth-of-type(2), #bruchzahl div:nth-of-type(2),#stick{
+  margin-top: 3rem;
   border-radius: 1rem;
-  padding: auto 1rem auto;
-  background-color: rgba(101, 255, 49, 0.789);
+  padding: 1rem 2rem;
+  background-color: hsl(300, 90%, 90%);
 }
-
-[class*="mathe_einleitung"] div:nth-of-type(2) h1{
+#geometrie div:nth-of-type(2) h1, #bruchzahl div:nth-of-type(2) h1{
   text-align: start;
 }
+
 /*underline span in mathe_content*/
 [class^="content_mathe"] span{
     text-decoration: underline;
 }
 
+/*button in math*/
+.mathe_container button:hover{
+  background-color: #1e88e5;
+}
 
 /*for uniq content element in Math_content*/
-[class$="mathe_bruchzahl"]{
-    grid-area: bruchzahl;
-
+/*part aside */
+#algebra{
+  border-radius: 1rem;
 }
 
-[class$="mathe_geometrie"]{
-    grid-area: geometrie;
+#stick{
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(240, 100%, 90%);
+  gap: 2rem;
+  height: auto;
 }
+#stick h2{
+  text-align: center;
+  margin-top: 2rem;
+}
+.inal{
+  margin-top: 2rem;
+  justify-self: center;
+}
+.inal input{
+  width: 100px;
+  height: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  border-color: transparent;
+  border-bottom:2px solid;
+  border-left: 1px solid;
+  margin-left: 1rem;
+}
+
+.inal button{
+  margin: 1.5rem auto;
+  width: 100px;
+  padding: 5px;
+  background-color: hsl(120, 100%, 90%);
+  border-radius: 6px;
+}
+
+#show{
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  display: none;
+}
+
+
+/*for the Uebung teil*/
 [class$="mathe_uebung"]{
-    grid-area: uebung;
+  padding: 1.5rem;
 }
-
+[class$="mathe_uebung"] >h1{
+  margin: 2rem;
+}
 [class$="mathe_uebung"] input{
     transform: scale(1.3);
 }
-
-[class$="mathe_uebung"] ol ul li{
-    list-style: none;
-}
-
-/*einzelne uebungen boxes*/
-[class^="mathe_Uebung"]{
-    padding-right: 0.5em;
-    margin-top: 2em;
-}
-[class^="mathe_Uebung"] h1{
-  color: rgb(255, 69, 0);
-}
-[class^="mathe_Uebung"] p{
-  margin-bottom: 1rem;
-}
-
-[class^="mathe_Uebung"]>ol>li{
+[class$="mathe_uebung"] ol>li{
   background-color: rgba(57, 205, 255, 0.895);
   border-radius: 6px;
-  padding-left:1em ;
+  border: 2px solid transparent ;
+  padding: 0 1rem;
 }
+[class$="mathe_uebung"] ol>li:nth-child(even){
+  background-color: hsl(120, 90%, 90%);
+}
+
+[class$="mathe_uebung"] ol,ul{
+  padding: 0;
+  margin: 0;
+}
+[class$="mathe_uebung"] ol ul li{
+  
+  border-radius: 6px;
+  padding-left:1em ;
+  list-style: none;
+}
+
+[class$="mathe_uebung"] ol ul li:hover{
+  background-color: hsl(299, 59%, 65%);
+}
+  
 /*making ol grid*/
-[class^="mathe_Uebung"]>ol{
+[class$="mathe_uebung"] >ol{
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  justify-content: space-around;
   gap: 2rem;
 }
+
 /*Geometrie Figuren*/
-
-
 #triangle{
     width: 0;
     height: 0;
@@ -1061,9 +1142,6 @@ summary~p{
     background-color: red; 
     border-radius: 50%;
 }
-
-
-
 
 /*Videos in mathe_content*/
 [class*="mathe_video"]{
@@ -1157,34 +1235,52 @@ summary~p{
         margin-bottom: 2rem;
     }
 
-
  /*START--------------------mathe.css----------------------------*/
  
- 
-
-/*---------------Content_Box------------------*/
-
-/*for all boxes together in mathe_content*/
-[class^="content_mathe"]{
+ [class*="content_mathe"]{
   margin: 2rem;
-  border: 5px solid rgba(0, 123, 255, 1);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Douce ombre */
-}
+ }
 
-
-[class^="mathe_Uebung"]>ol{
-
-  grid-template-columns: 1fr 1fr;
-}
-
+/*Videos in mathe_content*/
 [class*="mathe_video"]{
-  padding: 0 2em;
-  margin-top: 1em;
+  margin: 2rem;
+}
+[class*="mathe_video"] iframe{
+  height: 30rem;
 }
  /*START--------------------Informatik.css----------------------------*/
 .editors {
   grid-template-columns: 1fr;
+}
+
+/*-------footer-------*/
+
+[class*="footer"]{
+  grid-template-columns: repeat(2,1fr);
+  grid-template-areas: 
+    "formfoot logofoot"
+    "contactfoot  folgenfoot"
+    "endfoot endfoot"
+  ;
+  padding: 5rem 5rem 0;
+  justify-content: center;
+}
+#formfoot{
+  grid-area: formfoot;
+}
+
+/*Logo*/
+.folgen{
+  grid-area: folgenfoot;
+}
+.contact{
+  grid-area: contactfoot;
+}
+#logofoot{
+  grid-area: logofoot;
+}
+[class*="footer"] div:last-of-type{
+  grid-area: endfoot;
 }
 }
 
@@ -1239,11 +1335,82 @@ summary~p{
       font-size: 20px;
 
     }
+    
+ /*START--------------------mathe.css----------------------------*/
+ .mathe_container{
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas:  
+  "mathe_header mathe_header"
+  "mathe_beschreibung mathe_beschreibung"
+  "algebra bruchzahl" 
+  "algebra bruchzahl"
+  "algebra geometrie" 
+  "u1 u1"
+  "u4 u4"
+  "mathe_footer mathe_footer";
+  column-gap: 1rem;
+  row-gap: 5rem;
+ }
+/*second div in algebra should be sticky*/
+ #stick{
+  height: 100vh;
+  position: sticky;
+  top: 0;
+ }
+ #algebra{
+ grid-area: algebra;
+  height: 100%;
+  margin-left: 2rem;
+ }
+#bruchzahl{
+    grid-area: bruchzahl;
+}
+#geometrie{
+    grid-area: geometrie;
+}
+#Uebung_1{
+  grid-area: u1;
+}
+#Uebung_4{
+  grid-area: u4;
+}
+.mathe_footer{
+  grid-area: mathe_footer;
+}
+.mathe_beschreibung{
+  grid-area: mathe_beschreibung;
+}
+.mathe_header{
+  grid-area: mathe_header;
+}
+/*-----------Content_Box------------------*/
+#bruchzahl, #geometrie{
+  margin-right: 2rem;
+}
 
 
+[class*="content_mathe"] {
+   margin: 0rem;
+}
 
+[class*="mathe_uebung"]{
+  margin: 0rem 2rem;
+  border: 5px solid rgba(0, 123, 255, 1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  }
+#geometrie div:nth-of-type(2), #bruchzahl div:nth-of-type(2),#stick{
+  padding: 4rem;
+  padding-top: 0;
+}
+
+[class*="mathe_video"]{
+  margin: 1em 0 0;
+}
+
+}
+
   @media screen and (min-width: 1440px) {
 
     .mint-section{
@@ -1262,21 +1429,6 @@ summary~p{
       font-size: larger;
 
 }
-[class^="content_mathe"]{
-margin: 0 10rem;
-}
-/*for all boxes together in mathe_content*/
-[class*="mathe_einleitung"] div:nth-of-type(2){
-  margin-top: 5rem;
-  padding: 5rem;
-  padding-top: 0;
-  background-color: rgba(101, 255, 49, 0.789);
-}
-[class^="content_mathe"]{
-  padding-left: 5rem;
-  padding-right: 5rem;
-  line-height: 2;
-}
 
     .funfact_list{
         grid-template-columns: repeat(3,1fr);
@@ -1294,10 +1446,6 @@ margin: 0 10rem;
 [class*="mathe_video"] iframe{
   height: 50rem;
 }
-[class*="footer"]{
 
-  height: 20rem;
-
-}
 
   }

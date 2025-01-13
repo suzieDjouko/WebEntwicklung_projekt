@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+        <!-- Background with Stars and Space Theme -->
+        <defs>
+          <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#1a237e"/>
+            <stop offset="100%" stop-color="#0d47a1"/>
+          </radialGradient>
+        </defs>
+        <circle cx="300" cy="300" r="300" fill="url(#bgGradient)"/>
+      
+        <!-- Stars -->
+        <g>
+          <circle cx="80" cy="100" r="4" fill="#ffffff" opacity="0.9"/>
+          <circle cx="500" cy="150" r="5" fill="#ffffff" opacity="0.8"/>
+          <circle cx="250" cy="500" r="6" fill="#ffffff" opacity="0.8"/>
+          <circle cx="50" cy="300" r="3" fill="#ffffff" opacity="0.7"/>
+          <circle cx="550" cy="400" r="4" fill="#ffffff" opacity="0.9"/>
+          <circle cx="400" cy="100" r="5" fill="#ffffff" opacity="0.8"/>
+          <circle cx="200" cy="200" r="3" fill="#ffffff" opacity="0.8"/>
+        </g>
+      
+        <!-- Central Orbital Design with Atom -->
+        <circle cx="300" cy="300" r="100" fill="#ffffff"/>
+        <circle cx="300" cy="300" r="80" fill="#ffca28"/>
+        <circle cx="220" cy="300" r="20" fill="#4db6ac"/>
+        <circle cx="380" cy="300" r="20" fill="#4db6ac"/>
+        <circle cx="300" cy="220" r="20" fill="#4db6ac"/>
+        <circle cx="300" cy="380" r="20" fill="#4db6ac"/>
+        <path d="M220 300 A80 80 0 0 1 300 380" fill="none" stroke="#ff5252" stroke-width="5"/>
+        <path d="M300 220 A80 80 0 0 1 380 300" fill="none" stroke="#ff5252" stroke-width="5"/>
+      
+        <!-- Subject Labels Aligned Horizontally with Proper Spacing -->
+        <text x="50" y="300" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+          Mathematik.
+        </text>
+        <text x="100" y="400" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+          Informatik.
+        </text>
+        <text x="400" y="250" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+          Chemie.
+        </text>
+        <text x="300" y="450" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+          Naturwissenschaft.
+        </text>
+      
+        <!-- Science Formulas Reorganized -->
+        <text x="150" y="100" font-family="Courier New, monospace" font-size="24" fill="#ffffff">E=mc²</text>
+        <text x="400" y="100" font-family="Courier New, monospace" font-size="20" fill="#ffffff">H₂O</text>
+        <text x="100" y="200" font-family="Courier New, monospace" font-size="20" fill="#ffffff">a² + b² = c²</text>
+        <text x="500" y="300" font-family="Courier New, monospace" font-size="20" fill="#ffffff">F=ma</text>
+        <text x="100" y="500" font-family="Courier New, monospace" font-size="20" fill="#ffffff">PV=nRT</text>
+        <text x="300" y="150" font-family="Courier New, monospace" font-size="20" fill="#ffffff">ΔE=hν</text>
+      
+        <!-- Title -->
+        <text x="300" y="550" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="48" fill="#ffca28" stroke="#0288d1" stroke-width="2">
+          MINTopia
+        </text>
+      </svg>
