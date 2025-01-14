@@ -30,14 +30,14 @@ body{
 .index_container{
     display: grid;
     grid-template-areas: 
-        "index_header"
-        "index_beschreibung"
+        "header"
+        "beschreibung"
         "mint_1"
         "mint_2"
         "mint_3"
         "mint_4"
         "fun-fact"
-        "index_footer"
+        "footer"
     ;
     gap: 2rem;
     background-color: rgb(166, 183, 210);
@@ -48,6 +48,7 @@ body{
 }
 /*index_all_header*/
 [class$="header"]{
+  grid-area: header;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,15 +59,6 @@ body{
   height: 18rem;
   background-position: center;
   background-size: cover;
-}
-.index_header{
-  grid-area: index_header;
-}
-.index_beschreibung{
-  grid-area: index_beschreibung;
-}
-.index_footer{
-  grid-area: index_footer;
 }
 .header_menu{   
     display: none;
@@ -168,6 +160,7 @@ body{
 /*index_all_Beschreibung*/
 
 [class$="beschreibung"]{
+  grid-area: beschreibung;
     position: relative;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
@@ -269,79 +262,30 @@ div.d-flex{
   top: 4em;    
 }
 
-/*---------------------end_index------------------------*/
+/*----------------------end_index------------------------*/
 
 /*----------------start_footer_all-------------------------------------*/
-[class*="footer"]{
+#footer{
+  grid-area: footer;
   display: grid;
   width: 100%;
-  min-height: 100dvh;
-  border-radius: none;
+  height: auto;
   background: url(../images/imagefooter.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: #ffffff; /* Texte blanc pur */
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  gap: 1.5rem;
   text-align: center;
   padding-top: 1.5rem;
   font-size: 1rem;
 }
 /*form in footer*/
-.block{
-  margin-top: 2.5rem;
-  text-align: start;
-}
-#last{
-  width: 100%;
-  text-align: start;
-}
-.same,#email,#POB,#DOB {
-  width: 100%;
-  height: 35px;
-  background: transparent;
-  border-bottom: 1px solid hsl(27, 90%, 90%);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  color: orange;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-left: 10px;
-  font-family: sans-serif;
 
-}
-.formfoot textarea{
-  margin-top: 10px;
-  min-height: 5rem;
-  background-color: white;
-  color: #2c2c2c;
-  width: 100%;
-  border-radius: 6px;
-}
+.folgen div:first-of-type,.contact div:first-of-type{
+  font-size: 1rem;
+  padding-bottom: 5px;
 
-[class*="footer"] #submit{
-  background-color: white;
-  color:hsl(240, 65%, 52%);
-  font-weight: bold;
-  padding: 5px;
-  width: 100px;
-  border-radius: 6px;
-}
-[class*="footer"] #submit:hover{
-  color: white;
-  background-color: rgba(255, 223, 0, 1); /* Jaune soleil */
-  transform-origin: 6s ease;
-}
-.formfoot{
-  width: 80%;
-  margin:  5px auto;
-  padding: 0 ;
-}
-.folgen div:first-of-type,.contact div:first-of-type,.formfoot div:first-of-type{
-  font-size: 1.5rem;
-  padding-bottom:1.5rem ;
 }
 /*Logo*/
 .folgen .contact{
@@ -351,14 +295,14 @@ div.d-flex{
 }
 .folgen a, .contact a{
   color: white;
-      font-size: 30px;
+      font-size: 1rem;
       padding-left: 1rem;
       padding-top: 5px;
       transition: 0.3s ease;
       text-decoration: none;
   }
 .contact span{
-  font-size: 15px;
+  font-size: 0.8rem;
   margin-right: 5px;
 }
 .folgen a:hover, .contact a:hover{
@@ -373,13 +317,13 @@ div.d-flex{
 .naturwissenschaft_container {
   display: grid;
     grid-template-areas:
-        "naturwissenschaft_header"
-        "naturwissenschaft_beschreibung"
+        "header"
+        "beschreibung"
         "experiment"
         "mint"
         "quiz"
         "fun_fact"
-        "naturwissenschaft_footer";
+        "footer";
         background-color: rgb(245, 245, 245);
         background-color: white;
         width: 100%;
@@ -388,14 +332,10 @@ div.d-flex{
 
 .naturwissenschaft_header{
     background-image: url('../images/scientist1.jpg');
-  grid-area: naturwissenschaft_header;
 
 }
-.naturwissenschaft_footer{
-  grid-area: naturwissenschaft_footer;
-}
+
   .naturwissenschaft_beschreibung {
-    grid-area: naturwissenschaft_beschreibung;
     padding: 1rem;
     margin: 2rem auto;
     text-align: center;
@@ -813,12 +753,12 @@ p.intro-text {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas:
-      "informatik_header"
-      "informatik_beschreibung"
+      "header"
+      "beschreibung"
       "Inhalt"
       "Lern-check"
       "Quiz"
-      "informatik_footer"
+      "footer"
     ;
     background-color: rgb(166, 183, 210);
     gap: 1rem;
@@ -843,11 +783,8 @@ p.intro-text {
     grid-area: item2;
   }
   
-  .informatik_footer{
-    grid-area: informatik_footer;
-  }
+  
   .informatik_header {
-    grid-area: informatik_header;
     background-image: url('../images/background_informatik.webp');
     width: 100%;
     height: 10em;
@@ -855,7 +792,6 @@ p.intro-text {
   }
   
   .informatik_beschreibung {
-    grid-area: informatik_beschreibung;
     position: relative;
     /*background-color:#f5f5f5;
     top: 2em;
@@ -1048,6 +984,61 @@ p.intro-text {
   
 
 /*--------------------------start_mystery_box-----------------------------------------*/
+.formfoot div:first-of-type{
+  font-size: 1.5rem;
+  padding-bottom:1.5rem ;
+}
+#form_mystry-box .block{
+  margin-top: 2.5rem;
+  text-align: start;
+}
+#last{
+  width: 100%;
+  text-align: start;
+}
+.same,#email,#POB,#DOB {
+  width: 100%;
+  height: 35px;
+  background: transparent;
+  border-bottom: 1px solid hsl(27, 90%, 90%);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: orange;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  font-family: sans-serif;
+
+}
+.formfoot textarea{
+  margin-top: 10px;
+  min-height: 5rem;
+  background-color: white;
+  color: #2c2c2c;
+  width: 100%;
+  border-radius: 6px;
+}
+
+#form_mystry-box #submit{
+  background-color: white;
+  color:hsl(240, 65%, 52%);
+  font-weight: bold;
+  padding: 5px;
+  width: 100px;
+  border-radius: 6px;
+}
+#form_mystry-box #submit:hover{
+  color: white;
+  background-color: rgba(255, 223, 0, 1); /* Jaune soleil */
+  transform-origin: 6s ease;
+}
+.formfoot{
+  width: 80%;
+  margin:  5px auto;
+  padding: 0 ;
+}
+
 #form_mystry-box div:first-of-type {
   text-align: center;
   padding: 0;
@@ -1064,10 +1055,10 @@ p.intro-text {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-areas: 
-  "mystry_header"
-  "mystry_Beschreibung"
+  "header"
+  "beschreibung"
   "mystry_Form "
-  "mystry_footer"
+  "footer"
   ;
 
   gap: 1em;
@@ -1075,15 +1066,12 @@ p.intro-text {
 }
 
 .mystery-box_header{
-grid-area: mystry_header;
 background-image: url("../images/mystery.webp");
 height: 18rem;
 }
-
-.mystery-box_beschreibung{
-grid-area: mystry_Beschreibung ;
+.mystery-box_beschreibung .header_title{
+  top:-2rem
 }
-
 #form_mystry-box{
   background: linear-gradient(to top,rgba(0,0,0,0.8)50%,rgba(0,0,0,0.8)50%,url(../images/imagefooter.svg));
  /* background-image: url("../images/mystery.webp");*/
@@ -1094,12 +1082,7 @@ background-position: center;
   justify-self: center;
 }
 
-.mystery-box_footer{
-  grid-area: mystry_footer;
-}
-#form_mystry-box textarea{
-  min-height:250px ;
-}
+
   /*------------------end_mystery-box--------------------------*/
 
 
@@ -1140,8 +1123,15 @@ background-position: center;
   
 .mathe_container{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-columns: auto;
+    grid-template-areas: 
+    "header"
+    "beschreibung"
+    "algebra"
+    "bruchzahl"
+    "geometrie"
+    "u1"
+    "u4"
+    "footer";
     background-color: rgb(255, 255, 255);
     width: 100%;
     gap: 4rem;
@@ -1256,6 +1246,7 @@ background-position: center;
 /*for uniq content element in Math_content*/
 /*part aside */
 #algebra{
+  grid-area: algebra;
   border-radius: 1rem;
 }
 
@@ -1298,6 +1289,18 @@ background-position: center;
   width: 100%;
   padding: 1rem;
   display: none;
+}
+#bruchzahl{
+  grid-area: bruchzahl;
+}
+#geometrie{
+  grid-area: geometrie;
+}
+#Uebung_1{
+grid-area: u1;
+}
+#Uebung_4{
+grid-area: u4;
 }
 
 
@@ -1383,22 +1386,21 @@ background-position: center;
   .index_container{
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: 
-        "index_header index_header"
-        "index_beschreibung index_beschreibung"
+        "header header"
+        "beschreibung beschreibung"
         "mint_1 mint_2"
         "mint_3 mint_4"
         "fun-fact fun-fact"
-        "index_footer index_footer"
+        "footer footer"
     ;
-     
 }
 #mint_1,#mint_3{
-  margin-left: 2rem;
- margin-right: 0;;
+  margin-left: 5rem;
+ margin-right: 0;
 }
 
 #mint_2,#mint_4{
-  margin-right: 2rem;
+  margin-right: 5rem;
   margin-left: 0rem;
 }
 
@@ -1479,18 +1481,14 @@ background-position: center;
 
 /*----------------------start_footer_all----------------------*/
 
-[class*="footer"]{
+#footer{
   grid-template-columns: repeat(2,1fr);
   grid-template-areas: 
-    "footer_form logofoot"
     "contactfoot  folgenfoot"
     "endfoot endfoot"
   ;
   padding: 5rem 1.5rem 0;
   justify-content: center;
-}
-#footer_form{
-  grid-area: footer_form;
 }
 
 /*Logo*/
@@ -1500,10 +1498,8 @@ background-position: center;
 .contact{
   grid-area: contactfoot;
 }
-#logofoot{
-  grid-area: logofoot;
-}
-[class*="footer"] div:last-of-type{
+
+#footer div:last-of-type{
   grid-area: endfoot;
 }
 /*------------------end_foote_all--------------------*/
@@ -1528,6 +1524,15 @@ background-position: center;
     .header_menu a {
       font-size: 20px;
 
+    }
+    #mint_1,#mint_3{
+      margin-left: 10rem;
+     margin-right: 0;
+    }
+    
+    #mint_2,#mint_4{
+      margin-right: 10rem;
+      margin-left: 0rem;
     }
 
   /*-------------------------start_naturwissensschaft--------------------------------*/ 
@@ -1567,14 +1572,14 @@ background-position: center;
  .mathe_container{
   grid-template-columns: 1fr 2fr;
   grid-template-areas:  
-  "mathe_header mathe_header"
-  "mathe_beschreibung mathe_beschreibung"
+  "header header"
+  "beschreibung beschreibung"
   "algebra bruchzahl" 
   "algebra bruchzahl"
   "algebra geometrie" 
   "u1 u1"
   "u4 u4"
-  "mathe_footer mathe_footer";
+  "footer footer";
   column-gap: 1rem;
   row-gap: 5rem;
  }
@@ -1585,31 +1590,10 @@ background-position: center;
   top: 0;
  }
  #algebra{
- grid-area: algebra;
   height: 100%;
   margin-left: 2rem;
  }
-#bruchzahl{
-    grid-area: bruchzahl;
-}
-#geometrie{
-    grid-area: geometrie;
-}
-#Uebung_1{
-  grid-area: u1;
-}
-#Uebung_4{
-  grid-area: u4;
-}
-.mathe_footer{
-  grid-area: mathe_footer;
-}
-.mathe_beschreibung{
-  grid-area: mathe_beschreibung;
-}
-.mathe_header{
-  grid-area: mathe_header;
-}
+
 /*-----------Content_Box------------------*/
 #bruchzahl, #geometrie{
   margin-right: 2rem;
@@ -1636,6 +1620,10 @@ background-position: center;
   margin: 1em 0 0;
 }
 /*-------------------------end_mathe--------------------------------*/ 
+/*------------------------Mystery_box-------------------------------*/
+.mystery-box_beschreibung .header_title{
+  top:-3rem
+}
 }
 
   @media screen and (min-width: 1440px) {
@@ -1644,7 +1632,7 @@ background-position: center;
       padding: 1rem 10rem;
       gap:3rem
   }
-  .naturwissenschaft_container {
+  .naturwissenschaft_container,.container_informatik,.mathe_container,.index_container {
 
       max-width: 1400px;
       margin: 0 auto;
@@ -1682,8 +1670,6 @@ background-position: center;
 
  /*-------------------------end_mathe--------------------------------*/ 
   }
-
-
 
 
 

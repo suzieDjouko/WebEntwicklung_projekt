@@ -1,487 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="💻Lerne Informatik auf MINTopia mit interaktiven Übungen und Programmiertipps für Grundschüler.🚀.">
-    <meta name="keywords" content="Informatik, WebDev, html, Css, JavaScript">
-    <meta name="author" content="Enigma">
-
+    <meta
+      name="description"
+      content="💻Lerne Informatik auf MINTopia mit interaktiven Übungen und Programmiertipps für Grundschüler.🚀."
+    />
+    <meta name="keywords" content="Informatik, WebDev, html, Css, JavaScript" />
+    <meta name="author" content="Enigma" />
     <title>MINTopia - Informatik für Grundschüler</title>
-
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <script type="module" src="styles/main.js"></script>
     <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
-        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body id="informatik_body">
+  <body id="informatik_body">
     <div class="container_informatik">
-        <!--   HEADER   -->
-        <header class="informatik_header">
-            <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
-            <button class="header_hamburger-menu" aria-label="Menu" aria-expanded="false">
-                <span class="fa fa-bars"></span>
-            </button>
-            <nav class="header_menu" aria-hidden="true">
-                <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
-                <a href="mathe.html"><i class="fa fa-calculator"></i> Mathe</a>
-                <a href="Naturwissenschaft.html"><i class="fa fa-flask"></i> Naturwissenschaft</a>
-                <a href="mystery_box.html"><i class="fa fa-gift"></i> Mystery-box</a>
-            </nav>
-        </header>
+      <!--   HEADER   -->
+      <header class="informatik_header">
+        <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
+        <button
+          class="header_hamburger-menu"
+          aria-label="Menu"
+          aria-expanded="false"
+        >
+          <span class="fa fa-bars"></span>
+        </button>
+        <nav class="header_menu" aria-hidden="true">
+          <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
+          <a href="mathe.html"><i class="fa fa-calculator"></i> Mathe</a>
+          <a href="Naturwissenschaft.html"
+            ><i class="fa fa-flask"></i> Naturwissenschaft</a
+          >
+          <a href="mystery_box.html"><i class="fa fa-gift"></i> Mystery-box</a>
+        </nav>
+      </header>
 
+      <section class="informatik_beschreibung">
+        <div class="Einführung">
+          Einführung in HTML, CSS und JavaScript 💻🎨
+        </div>
+        <p>
+          In diesem Kurs wirst du die Grundlagen des Webdesigns und der
+          Webentwicklung kennenlernen. Du beginnst mit HTML, der Sprache, die
+          für die Strukturierung von Webseiten verantwortlich ist. 📑
+          Anschließend tauchst du in CSS ein, um deine Seiten visuell zu
+          gestalten und ihnen ein modernes, ansprechendes Aussehen zu verleihen.
+          🎨 Zum Abschluss wirst du mit JavaScript die Möglichkeit haben,
+          Interaktivität hinzuzufügen und einfache dynamische Funktionen zu
+          programmieren. ⚙️ Für visuelle Lernende stellt die Seite zusätzlich
+          Videos 🎥 zur Verfügung, die die Konzepte und Techniken anschaulich
+          erklären. Diese Videos sind eine wertvolle Unterstützung, um die
+          Themen noch besser zu verstehen. Am Ende jedes Kurses gibt es Quiz 📝,
+          um dein Wissen zu testen und deinen Lernfortschritt zu überprüfen. So
+          kannst du sicherstellen, dass du alle wichtigen Konzepte gut
+          verstanden hast und bereit bist, weiterzugehen. Dieser Kurs ist ideal
+          für alle, die sich für das Erstellen von Webseiten und die
+          Programmierung interessieren und dabei praktische, leicht
+          verständliche Techniken erlernen möchten. 🚀
+        </p>
+      </section>
 
-        <section class="informatik_beschreibung">
-            <div class="Einführung">Einführung in HTML, CSS und JavaScript 💻🎨</div>
+      <section class="Inhalt_Informatik">
+        <article class="html">
+          <div class="Inhalt">💻Einführung in html</div>
+          <details>
+            <summary>Was ist HTML?</summary>
             <p>
-                In diesem Kurs wirst du die Grundlagen des Webdesigns und der Webentwicklung kennenlernen. Du beginnst
-                mit HTML, der Sprache, die für die Strukturierung von Webseiten verantwortlich ist. 📑 Anschließend
-                tauchst du in CSS ein, um deine Seiten visuell zu gestalten und ihnen ein modernes, ansprechendes
-                Aussehen zu verleihen. 🎨 Zum Abschluss wirst du mit JavaScript die Möglichkeit haben, Interaktivität
-                hinzuzufügen und einfache dynamische Funktionen zu programmieren. ⚙️
-                Für visuelle Lernende stellt die Seite zusätzlich Videos 🎥 zur Verfügung, die die Konzepte und
-                Techniken anschaulich erklären. Diese Videos sind eine wertvolle Unterstützung, um die Themen noch
-                besser zu verstehen.
-                Am Ende jedes Kurses gibt es Quiz 📝, um dein Wissen zu testen und deinen Lernfortschritt zu überprüfen.
-                So kannst du sicherstellen, dass du alle wichtigen Konzepte gut verstanden hast und bereit bist,
-                weiterzugehen.
-                Dieser Kurs ist ideal für alle, die sich für das Erstellen von Webseiten und die Programmierung
-                interessieren und dabei praktische, leicht verständliche Techniken erlernen möchten. 🚀
+              HTML (HyperText Markup Language) ist die Grundlage jeder Webseite.
+              Es definiert die Struktur einer Seite, wie Überschriften, Absätze
+              und Bilder.
             </p>
-        </section>
+          </details>
 
-        <section class="Inhalt_Informatik">
-            <article class="html">
-                <div class="Inhalt">💻Einführung in html</div>
-                <details>
-                    <summary>Was ist HTML?</summary>
-                    <p>HTML (HyperText Markup Language) ist die Grundlage jeder Webseite. Es definiert die Struktur
-                        einer
-                        Seite, wie Überschriften, Absätze und Bilder.</p>
-
-                </details>
-
-                <section class="videos">
-                    <article class="item1">
-                        <figure>
-                            <figcaption>Basic Html Structure</figcaption>
-                            <img src="images/HTML_struktur.png" alt="Basic Html Structure" />
-                        </figure>
-                    </article>
-                    <article class="item2">
-                        <figure>
-                            <figcaption>HTML Grundlagen</figcaption>
-                            <iframe src="https://www.youtube.com/embed/ZWCZ2q18D64?si=WO1eEOcUxRn8FTpH"
-                                alt="HTML Grundlagen"></iframe>
-                        </figure>
-                    </article>
-                </section>
-
-                <details>
-                    <summary>HTML-Tags und Struktur</summary>
-                    <p>Lerne, wie HTML-Tags verwendet werden, um Inhalte wie Überschriften, Listen und Links zu
-                        organisieren.</p>
-
-                </details>
-
-                <section class="videos">
-                    <article class="item1">
-                        <figure>
-                            <figcaption>HTML Page Structure</figcaption>
-                            <img src="images/HT.png" alt="HTML Page Structure" />
-                        </figure>
-                    </article>
-                    <article class="item2">
-                        <figure>
-                            <figcaption>Html-Tags</figcaption>
-                            <iframe src="https://www.youtube.com/embed/eca4P3v0Jf8?si=C_rXscmPTxOF4ETa"
-                                alt="Html-Tags"></iframe>
-                        </figure>
-                    </article>
-                </section>
+          <section class="videos">
+            <article class="item1">
+              <figure>
+                <figcaption>Basic Html Structure</figcaption>
+                <img
+                  src="images/HTML_struktur.png"
+                  alt="Basic Html Structure"
+                />
+              </figure>
             </article>
-
-            <article class="CSS">
-                <div class="Inhalt">💻CSS Grundlagen</div>
-                <details>
-                    <summary>Was ist CSS?</summary>
-                    <p>CSS (Cascading Style Sheets) macht Webseiten schön. Es gibt Stilregeln vor, wie Farbe, Schriftart
-                        und
-                        Layout.</p>
-
-                </details>
-
-                <section class="videos">
-                    <article class="item1">
-                        <figure>
-                            <figcaption>CSS Grundlagen</figcaption>
-                            <img src="images/CSS-Struktur.jpeg" alt="CSS Grundlagen" />
-                        </figure>
-                    </article>
-                    <article class="item2">
-                        <figure>
-                            <figcaption>CSS Fully Responsive</figcaption>
-                            <iframe src="https://www.youtube.com/embed/wodWDIdV9BY?si=T2WpiKFsDM83CLbK"
-                                alt="CSS Fully Responsive"></iframe>
-                        </figure>
-                    </article>
-                </section>
-
-                <details>
-                    <summary>Styling von Text und Layout</summary>
-                    <p>Erfahre, wie du Texte stilisierst und Layouts gestaltest, die auf allen Geräten gut aussehen.</p>
-
-                </details>
-
-                <section class="videos">
-                    <article class="item1">
-                        <figure>
-                            <figcaption>Selektoren</figcaption>
-                            <img src="images/CSS.jpg" alt="CSS Selektoren" />
-                        </figure>
-                    </article>
-                    <article class="item2">
-                        <figure>
-                            <figcaption>How to make a website light/dark toggle with CSS</figcaption>
-                            <iframe src="https://www.youtube.com/embed/oeOQQT7Xn7w?si=RCdIfInWFBVIbgwr"
-                                alt="How to make a website light/dark toggle with CSS"></iframe>
-                        </figure>
-                    </article>
-                </section>
-
+            <article class="item2">
+              <figure>
+                <figcaption>HTML Grundlagen</figcaption>
+                <iframe
+                  src="https://www.youtube.com/embed/ZWCZ2q18D64?si=WO1eEOcUxRn8FTpH"
+                  alt="HTML Grundlagen"
+                ></iframe>
+              </figure>
             </article>
+          </section>
 
-            <article class="JavaScript">
-                <div class="Inhalt">💻JavaScript Grundlagen</div>
-                <details>
-                    <summary>Was ist JavaScript?</summary>
-                    <p>JavaScript bringt Dynamik in Webseiten. Es steuert Klick-Events, Animationen und vieles mehr.</p>
-
-
-                </details>
-                <section class="videos">
-                    <article class="item1">
-                        <figure>
-                            <figcaption>JavaScript Structure</figcaption>
-                            <img src="images/JavaScript-Structure.jpg" alt="JavaScript Structure" />
-                        </figure>
-                    </article>
-                    <article class="item2">
-                        <figure>
-                            <figcaption>Was ist JavaScript</figcaption>
-                            <iframe src="https://www.youtube.com/embed/eI5KmO83HuY?si=XkvE6kUjz0Rht_A_"
-                                alt="was ist JavaScript"></iframe>
-                        </figure>
-                    </article>
-                </section>
-
-                <details>
-                    <summary>Variablen und einfache Funktionen</summary>
-                    <p>Begib dich auf die Reise in die Programmierung mit Variablen und Funktionen, die Webseiten
-                        interaktiv
-                        machen.</p>
-                </details>
-
-                <section class="videos">
-
-                    <article class="item1">
-                        <figure>
-                            <figcaption>JavaScript Funktionen</figcaption>
-                            <img src="images/javascript-code-structure.png" alt="JavaScript Funktionen" />
-                        </figure>
-                    </article>
-                    <article class="item2">
-                        <figure>
-                            <figcaption>JavaScript Functions are easy</figcaption>
-                            <iframe src="https://www.youtube.com/embed/HFaxylC7bUc?si=UXQ5_E0arEuN8t9k"
-                                alt="JavaScript Funktioneneinfach erklärt"></iframe>
-                        </figure>
-                    </article>
-                </section>
-            </article>
-        </section>
-
-        <section class="Lern-Check">
-            <div class="Inhalt">🎓Lern-Check: Beweise dein Können! </div>
-            <p>Erstelle eine kleine Webseite, die Folgendes beinhaltet:</p>
-            <ul>
-                <li>Eine Überschrift: „Teste deine Fähigkeiten!</li>
-                <li>Ein Button mit der Aufschrift „Klicke mich!</li>
-                <li>Der Button soll eine Hintergrundfarbe deiner Wahl haben und sich ändern, wenn man mit der Maus
-                    darüber fährt.</li>
-                <li>Beim Klicken auf den Button soll ein Text erscheinen, z.B. „Gut gemacht! Du hast den Button
-                    geklickt!“</li>
-            </ul>
-
-            <div class="editor-container">
-                <div class="editors">
-                    <div>
-                        <p>HTML</p>
-                        <textarea id="html-code" placeholder="HTML Code..."></textarea>
-                    </div>
-                    <div>
-                        <p>CSS</p>
-                        <textarea id="css-code" placeholder="CSS Code..."></textarea>
-                    </div>
-                    <div>
-                        <p>JavaScript</p>
-                        <textarea id="js-code" placeholder="JavaScript Code..."></textarea>
-                    </div>
-                </div>
-
-                <button onclick="runCode()">Run</button>
-
-                <iframe id="output"></iframe>
-            </div>
-        </section>
-
-
-        <section class="Quiz">
-            <div class="Inhalt">🎓Quiz zur Überprüfung des Wissens💻</div>
-            <p>1. Was ist die Funktion von HTML?</p>
-            <div>
-                <input type="radio" id="q1a" name="q1" value="incorrect">
-                <label for="q1a">Es sorgt dafür, dass Webseiten schnell geladen werden</label><br>
-                <input type="radio" id="q1b" name="q1" value="incorrect">
-                <label for="q1b">Es wird verwendet, um das Layout einer Webseite zu gestalten</label><br>
-                <input type="radio" id="q1c" name="q1" value="correct">
-                <label for="q1c">Es strukturiert den Inhalt einer Webseite.</label><br>
-            </div>
-
-            <p>2. Was macht CSS in der Webentwicklung?</p>
-            <div>
-                <input type="radio" id="q2a" name="q2" value="incorrect">
-                <label for="q2a">Es fügt interaktive Funktionen zur Webseite hinzu.</label><br>
-                <input type="radio" id="q2b" name="q2" value="correct">
-                <label for="q2b">Es definiert das Layout und das Aussehen von Webseiten.</label><br>
-                <input type="radio" id="q2c" name="q2" value="incorrect">
-                <label for="q2c">Es wird verwendet, um den Code einer Webseite zu überprüfen.</label><br>
-            </div>
-
-            <p>3. Wie fügt man ein Bild in HTML ein?</p>
-            <div>
-                <input type="radio" id="q3a" name="q3" value="incorrect">
-                <label for="q3a">&lt;image src="bild.jpg"&gt;</label><br>
-                <input type="radio" id="q3b" name="q3" value="correct">
-                <label for="q3b">&lt;img src="bild.jpg"&gt;</label><br>
-                <input type="radio" id="q3c" name="q3" value="incorrect">
-                <label for="q3c">&lt;picture src="bild.jpg"&gt;</label><br>
-            </div>
-
-            <p>4. Wie ändert man die Hintergrundfarbe einer Webseite?</p>
-            <div>
-                <input type="radio" id="q4a" name="q4" value="correct">
-                <label for="q4a">background: red;</label><br>
-                <input type="radio" id="q4b" name="q4" value="incorrect">
-                <label for="q4b">color: red;</label><br>
-                <input type="radio" id="q4c" name="q4" value="incorrect">
-                <label for="q4c">font-color: red;</label><br>
-            </div>
-
-            <p>5. JavaScript: Wie zeigt man eine Nachricht in der Konsole an?</p>
-            <div>
-                <input type="radio" id="q5a" name="q5" value="correct">
-                <label for="q5a">console.log("Hallo Welt");</label><br>
-                <input type="radio" id="q5b" name="q5" value="incorrect">
-                <label for="q5b">printf "Hallo Welt";</label><br>
-                <input type="radio" id="q5c" name="q5" value="incorrect">
-                <label for="q5c">echo "Hallo Welt";</label><br>
-            </div>
-
-            <p>6. Was ist der Unterschied zwischen "block" und "inline" in CSS?</p>
-            <div>
-                <input type="radio" id="q6a" name="q6" value="incorrect">
-                <label for="q6a">"block" nimmt nur so viel Platz wie nötig ein, während "inline" das Layout
-                    verändert.</label><br>
-                <input type="radio" id="q6b" name="q6" value="incorrect">
-                <label for="q6b">"block" Elemente gehen immer in eine neue Zeile, während "inline" Elemente im gleichen
-                    Fluss bleiben.</label><br>
-                <input type="radio" id="q6c" name="q6" value="correct">
-                <label for="q6c">"block"-Elemente beginnen auf einer neuen Zeile und nehmen die volle Breite des
-                    Containers ein, während "inline" Elemente nur so viel Platz wie nötig einnehmen.</label><br>
-            </div>
-
-            <p>7. Welches Attribut in HTML ist entscheidend, um ein Formular zu senden?</p>
-            <div>
-                <input type="radio" id="q7a" name="q7" value="incorrect">
-                <label for="q7a">Das "type" Attribut von .. definiert die Art des Formulars.</label><br>
-                <input type="radio" id="q7b" name="q7" value="correct">
-                <label for="q7b">Das "submit" Attribut im .. Tag löst das Absenden des Formulars aus.</label><br>
-                <input type="radio" id="q7c" name="q7" value="incorrect">
-                <label for="q7c">Das "action" Attribut im ..Tag gibt an, wohin die Daten gesendet werden.</label><br>
-            </div>
-
-            <p>8. Was passiert, wenn man den Code `let x = 10; x = "Hallo";` ausführt?</p>
-            <div>
-                <input type="radio" id="q8a" name="q8" value="incorrect">
-                <label for="q8a">Es führt zu einem Fehler, weil der Datentyp von `x` nicht geändert werden
-                    kann.</label><br>
-                <input type="radio" id="q8b" name="q8" value="incorrect">
-                <label for="q8b">Es wird automatisch ein neues Element mit dem Namen `x` erstellt.</label><br>
-                <input type="radio" id="q8c" name="q8" value="correct">
-                <label for="q8c">Es wird `x` von einem numerischen Wert zu einem String geändert, da `let` keine
-                    Einschränkungen für den Datentyp hat.</label><br>
-            </div>
-
-            <p>9. Wie fügt man in JavaScript einen Event-Listener hinzu, der auf einen Klick auf ein Element reagiert?
+          <details>
+            <summary>HTML-Tags und Struktur</summary>
+            <p>
+              Lerne, wie HTML-Tags verwendet werden, um Inhalte wie
+              Überschriften, Listen und Links zu organisieren.
             </p>
+          </details>
+
+          <section class="videos">
+            <article class="item1">
+              <figure>
+                <figcaption>HTML Page Structure</figcaption>
+                <img src="images/HT.png" alt="HTML Page Structure" />
+              </figure>
+            </article>
+            <article class="item2">
+              <figure>
+                <figcaption>Html-Tags</figcaption>
+                <iframe
+                  src="https://www.youtube.com/embed/eca4P3v0Jf8?si=C_rXscmPTxOF4ETa"
+                  alt="Html-Tags"
+                ></iframe>
+              </figure>
+            </article>
+          </section>
+        </article>
+
+        <article class="CSS">
+          <div class="Inhalt">💻CSS Grundlagen</div>
+          <details>
+            <summary>Was ist CSS?</summary>
+            <p>
+              CSS (Cascading Style Sheets) macht Webseiten schön. Es gibt
+              Stilregeln vor, wie Farbe, Schriftart und Layout.
+            </p>
+          </details>
+
+          <section class="videos">
+            <article class="item1">
+              <figure>
+                <figcaption>CSS Grundlagen</figcaption>
+                <img src="images/CSS-Struktur.jpeg" alt="CSS Grundlagen" />
+              </figure>
+            </article>
+            <article class="item2">
+              <figure>
+                <figcaption>CSS Fully Responsive</figcaption>
+                <iframe
+                  src="https://www.youtube.com/embed/wodWDIdV9BY?si=T2WpiKFsDM83CLbK"
+                  alt="CSS Fully Responsive"
+                ></iframe>
+              </figure>
+            </article>
+          </section>
+
+          <details>
+            <summary>Styling von Text und Layout</summary>
+            <p>
+              Erfahre, wie du Texte stilisierst und Layouts gestaltest, die auf
+              allen Geräten gut aussehen.
+            </p>
+          </details>
+
+          <section class="videos">
+            <article class="item1">
+              <figure>
+                <figcaption>Selektoren</figcaption>
+                <img src="images/CSS.jpg" alt="CSS Selektoren" />
+              </figure>
+            </article>
+            <article class="item2">
+              <figure>
+                <figcaption>
+                  How to make a website light/dark toggle with CSS
+                </figcaption>
+                <iframe
+                  src="https://www.youtube.com/embed/oeOQQT7Xn7w?si=RCdIfInWFBVIbgwr"
+                  alt="How to make a website light/dark toggle with CSS"
+                ></iframe>
+              </figure>
+            </article>
+          </section>
+        </article>
+
+        <article class="JavaScript">
+          <div class="Inhalt">💻JavaScript Grundlagen</div>
+          <details>
+            <summary>Was ist JavaScript?</summary>
+            <p>
+              JavaScript bringt Dynamik in Webseiten. Es steuert Klick-Events,
+              Animationen und vieles mehr.
+            </p>
+          </details>
+          <section class="videos">
+            <article class="item1">
+              <figure>
+                <figcaption>JavaScript Structure</figcaption>
+                <img
+                  src="images/JavaScript-Structure.jpg"
+                  alt="JavaScript Structure"
+                />
+              </figure>
+            </article>
+            <article class="item2">
+              <figure>
+                <figcaption>Was ist JavaScript</figcaption>
+                <iframe
+                  src="https://www.youtube.com/embed/eI5KmO83HuY?si=XkvE6kUjz0Rht_A_"
+                  alt="was ist JavaScript"
+                ></iframe>
+              </figure>
+            </article>
+          </section>
+
+          <details>
+            <summary>Variablen und einfache Funktionen</summary>
+            <p>
+              Begib dich auf die Reise in die Programmierung mit Variablen und
+              Funktionen, die Webseiten interaktiv machen.
+            </p>
+          </details>
+
+          <section class="videos">
+            <article class="item1">
+              <figure>
+                <figcaption>JavaScript Funktionen</figcaption>
+                <img
+                  src="images/javascript-code-structure.png"
+                  alt="JavaScript Funktionen"
+                />
+              </figure>
+            </article>
+            <article class="item2">
+              <figure>
+                <figcaption>JavaScript Functions are easy</figcaption>
+                <iframe
+                  src="https://www.youtube.com/embed/HFaxylC7bUc?si=UXQ5_E0arEuN8t9k"
+                  alt="JavaScript Funktioneneinfach erklärt"
+                ></iframe>
+              </figure>
+            </article>
+          </section>
+        </article>
+      </section>
+
+      <section class="Lern-Check">
+        <div class="Inhalt">🎓Lern-Check: Beweise dein Können!</div>
+        <p>Erstelle eine kleine Webseite, die Folgendes beinhaltet:</p>
+        <ul>
+          <li>Eine Überschrift: „Teste deine Fähigkeiten!</li>
+          <li>Ein Button mit der Aufschrift „Klicke mich!</li>
+          <li>
+            Der Button soll eine Hintergrundfarbe deiner Wahl haben und sich
+            ändern, wenn man mit der Maus darüber fährt.
+          </li>
+          <li>
+            Beim Klicken auf den Button soll ein Text erscheinen, z.B. „Gut
+            gemacht! Du hast den Button geklickt!“
+          </li>
+        </ul>
+
+        <div class="editor-container">
+          <div class="editors">
             <div>
-                <input type="radio" id="q9a" name="q9" value="incorrect">
-                <label for="q9a">`document.addEventListener("click", myFunction);`</label><br>
-                <input type="radio" id="q9b" name="q9" value="correct">
-                <label for="q9b">`button.addEventListener("click", function);`</label><br>
-                <input type="radio" id="q9c" name="q9" value="incorrect">
-                <label for="q9c">`element.addEventListener("click", clickHandler);`</label><br>
+              <p>HTML</p>
+              <textarea id="html-code" placeholder="HTML Code..."></textarea>
             </div>
-
-            <p>10. Was ist der Unterschied zwischen 'let', 'const' und 'var' in JavaScript?</p>
             <div>
-                <input type="radio" id="q10a" name="q10" value="incorrect">
-                <label for="q10a">'var' hat Block-Scope, während 'let' und 'const' nur Funktion-Scope haben.</label><br>
-                <input type="radio" id="q10b" name="q10" value="incorrect">
-                <label for="q10b">'const' ist variabel, aber 'let' und 'var' sind konstant.</label><br>
-                <input type="radio" id="q10c" name="q10" value="correct">
-                <label for="q10c">'let' und 'const' haben Block-Scope, während 'var' Funktion-Scope hat.</label><br>
+              <p>CSS</p>
+              <textarea id="css-code" placeholder="CSS Code..."></textarea>
             </div>
+            <div>
+              <p>JavaScript</p>
+              <textarea
+                id="js-code"
+                placeholder="JavaScript Code..."
+              ></textarea>
+            </div>
+          </div>
 
-            <button id="submit">Senden</button>
-            <p id="feedback" class="hidden"></p>
+          <button onclick="runCode()">Run</button>
 
-            <audio id="successSound" src=" Audio/success.mp3"></audio>
-            <audio id="failureSound" src="Audio/failure.mp3"></audio>
-        </section>
-    <!---------------------------   FOOTER   ---------------------------------->
-    <footer class="informatik_footer">
+          <iframe id="output"></iframe>
+        </div>
+      </section>
 
-        <form class="formfoot" id="footer_form">
-              <div>CONTACT FORMULAR</div>
-              <div class="block">
-                  <label for="name" class="">Name:</label>
-                  <input type="text" class="same" id="name" required="required"  placeholder="enter your name" name="name" />
-              </div>
-              <div class="block">
-                  <label for="email" class="">Email:</label>
-                  <input type="email" class="same" id="email" required="required"  placeholder="enter your Email" name="email" />
-              </div>
-              
-              <div class="block">
-                  <span class="">Gender:</span>
-                  <input type="radio" required name="gender" id="male" 
-                  value="M" />
-                  <label for="male">Male</label>
-                  <input type="radio" name="gender" id="female" 
-                  value="F" />
-                  <label for="female">Female</label><br />
-              </div>
-              <div class="block">
-                <label> What can you say about your experience on our <em>Webpage</em> <br />
-                  <textarea required="required" name="comment" cols="25" rows="8">Comment here!</textarea></label>
-              </div>
-              <div id="last" >   
-                <label for="submit">Click here to send your information</label>
-                <input type="submit" value="SEND" id="submit" />
-              </div>
-</form>
-<div id="logofoot">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="auto" height="400">
-    <!-- Background with Stars and Space Theme -->
-    <defs>
-      <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
-        <stop offset="0%" stop-color="#1a237e"/>
-        <stop offset="100%" stop-color="#0d47a1"/>
-      </radialGradient>
-    </defs>
-    <circle cx="300" cy="300" r="300" fill="url(#bgGradient)"/>
-  
-    <!-- Stars -->
-    <g>
-      <circle cx="80" cy="100" r="4" fill="#ffffff" opacity="0.9"/>
-      <circle cx="500" cy="150" r="5" fill="#ffffff" opacity="0.8"/>
-      <circle cx="250" cy="500" r="6" fill="#ffffff" opacity="0.8"/>
-      <circle cx="50" cy="300" r="3" fill="#ffffff" opacity="0.7"/>
-      <circle cx="550" cy="400" r="4" fill="#ffffff" opacity="0.9"/>
-      <circle cx="400" cy="100" r="5" fill="#ffffff" opacity="0.8"/>
-      <circle cx="200" cy="200" r="3" fill="#ffffff" opacity="0.8"/>
-    </g>
-  
-    <!-- Central Orbital Design with Atom -->
-    <circle cx="300" cy="300" r="100" fill="#ffffff"/>
-    <circle cx="300" cy="300" r="80" fill="#ffca28"/>
-    <circle cx="220" cy="300" r="20" fill="#4db6ac"/>
-    <circle cx="380" cy="300" r="20" fill="#4db6ac"/>
-    <circle cx="300" cy="220" r="20" fill="#4db6ac"/>
-    <circle cx="300" cy="380" r="20" fill="#4db6ac"/>
-    <path d="M220 300 A80 80 0 0 1 300 380" fill="none" stroke="#ff5252" stroke-width="5"/>
-    <path d="M300 220 A80 80 0 0 1 380 300" fill="none" stroke="#ff5252" stroke-width="5"/>
-  
-    <!-- Subject Labels Aligned Horizontally with Proper Spacing -->
-    <text x="50" y="300" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
-      Mathematik.
-    </text>
-    <text x="100" y="400" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
-      Informatik.
-    </text>
-    <text x="400" y="250" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
-      Chemie.
-    </text>
-    <text x="300" y="450" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
-      Naturwissenschaft.
-    </text>
-  
-    <!-- Science Formulas Reorganized -->
-    <text x="150" y="100" font-family="Courier New, monospace" font-size="24" fill="#ffffff">E=mc²</text>
-    <text x="400" y="100" font-family="Courier New, monospace" font-size="20" fill="#ffffff">H₂O</text>
-    <text x="100" y="200" font-family="Courier New, monospace" font-size="20" fill="#ffffff">a² + b² = c²</text>
-    <text x="500" y="300" font-family="Courier New, monospace" font-size="20" fill="#ffffff">F=ma</text>
-    <text x="100" y="500" font-family="Courier New, monospace" font-size="20" fill="#ffffff">PV=nRT</text>
-    <text x="300" y="150" font-family="Courier New, monospace" font-size="20" fill="#ffffff">ΔE=hν</text>
-  
-    <!-- Title -->
-    <text x="300" y="550" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="48" fill="#ffca28" stroke="#0288d1" stroke-width="2">
-      MINTopia
-    </text>
-  </svg>
-</div>
+      <section class="Quiz">
+        <div class="Inhalt">🎓Quiz zur Überprüfung des Wissens💻</div>
+        <p>1. Was ist die Funktion von HTML?</p>
+        <div>
+          <input type="radio" id="q1a" name="q1" value="incorrect" />
+          <label for="q1a"
+            >Es sorgt dafür, dass Webseiten schnell geladen werden</label
+          ><br />
+          <input type="radio" id="q1b" name="q1" value="incorrect" />
+          <label for="q1b"
+            >Es wird verwendet, um das Layout einer Webseite zu gestalten</label
+          ><br />
+          <input type="radio" id="q1c" name="q1" value="correct" />
+          <label for="q1c">Es strukturiert den Inhalt einer Webseite.</label
+          ><br />
+        </div>
 
-    <div class="contact">
-      <div>CONTACT US</div>
-      <div>
-        <a href=""><span>WhatsApp</span><i class="fa-brands fa-whatsapp"></i></a>
-        <a href=""><span>Email</span><i class="fa-regular fa-envelope"></i></a>
-        <a href=""><span>Phone</span><i class="fa-solid fa-phone"></i></a>
-      </div>
-      
-    </div>
-    
-    <div class="folgen">
-      <div>FOLGE UNS</div>
-      <div>
-        <a href="#">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-google"></i>
-        </a>
-        <a href="#">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </div>
-    </div>
-    <div>&copy; 2024 MINTopia. Alle Rechte vorbehalten.</div>
-  </footer>
+        <p>2. Was macht CSS in der Webentwicklung?</p>
+        <div>
+          <input type="radio" id="q2a" name="q2" value="incorrect" />
+          <label for="q2a"
+            >Es fügt interaktive Funktionen zur Webseite hinzu.</label
+          ><br />
+          <input type="radio" id="q2b" name="q2" value="correct" />
+          <label for="q2b"
+            >Es definiert das Layout und das Aussehen von Webseiten.</label
+          ><br />
+          <input type="radio" id="q2c" name="q2" value="incorrect" />
+          <label for="q2c"
+            >Es wird verwendet, um den Code einer Webseite zu überprüfen.</label
+          ><br />
+        </div>
+
+        <p>3. Wie fügt man ein Bild in HTML ein?</p>
+        <div>
+          <input type="radio" id="q3a" name="q3" value="incorrect" />
+          <label for="q3a">&lt;image src="bild.jpg"&gt;</label><br />
+          <input type="radio" id="q3b" name="q3" value="correct" />
+          <label for="q3b">&lt;img src="bild.jpg"&gt;</label><br />
+          <input type="radio" id="q3c" name="q3" value="incorrect" />
+          <label for="q3c">&lt;picture src="bild.jpg"&gt;</label><br />
+        </div>
+
+        <p>4. Wie ändert man die Hintergrundfarbe einer Webseite?</p>
+        <div>
+          <input type="radio" id="q4a" name="q4" value="correct" />
+          <label for="q4a">background: red;</label><br />
+          <input type="radio" id="q4b" name="q4" value="incorrect" />
+          <label for="q4b">color: red;</label><br />
+          <input type="radio" id="q4c" name="q4" value="incorrect" />
+          <label for="q4c">font-color: red;</label><br />
+        </div>
+
+        <p>5. JavaScript: Wie zeigt man eine Nachricht in der Konsole an?</p>
+        <div>
+          <input type="radio" id="q5a" name="q5" value="correct" />
+          <label for="q5a">console.log("Hallo Welt");</label><br />
+          <input type="radio" id="q5b" name="q5" value="incorrect" />
+          <label for="q5b">printf "Hallo Welt";</label><br />
+          <input type="radio" id="q5c" name="q5" value="incorrect" />
+          <label for="q5c">echo "Hallo Welt";</label><br />
+        </div>
+
+        <p>6. Was ist der Unterschied zwischen "block" und "inline" in CSS?</p>
+        <div>
+          <input type="radio" id="q6a" name="q6" value="incorrect" />
+          <label for="q6a"
+            >"block" nimmt nur so viel Platz wie nötig ein, während "inline" das
+            Layout verändert.</label
+          ><br />
+          <input type="radio" id="q6b" name="q6" value="incorrect" />
+          <label for="q6b"
+            >"block" Elemente gehen immer in eine neue Zeile, während "inline"
+            Elemente im gleichen Fluss bleiben.</label
+          ><br />
+          <input type="radio" id="q6c" name="q6" value="correct" />
+          <label for="q6c"
+            >"block"-Elemente beginnen auf einer neuen Zeile und nehmen die
+            volle Breite des Containers ein, während "inline" Elemente nur so
+            viel Platz wie nötig einnehmen.</label
+          ><br />
+        </div>
+
+        <p>
+          7. Welches Attribut in HTML ist entscheidend, um ein Formular zu
+          senden?
+        </p>
+        <div>
+          <input type="radio" id="q7a" name="q7" value="incorrect" />
+          <label for="q7a"
+            >Das "type" Attribut von .. definiert die Art des Formulars.</label
+          ><br />
+          <input type="radio" id="q7b" name="q7" value="correct" />
+          <label for="q7b"
+            >Das "submit" Attribut im .. Tag löst das Absenden des Formulars
+            aus.</label
+          ><br />
+          <input type="radio" id="q7c" name="q7" value="incorrect" />
+          <label for="q7c"
+            >Das "action" Attribut im ..Tag gibt an, wohin die Daten gesendet
+            werden.</label
+          ><br />
+        </div>
+
+        <p>
+          8. Was passiert, wenn man den Code `let x = 10; x = "Hallo";`
+          ausführt?
+        </p>
+        <div>
+          <input type="radio" id="q8a" name="q8" value="incorrect" />
+          <label for="q8a"
+            >Es führt zu einem Fehler, weil der Datentyp von `x` nicht geändert
+            werden kann.</label
+          ><br />
+          <input type="radio" id="q8b" name="q8" value="incorrect" />
+          <label for="q8b"
+            >Es wird automatisch ein neues Element mit dem Namen `x`
+            erstellt.</label
+          ><br />
+          <input type="radio" id="q8c" name="q8" value="correct" />
+          <label for="q8c"
+            >Es wird `x` von einem numerischen Wert zu einem String geändert, da
+            `let` keine Einschränkungen für den Datentyp hat.</label
+          ><br />
+        </div>
+
+        <p>
+          9. Wie fügt man in JavaScript einen Event-Listener hinzu, der auf
+          einen Klick auf ein Element reagiert?
+        </p>
+        <div>
+          <input type="radio" id="q9a" name="q9" value="incorrect" />
+          <label for="q9a"
+            >`document.addEventListener("click", myFunction);`</label
+          ><br />
+          <input type="radio" id="q9b" name="q9" value="correct" />
+          <label for="q9b">`button.addEventListener("click", function);`</label
+          ><br />
+          <input type="radio" id="q9c" name="q9" value="incorrect" />
+          <label for="q9c"
+            >`element.addEventListener("click", clickHandler);`</label
+          ><br />
+        </div>
+
+        <p>
+          10. Was ist der Unterschied zwischen 'let', 'const' und 'var' in
+          JavaScript?
+        </p>
+        <div>
+          <input type="radio" id="q10a" name="q10" value="incorrect" />
+          <label for="q10a"
+            >'var' hat Block-Scope, während 'let' und 'const' nur Funktion-Scope
+            haben.</label
+          ><br />
+          <input type="radio" id="q10b" name="q10" value="incorrect" />
+          <label for="q10b"
+            >'const' ist variabel, aber 'let' und 'var' sind konstant.</label
+          ><br />
+          <input type="radio" id="q10c" name="q10" value="correct" />
+          <label for="q10c"
+            >'let' und 'const' haben Block-Scope, während 'var' Funktion-Scope
+            hat.</label
+          ><br />
+        </div>
+
+        <button id="submit">Senden</button>
+        <p id="feedback" class="hidden"></p>
+
+        <audio id="successSound" src=" Audio/success.mp3"></audio>
+        <audio id="failureSound" src="Audio/failure.mp3"></audio>
+      </section>
+      <!---------------------------   FOOTER   ---------------------------------->
+      <footer id="footer"></footer>
     </div>
     <script src="styles/skript.js"></script>
-</body>
-
+  </body>
 </html>

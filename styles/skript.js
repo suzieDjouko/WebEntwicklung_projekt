@@ -1,19 +1,8 @@
- /*----------------------------------------start_naturwissenschaft--------------------------------------------*/
- if(document.body.id === 'naturwissenschaft_page' ){
-    let hamburgerMenu = document.querySelector(".fa-bars");
-let headerMenu = document.querySelector(".header_menu");
-let lightCandleButton = document.getElementById('lightCandle');
-let resetButton = document.getElementById('resetExperiment');
-let flame = document.getElementById('flame');
-let glass = document.getElementById('glass');
-let resultText = document.getElementById('result_text');
-let water = document.querySelector('.water'); 
-let isCandleLight = false;
-let goupbtn = document.querySelector('#go_up_button')
-let form_natur = document.querySelector('#form_natur_quiz')
+ 
+ let hamburgerMenu = document.querySelector(".fa-bars");
+ let headerMenu = document.querySelector(".header_menu");
 
-
-hamburgerMenu.addEventListener("click", function () {
+ hamburgerMenu.addEventListener("click", function () {
     let isMenuActive = headerMenu.classList.toggle("active");
     /*Ajoute la classe active  si elle n'est pas definie et la supprine si elle l'est */
 
@@ -35,6 +24,20 @@ document.addEventListener("click", function(event){
     console.log(event.target);
 
 });
+
+ /*----------------------------------------start_naturwissenschaft--------------------------------------------*/
+if(document.body.id === 'naturwissenschaft_page' ){
+
+let lightCandleButton = document.getElementById('lightCandle');
+let resetButton = document.getElementById('resetExperiment');
+let flame = document.getElementById('flame');
+let glass = document.getElementById('glass');
+let resultText = document.getElementById('result_text');
+let water = document.querySelector('.water'); 
+let isCandleLight = false;
+let goupbtn = document.querySelector('#go_up_button')
+let form_natur = document.querySelector('#form_natur_quiz')
+
 
 if(document.body.id === 'naturwissenschaft_page'){
 
