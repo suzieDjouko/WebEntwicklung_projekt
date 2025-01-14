@@ -363,7 +363,7 @@ btnsum.addEventListener('click', (e)=> {
                 let answer;
                 answerEls.forEach(answerEl => {
                     if(answerEl.checked){
-                        answer =answerEl.id;
+                        answer = answerEl.id;
                     }
                     
                 })
