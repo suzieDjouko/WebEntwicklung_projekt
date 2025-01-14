@@ -26,7 +26,7 @@ body{
     background-color: #fef6e4;
     
 }
-
+/*-----------------------start-index---------------------------------*/
 .index_container{
     display: grid;
     grid-template-areas: 
@@ -46,19 +46,18 @@ body{
    justify-content: space-around;
     
 }
-/*Header*/
+/*index_all_header*/
 [class$="header"]{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end; 
-    width: 100%;
-    padding: 0.5rem 1rem;
-    background-image: url('../images/headerbackground.jpg');
-    height: 18rem;
-    background-position: center;
-    background-size: cover;
-   
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  background-image: url('../images/headerbackground.jpg');
+  height: 18rem;
+  background-position: center;
+  background-size: cover;
 }
 .index_header{
   grid-area: index_header;
@@ -152,7 +151,7 @@ body{
 .fa-bars:hover {
     color: #f87619;
 }
-
+/*index_all_title*/
 [class$="title"]{
     position: absolute;
     top: -1.5em;
@@ -166,12 +165,12 @@ body{
 
 }
 
-/*Beschreibung*/
+/*index_all_Beschreibung*/
 
 [class$="beschreibung"]{
     position: relative;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     padding: 1rem;
     border-radius: 10px;
     line-height: 1.3em;
@@ -207,6 +206,7 @@ body{
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     justify-self: space-around;
+    margin: 0 2rem;
 }
 
 .mint-item:hover {
@@ -220,9 +220,7 @@ body{
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
-
-  
-.mint-item figcaption {
+  [class^="mint"] figcaption {
     margin-top: 10px;
     font-size: 0.9rem;
     color: #333;
@@ -230,56 +228,194 @@ body{
 
 .fun-fact{
     grid-area: fun-fact;
-    background-color: #cfcfcf;
-    padding: 1rem;
+    background-color: #dcdcdc;
+    padding: 0.5rem;
     border-radius: 8px;
     text-align: center;
-    width: 100%;
+}
 
+.carousel-item {
+  font-size: 1.2rem;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+  
+}
+div.d-flex{
+  align-items:center ;
+  justify-content:center ;
+  height: 200px; 
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: auto;
+
+}
+
+.carousel-indicators button {
+  background-color: #c7bdbd;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #8b8989;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+  
+  
+}
+.carousel-control-next,
+.carousel-control-prev{
+  top: 4em;    
+}
+
+/*---------------------end_index------------------------*/
+
+/*----------------start_footer_all-------------------------------------*/
+[class*="footer"]{
+  display: grid;
+  width: 100%;
+  min-height: 100dvh;
+  border-radius: none;
+  background: url(../images/imagefooter.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff; /* Texte blanc pur */
+  grid-template-columns: 1fr;
+  gap: 1.5em;
+  text-align: center;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+}
+/*form in footer*/
+[class*="footer"] .block{
+  margin-top: 2.5rem;
+  text-align: start;
+}
+#last{
+  width: 100%;
+  text-align: start;
+}
+#name,#email,#POB,#DOB {
+  width: 100%;
+  height: 35px;
+  background: transparent;
+  border-bottom: 1px solid hsl(27, 90%, 90%);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: orange;
+  font-size: 20px;
+  letter-spacing: 1px;
+  margin-left: 10px;
+  font-family: sans-serif;
+
+}
+#formfoot textarea{
+  margin-top: 10px;
+  min-height: 5rem;
+  background-color: white;
+  color: #2c2c2c;
+  width: 100%;
+  border-radius: 6px;
+}
+
+[class*="footer"] #submit{
+  background-color: white;
+  color:hsl(240, 65%, 52%);
+  font-weight: bold;
+  padding: 5px;
+  width: 100px;
+  border-radius: 6px;
+}
+[class*="footer"] #submit:hover{
+  color: white;
+  background-color: rgba(255, 223, 0, 1); /* Jaune soleil */
+  transform-origin: 6s ease;
+}
+#formfoot{
+  width: 80%;
+  margin:  5px auto;
+  padding: 0 ;
+}
+.folgen div:first-of-type,.contact div:first-of-type,#formfoot div:first-of-type{
+  font-size: 1.5rem;
+  padding-bottom:1.5rem ;
+}
+/*Logo*/
+.folgen .contact{
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+.folgen a, .contact a{
+  color: white;
+      font-size: 30px;
+      padding-left: 1rem;
+      padding-top: 5px;
+      transition: 0.3s ease;
+      text-decoration: none;
+  }
+.contact span{
+  font-size: 15px;
+  margin-right: 5px;
+}
+.folgen a:hover, .contact a:hover{
+  color: rgba(255, 223, 0, 1); /* Jaune soleil */
   }
 
 
-/*Naturvissenschaft*/
+/*----------------------end_footer-------------------------------------*/
+
+/*----------------------start_naturvissenschaft----------------*/
 
 .naturwissenschaft_container {
+  display: grid;
     grid-template-areas:
-        "header"
-        "beschreibung"
+        "naturwissenschaft_header"
+        "naturwissenschaft_beschreibung"
         "experiment"
         "mint"
         "quiz"
         "fun_fact"
-        "footer";
-    background-color: rgb(245, 245, 245);
-    background-color: white;
-    width: 100%;
-    height: 100vh;
-
-    
+        "naturwissenschaft_footer";
+        background-color: rgb(245, 245, 245);
+        background-color: white;
+        width: 100%;
+        height: 100vh;
 }
+
 .naturwissenschaft_header{
     background-image: url('../images/scientist1.jpg');
-    height: 18rem;
-
+  grid-area: naturwissenschaft_header;
 
 }
-
+.naturwissenschaft_footer{
+  grid-area: naturwissenschaft_footer;
+}
   .naturwissenschaft_beschreibung {
-    grid-area: beschreibung;
+    grid-area: naturwissenschaft_beschreibung;
     padding: 1rem;
     margin: 2rem auto;
     text-align: center;
     
   }
   .naturwissenschaft_mint {
-   display: flex;
-   flex-direction: column;
+    grid-area: mint;
+    display: grid;
+    /* display:flex;
+    flex-direction: column;*/
+    grid-template-areas: 
+    "mint_1"
+    "mint_2"
+    "mint_3"
+    "mint_4";
     gap: 2rem;
     padding: 2rem 1.5rem;
     background-color: #dedcde;
     margin-top: 3rem;
     width: 100%;
-    
   }
   .water_rise{
     grid-area: experiment;
@@ -416,9 +552,6 @@ h1.naturwissenschaft_title{
     transition: width 1s, height 1s;
 }
 
-.hidden {
-    display: none;
-}
 
 .water_rise_buttons{
     display: flex;
@@ -471,6 +604,18 @@ button#resetExperiment:hover {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out;
 }
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 
 #reveal-button{
   background-color: #077a37;
@@ -512,137 +657,62 @@ p.intro-text {
     width:100%;
     height:315px;
 }
-
-
-/*----------------all footer-------------------------------------*/
-[class*="footer"]{
-  display: grid;
-  width: 100%;
-  height: auto;
-  border-radius: none;
-  background: url(../images/imagefooter.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #ffffff; /* Texte blanc pur */
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 1.5em;
-  text-align: center;
-  padding-top: 3rem;
-  font-size: 20rem;
+#audio_container{
+  position: absolute;
+  right: 1em;
+  top:-1.9em;
+  background-color: #f8c471;
+  border-radius: 1.5em;
+  padding: 0.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center; 
 }
-[class*="footer"]:last-child{
-  font-size: small;
-}
-/*form in footer*/
-.block{
-  margin-top: 1rem;
-  text-align: start;
-}
-#last{
-  width: 100%;
-  text-align: start;
-}
-#name,#email,#POB,#DOB {
-  max-width: 450px;
-  height: 35px;
-  background: transparent;
-  border-bottom: 1px solid hsl(27, 90%, 90%);
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  color: orange;
-  font-size: 20px;
-  letter-spacing: 1px;
-  margin-left: 10px;
-  font-family: sans-serif;
-
-}
-#formfoot textarea{
-  margin-top: 10px;
-  min-height: 5rem;
-  background-color: white;
-  color: #2c2c2c;
-  max-width: 500px;
-}
-
-[class*="footer"] #submit{
-  background-color: white;
-  color:hsl(240, 65%, 52%);
-  font-weight: bold;
-  padding: 5px;
-  width: 100px;
-  border-radius: 6px;
-}
-#formfoot{
-  width: 80%;
-  margin:  5px auto;
-  padding: 0 ;
-}
-
-/*Logo*/
-.folgen .contact{
-  width: 100%;
-  flex-direction: column;
-  text-align: center;
-}
-.folgen a, .contact a{
-  color: rgba(255, 223, 0, 1); /* Jaune soleil */
+#audio_container button {
+  background-color: #3498db;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 45px;
+  margin-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-      font-size: 30px;
-      padding-left: 2rem;
-      padding-top: 5px;
-      transition: 0.3s ease;
-      text-decoration: none;
-  }
-.contact span{
-  font-size: 15px;
-  margin-left: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  
 }
-.folgen [class^="fa-brands"]:hover .contact [class^="fa-brands"]:hover{
-      color: #ff7200;
-  }
-
-
-/*-----------------------------------------------------------*/
-
-#audio-container{
-    position: absolute;
-    right: 1em;
-    top:-1em;
-    background-color: #f8c471;
-    border-radius: 1.5em;
-    padding: 0.6rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center; 
+#audio_container button:hover {
+  transform: scale(1.1);
 }
-#audio-container button {
-    background-color: #3498db;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    margin-right: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: transform 0.2s;
-    
-  }
-  #audio-container button:hover {
-    transform: scale(1.1);
-  }
+
+
+#go_up_button {
+  position: fixed;
+  bottom: 25px;
+  right:25px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1172b3;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+#go_up_button:hover {
+  background-color: #2980b9;
+}
 
   /* Section Quiz */
-  
-  
-  
   .quiz_title {
     font-size: 1.5rem;
   }
@@ -670,8 +740,13 @@ p.intro-text {
     transform: scale(1.5);/*agrandit les cercles du radio btn*/
     cursor: pointer;
   }
-  #quiz_submit {
-    display: block;
+  #quiz_buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #quiz_submit, #quiz_reset {
     margin: 3em auto;
     padding: 0.8rem 2rem;
     background-color: #4caf50;
@@ -685,16 +760,23 @@ p.intro-text {
   #quiz_submit:hover {
     background-color: #388e3c;
   }
+  #quiz_reset{
+    background-color: #9ca09c;
+  }
+  #quiz_reset:hover{
+    background-color: #646564;
+  }
+ 
   
-  #quiz_result {
+  #naturwissenschaft_quiz_result {
     text-align: center;
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
     color: #333;
   }
-  /* Fun Fact Section */
 
+  /* Fun Fact Section */
   .funfact_title {
     font-size: 1.8rem;
     color: #007acc;
@@ -724,174 +806,302 @@ p.intro-text {
   .funfact_list li:nth-child(even) {
     background-color: #dff0fc;
   }
-  /*---------------------------------Informatik---------------------------*/
+/*----------------------end_naturvissenschaft----------------*/
+
+/*---------------------------------start_nformatik---------------------------*/
+  .container_informatik {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "informatik_header"
+      "informatik_beschreibung"
+      "Inhalt"
+      "Lern-check"
+      "Quiz"
+      "informatik_footer"
+    ;
+    background-color: rgb(166, 183, 210);
+    gap: 1rem;
+  }
   
-.container_informatik {
+.container_informatik .videos {
+    display: grid;
+    grid-template-areas:
+      "item1"
+      "item2"
+    ;
+    gap: 1rem;
+    margin: 2em;
+  }
+  
+  
+  .container_informatik .item1 {
+    grid-area: item1;
+  }
+  
+  .container_informatik .item2 {
+    grid-area: item2;
+  }
+  
+  .informatik_footer{
+    grid-area: informatik_footer;
+  }
+  .informatik_header {
+    grid-area: informatik_header;
+    background-image: url('../images/background_informatik.webp');
+    width: 100%;
+    height: 10em;
+  
+  }
+  
+  .informatik_beschreibung {
+    grid-area: informatik_beschreibung;
+    position: relative;
+    /*background-color:#f5f5f5;
+    top: 2em;
+    border-radius: 12px;
+    margin-bottom: 3em;*/
+  
+    background-color: #ffffff;
+    border: 3px solid #ffa500;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 24px;
+    margin: 2em auto;
+    padding: 1.5em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .Einführung {
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 1em;
+    font-size: 1.2em;
+    color: #2b4d79;
+  }
+  
+  .Inhalt_Informatik {
+    grid-area: Inhalt;
+  }
+  
+  .Quiz {
+    grid-area: Quiz;
+  }
+  
+  .Lern-check {
+    grid-area: Lern-Check;
+  }
+  
+  .Inhalt,
+  .Lern-Check,
+  .Quiz {
+    position: relative;
+    background-color: #fffbe6;
+    border-radius: 16px;
+    border: 2px dashed #ffa500;
+    padding: 1em;
+    margin: 1em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .Inhalt:hover {
+    transform: translateY(-5px);
+    background-color: #fff2cc;
+  }
+  
+  
+  .Inhaltsverzeichnis {
+    position: relative;
+    top: 1em;
+    margin-bottom: 2em;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  * [class^="item"] iframe {
+    border: 5px solid #ffa500;
+    border-radius: 15px;
+    width: 90%;
+    height: 20rem;
+  }
+  
+  [class^="item"] img {
+    border: 5px solid #ffa500;
+    border-radius: 15px;
+    width: 90%;
+    height: 20rem;
+  }
+  
+  .Inhalt {
+    position: relative;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-weight: bold;
+    border: 1px dotted black;
+  }
+  
+  .container_informatik ul {
+    /* list-style-type: square;*/
+  
+    list-style-type: disc;
+    padding-left: 1em;
+    color: #444;
+  }
+  
+.container_informatik .editors {
+    display: grid;
+    grid-template-areas:
+      "html"
+      "css"
+      "JavaScript";
+    gap: 1.2em;
+  }
+  
+  #html-code {
+    grid-area: html;
+  }
+  
+  #css-code {
+    grid-area: css;
+  }
+  
+  #js-code {
+    grid-area: JavaScript;
+  }
+  
+  .editor-container {
+    /*margin-top: 2em;*/
+    background-color: #ffffff;
+    border: 2px solid #2b4d79;
+    border-radius: 12px;
+    padding: 1em;
+  
+  }
+  
+  .editor-container button {
+    font-weight: bold;
+    /* background-color: rgb(166, 183, 210);*/
+    width: 100%;
+    background-color: #ffa500;
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 16px;
+  }
+  
+  .editor-container button:active {
+    background-color: #ff5500;
+  }
+  
+  
+  .container_informatik .Lern-Check textarea {
+    height: 24em;
+    width: 100%;
+    font-family: monospace;
+    border-radius: 12px;
+    padding: 0.5em;
+    background-color: #fff8e4;
+  }
+  
+  .container_informatik #output {
+    border: 2px dotted #ffa500;
+    width: 100%;
+    height: 18em;
+    margin-top: 2em;
+    background-color: #fff2cc;
+    border-radius: 12px;
+    font-size: 1em;
+  }
+  
+  .container_informatik form {
+    margin-bottom: 1em;
+  }
+  
+  .container_informatik summary {
+    font-weight: bold;
+  }
+  
+  .container_informatik summary~p {
+    background: #fff;
+    border: 3px solid #ffa500;
+    border-radius: 15px;
+    margin: 1em;
+  }
+  
+   .Quiz p {
+    margin-top: 2em;
+  }
+  
+  .container_informatik #submit {
+    margin-top: 2em;
+    font-weight: bold;
+    background-color: #ffa500;
+    color: white;
+    padding: 0.8em 1.2em;
+    border: none;
+    border-radius: 16px;
+  }
+
+  /*END-------------------------------- Informatik---------------------------*/
+  
+
+/*--------------------------start_Mystery_box-----------------------------------------*/
+
+.mystery-box-container .block{
+  margin-top: 2em;
+  width: 100%;
+}
+
+.mystery-box-container .block label{
+  font-weight: bold;
+}
+
+.mystery-box-container .block input{
+  padding: 1em;
+  width: 100%;
+}
+
+.mystery-box-container{
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
-  grid-template-areas:
-    "header"
-    "beschreibung"
-    "Inhalt"
-    "Lern-check"
-    "footer"
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+  "mystry_header"
+  "mystry_Beschreibung"
+  "mystry_Form "
+  "mystry_footer"
   ;
 
-  background-color: rgb(166, 183, 210);
-  gap: 1rem;
-
+  gap: 1em;
 }
 
-.informatik_header {
-  background-image: url('../images/background_informatik.webp');
-  width: 100%;
-  height: 10em;
-
+.mystery-box_header{
+grid-area: mystry_header;
+background-image: url("../images/mystery.webp");
+height: 18rem;
 }
 
-.informatik {
-  position: relative;
-  /*background-color:#f5f5f5;
-  top: 2em;
-  border-radius: 12px;
-  margin-bottom: 3em;*/
-
-  background-color: #ffffff;
-  border: 3px solid #ffa500;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  border-radius: 24px;
-  margin: 2em auto;
-  padding: 1.5em;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.mystery-box_beschreibung{
+grid-area: mystry_Beschreibung ;
 }
 
-.Einführung {
-  position: relative;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: underline;
-  margin-bottom: 1em;
-  font-size: 1.2em;
-  color: #2b4d79;
+#form_mystry-box{
+  grid-area: mystry_Form;
+  justify-self: center;
 }
 
-
-.Inhalt,
-.Lern-Check,
-.Quiz {
-  position: relative;
-  background-color: #fffbe6;
-  border-radius: 16px;
-  border: 2px dashed #ffa500;
-  padding: 1em;
-  margin: 2em 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+.mystery-box_footer{
+  grid-area: mystry_footer;
 }
 
-.Inhalt:hover {
-  transform: translateY(-5px);
-  background-color: #fff2cc;
+.mystery-box-container .block textarea{
+  background-color: white;
 }
+  /*------------------end_mystry-box--------------------------*/
 
 
-.Inhaltsverzeichnis {
-  position: relative;
-  top: 1em;
-  margin-bottom: 2em;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-* .mint-item iframe {
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-}
-
-.Inhalt {
-  position: relative;
-  margin-bottom: 1em;
-  margin-top: 1em;
-  font-weight: bold;
-  border: 1px dotted black;
-}
-
-ul {
-  /* list-style-type: square;*/
-
-  list-style-type: disc;
-  padding-left: 1em;
-  color: #444;
-}
-
-.editors {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 1.2em;
-}
-
-.editor-container {
-  /*margin-top: 2em;*/
-  background-color: #ffffff;
-  border: 2px solid #2b4d79;
-  border-radius: 12px;
-  padding: 1em;
-
-}
-
-.editor-container button {
-  font-weight: bold;
-  /* background-color: rgb(166, 183, 210);*/
-  width: 100%;
-  background-color: #ffa500;
-  color: white;
-  padding: 0.8em 1.2em;
-  border: none;
-  border-radius: 16px;
-}
-
-.editor-container button:active {
-  background-color: #ff5500;
-}
-
-
-textarea {
-  height: 120px;
-  width: 100%;
-  font-family: monospace;
-  border-radius: 12px;
-  padding: 0.5em;
-  background-color: #fff8e4;
-}
-
-#output {
-  border: 2px dotted #ffa500;
-  width: 100%;
-  margin-top: 2em;
-  background-color: #fff2cc;
-  border-radius: 12px;
-  font-size: 1em;
-}
-
-form {
-  margin-bottom: 1em;
-}
-
-summary{
-  font-weight: bold;
-}
-
-summary~p{
-  background:#fff;
-  border: 3px solid #ffa500;
-  border-radius: 15px;
-  margin: 1em;
-}
-  /*-------------------------------- Informatik---------------------------*/
-  
-  /*START--------------------mathe.css----------------------------*/
+  /*--------------------start_mathe----------------------------*/
   .mathe_title{
 
     background-color: rgba(0, 123, 255, 1);
@@ -1165,22 +1375,8 @@ summary~p{
     border-radius: 1rem;
 }
 
-/*---------------Footer_Box------------------*/
-
 /*END---------------------mathe.css-------------------------------*/
   
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
 @media screen and (min-width:768px){
   .index_container{
     grid-template-columns: repeat(2, 1fr);
@@ -1196,10 +1392,12 @@ summary~p{
 }
 #mint_1,#mint_3{
   margin-left: 2rem;
+ margin-right: 0;;
 }
 
 #mint_2,#mint_4{
   margin-right: 2rem;
+  margin-left: 0rem;
 }
 
   .fa-bars{
@@ -1207,44 +1405,62 @@ summary~p{
     }
   
     [class$="header"]{
-        flex-direction: row;
-        justify-content: flex-end;
-        align-items: center;
-        height: 100vh;
-    }
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+  }
 
-    .header_menu {
-        display: flex;
-        flex-direction: row;
-        position: static;
-        gap:1rem;
-        background-color: #fff;
-        margin-left: 1em;
-        box-shadow: none;
-        padding: 1.2rem;
-        width: 85%;
-      }
-    
+  .header_menu {
+      /*display: flex;*/
+      display: inline-flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      /*flex-flow : row nowrap*/
+      align-items: center;
+      justify-self: center;
+      position: static;
+      background-color: #fff;
+      box-shadow: none;
+     /* width: 100%;*/
+    }
   
-      .header_menu a {
-        border: none;
-        white-space: nowrap;
-        font-size: 13px;
-      }
 
-      .naturwissenschaft_mint{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap:1.5rem;
-        margin: 0 auto;
-        padding: 2rem;
-        
-    }  
-    .water_rise{
-        margin-bottom: 2rem;
+    .header_menu a {
+      border: none;
+      font-size: 1.13rem;
     }
+/*--------------------start_naturwissenschaft----------------------------*/ 
+    .naturwissenschaft_mint{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:1.5rem;
+      margin: 0 auto;
+      padding: 2rem;
+      
+  }  
+  .water_rise{
+      margin-bottom: 2rem;
+  }
+/*--------------------end_naturwissenschaft----------------------------*/ 
 
- /*START--------------------mathe.css----------------------------*/
+  /*--------------------start_informatik----------------------------*/ 
+
+  .container_informatik .videos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "item1 item2"
+    ;
+  }
+
+  .container_informatik .editors {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "html" "css" "JavaScript"
+    ;
+  }
+  /*--------------------end_informatik----------------------------*/
+
+ /*--------------------start_mathe----------------------------*/
  
  [class*="content_mathe"]{
   margin: 2rem;
@@ -1257,12 +1473,9 @@ summary~p{
 [class*="mathe_video"] iframe{
   height: 30rem;
 }
- /*START--------------------Informatik.css----------------------------*/
-.editors {
-  grid-template-columns: 1fr;
-}
+/*--------------------end_mathe----------------------------*/
 
-/*-------footer-------*/
+/*----------------------start_footer_all----------------------*/
 
 [class*="footer"]{
   grid-template-columns: repeat(2,1fr);
@@ -1271,7 +1484,7 @@ summary~p{
     "contactfoot  folgenfoot"
     "endfoot endfoot"
   ;
-  padding: 5rem 5rem 0;
+  padding: 5rem 1.5rem 0;
   justify-content: center;
 }
 #formfoot{
@@ -1291,6 +1504,7 @@ summary~p{
 [class*="footer"] div:last-of-type{
   grid-area: endfoot;
 }
+/*------------------end_foote_all--------------------*/
 }
 
   
@@ -1304,6 +1518,17 @@ summary~p{
     [class$="beschreibung"]{
         font-size: 1.6em;
     }
+    .header_menu {
+      width: auto;
+    }
+  
+
+    .header_menu a {
+      font-size: 20px;
+
+    }
+
+  /*-------------------------start_naturwissensschaft--------------------------------*/ 
     .naturwissenschaft_mint {
         grid-template-columns: repeat(2, 1fr); 
         gap: 2rem;
@@ -1334,18 +1559,9 @@ summary~p{
         gap:2em
 
     }
-    
-    .header_menu {
-      width: auto;
-    }
-  
-
-    .header_menu a {
-      font-size: 20px;
-
-    }
-    
- /*START--------------------mathe.css----------------------------*/
+ /*-------------------------end_naturwissensschaft--------------------------------*/    
+       
+ /*--------------------start_mathe.css----------------------------*/
  .mathe_container{
   grid-template-columns: 1fr 2fr;
   grid-template-areas:  
@@ -1417,44 +1633,55 @@ summary~p{
 [class*="mathe_video"]{
   margin: 1em 0 0;
 }
-
+/*-------------------------end_mathe--------------------------------*/ 
 }
 
   @media screen and (min-width: 1440px) {
-
+/*-------------------------start_naturwissensschaft--------------------------------*/ 
     .mint-section{
       padding: 1rem 10rem;
       gap:3rem
-  
   }
-    
-    .naturwissenschaft_container {
+  .naturwissenschaft_container {
 
-            max-width: 1400px;
-            margin: 0 auto;
+      max-width: 1400px;
+      margin: 0 auto;
 
     }
-    .mathe_container {
-      font-size: larger;
-
-}
-
-    .funfact_list{
+  .funfact_list{
         grid-template-columns: repeat(3,1fr);
        
     }
+ /*-------------------------end_naturwissensschaft--------------------------------*/ 
 
- 
-  
-  }
+/*-------------------------start_mathe--------------------------------*/
+.mathe_container {
+  font-size: larger;
+}
+ /*-------------------------end_mathe--------------------------------*/ 
+}
+
+
   @media screen and (min-width: 2560px) {
+
+/*-------------------------start_mathe--------------------------------*/
 .mathe_container{
   font-size: 30px;
 }
-
+.mathe_container h1{
+  font-size: 70px;
+}
 [class*="mathe_video"] iframe{
   height: 50rem;
 }
+.mathe_title{
+  font-size:40px;
+}
 
-
+ /*-------------------------end_mathe--------------------------------*/ 
   }
+
+
+
+
+

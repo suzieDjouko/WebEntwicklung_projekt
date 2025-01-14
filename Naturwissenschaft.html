@@ -100,17 +100,18 @@
                 Das Wasser steigt, weil der Sauerstoff verbrennt und ein Unterdruck entsteht!
             </p>
         </div>
-        <div id="audio-container">
+        <div id="audio_container">
             <button id="audio-toggle" aria-label="Musik ein-/ausschalten">
               <i id="audio-icon" class="fas fa-volume-up"></i>
             </button>
-            <span id="audio-status">Musik eingeschaltet</span>
+            <span id="audio-status" >Musik eingeschaltet</span>
           </div>
     </section>
     
       
 
       <section class="naturwissenschaft_mint">
+
 
         <div class="experiment_content">
           <article class="rainbow_experiment">
@@ -316,100 +317,105 @@
       </section>
       
       <!--QUIZ SECTION-->
+
       <section class="naturwissenschaft_quiz">
         <h2 class="quiz_title">🧠 Teste dein Wissen!</h2>
-        <div class="quiz_item">
-          <h4>Frage 1:</h4>
-          <p>Warum schwimmt eine Büroklammer auf der Wasseroberfläche?</p>
-          <ul>
-            <li>
-              <input type="radio" id="q1a" name="q1" value="a" />
-              <label for="q1a">Weil Wasser die Büroklammer anzieht.</label>
-            </li>
-            <li>
-              <input type="radio" id="q1b" name="q1" value="b" />
-              <label for="q1b"
-                >Wegen der Oberflächenspannung des Wassers.</label
-              >
-            </li>
-            <li>
-              <input type="radio" id="q1c" name="q1" value="c" />
-              <label for="q1c"
-                >Weil die Büroklammer leichter als Wasser ist.</label
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="quiz_item">
-          <h4>Frage 2:</h4>
-          <p>
-            Was passiert, wenn du ein Ei in eine Flasche setzt und ein
-            brennendes Papier benutzt?
-          </p>
-          <ul>
-            <li>
-              <input type="radio" id="q2a" name="q2" value="a" />
-              <label for="q2a">Das Ei schmilzt.</label>
-            </li>
-            <li>
-              <input type="radio" id="q2b" name="q2" value="b" />
-              <label for="q2b"
-                >Das Ei wird durch den Luftdruck in die Flasche gezogen.</label
-              >
-            </li>
-            <li>
-              <input type="radio" id="q2c" name="q2" value="c" />
-              <label for="q2c">Das Ei springt aus der Flasche heraus.</label>
-            </li>
-          </ul>
-        </div>
-        
-
-        <div class="quiz_item">
-          <h4>Frage 3:</h4>
-          <p>Warum vermischen sich Öl und Wasser nicht?</p>
-          <ul>
-            <li>
-              <input type="radio" id="q3a" name="q3" value="a" />
-              <label for="q3a">Weil sie unterschiedliche Farben haben.</label>
-            </li>
-            <li>
-              <input type="radio" id="q3b" name="q3" value="b" />
-              <label for="q3b"
-                >Weil Öl leichter als Wasser ist und eine geringere Dichte
-                hat.</label
-              >
-            </li>
-            <li>
-              <input type="radio" id="q3c" name="q3" value="c" />
-              <label for="q3c">Weil Wasser und Öl sich anziehen.</label>
-            </li>
-          </ul>
-        </div>
-        <div class="quiz_item">
-          <h4>Frage 4:</h4>
-          <p>Warum ist der Himmel blau?</p>
-          <ul>
-            <li>
-              <input type="radio" id="q4a" name="q4" value="a" />
-              <label for="q4a">Weil die Sonne blaues Licht aussendet.</label>
-            </li>
-            <li>
-              <input type="radio" id="q4b" name="q4" value="b" />
-              <label for="q4b"
-                >Weil blaues Licht durch die Atmosphäre gestreut wird.</label
-              >
-            </li>
-            <li>
-              <input type="radio" id="q4c" name="q4" value="c" />
-              <label for="q4c">Weil die Luft blau gefärbt ist.</label>
-            </li>
-          </ul>
-        </div>
-
+        <form action="" id="form_natur_quiz">
+          <div class="quiz_item">
+            <h4>Frage 1:</h4>
+            <p>Warum schwimmt eine Büroklammer auf der Wasseroberfläche?</p>
+            <ul>
+              <li>
+                <input type="radio" id="q1a" name="q1" value="a" />
+                <label for="q1a">Weil Wasser die Büroklammer anzieht.</label>
+              </li>
+              <li>
+                <input type="radio" id="q1b" name="q1" value="b" />
+                <label for="q1b"
+                  >Wegen der Oberflächenspannung des Wassers.</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="q1c" name="q1" value="c" />
+                <label for="q1c"
+                  >Weil die Büroklammer leichter als Wasser ist.</label
+                >
+              </li>
+            </ul>
+          </div>
+  
+          <div class="quiz_item">
+            <h4>Frage 2:</h4>
+            <p>
+              Was passiert, wenn du ein Ei in eine Flasche setzt und ein
+              brennendes Papier benutzt?
+            </p>
+            <ul>
+              <li>
+                <input type="radio" id="q2a" name="q2" value="a" />
+                <label for="q2a">Das Ei schmilzt.</label>
+              </li>
+              <li>
+                <input type="radio" id="q2b" name="q2" value="b" />
+                <label for="q2b"
+                  >Das Ei wird durch den Luftdruck in die Flasche gezogen.</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="q2c" name="q2" value="c" />
+                <label for="q2c">Das Ei springt aus der Flasche heraus.</label>
+              </li>
+            </ul>
+          </div> 
+  
+          <div class="quiz_item">
+            <h4>Frage 3:</h4>
+            <p>Warum vermischen sich Öl und Wasser nicht?</p>
+            <ul>
+              <li>
+                <input type="radio" id="q3a" name="q3" value="a" />
+                <label for="q3a">Weil sie unterschiedliche Farben haben.</label>
+              </li>
+              <li>
+                <input type="radio" id="q3b" name="q3" value="b" />
+                <label for="q3b"
+                  >Weil Öl leichter als Wasser ist und eine geringere Dichte
+                  hat.</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="q3c" name="q3" value="c" />
+                <label for="q3c">Weil Wasser und Öl sich anziehen.</label>
+              </li>
+            </ul>
+          </div>
+          <div class="quiz_item">
+            <h4>Frage 4:</h4>
+            <p>Warum ist der Himmel blau?</p>
+            <ul>
+              <li>
+                <input type="radio" id="q4a" name="q4" value="a" />
+                <label for="q4a">Weil die Sonne blaues Licht aussendet.</label>
+              </li>
+              <li>
+                <input type="radio" id="q4b" name="q4" value="b" />
+                <label for="q4b"
+                  >Weil blaues Licht durch die Atmosphäre gestreut wird.</label
+                >
+              </li>
+              <li>
+                <input type="radio" id="q4c" name="q4" value="c" />
+                <label for="q4c">Weil die Luft blau gefärbt ist.</label>
+              </li>
+            </ul>
+          </div>
+        </form>
+        <div id="quiz_buttons">
         <button id="quiz_submit">Antworten prüfen</button>
         <p id="quiz_result" class="hidden"></p>
+        <button id="quiz_reset" class="hidden">Reset</button>
+
+        </div>
       </section>
       
 
@@ -462,35 +468,135 @@
         </ul>
       </section>
 
-      <footer class="Naturwissenschaft_footer">
-        <div class="folgen"> 
-          <div>FOLGE UNS </div>
-          <div>
-              <a href="#">
-                  <ion-icon name="logo-facebook"></ion-icon>
-              </a> 
-              <a href="#">
-                  <i class="fa-brands fa-instagram"></i>
-              </a> 
-              <a href="#">
-                  <i class="fa-brands fa-x-twitter"></i>
-              </a> 
-              <a href="#">
-                  <i class="fa-brands fa-google"></i>
-              </a> 
-              <a href="#">
-                  <i class="fa-brands fa-youtube"></i>
-              </a> 
-          </div>
-      </div>
-      <div>&copy; 2024 MINTopia. Alle Rechte vorbehalten.</div>
-      <!--
-      <div class="send"> <input class="srch" type="E-mail" name="" placeholder="Type your Mail"> 
-          <a href="#"><button class="btn">Senden</button></a> </div>
-      </div>
+      <footer class="naturwissenschaft_footer">
+       
+                          <form id="formfoot">
+                            <div>CONTACT FORMULAR</div>
+                            <div class="block">
+                                <label for="name" class="">Name:</label>
+                                <input type="text" class="same" id="name" required="required"  placeholder="enter your name" name="name" />
+                            </div>
+                            <div class="block">
+                                <label for="email" class="">Email:</label>
+                                <input type="email" class="same" id="email" required="required"  placeholder="enter your Email" name="email" />
+                            </div>
+                            
+                            <div class="block">
+                                <span class="">Gender:</span>
+                                <input type="radio" required name="gender" id="male" 
+                                value="M" />
+                                <label for="male">Male</label>
+                                <input type="radio" name="gender" id="female" 
+                                value="F" />
+                                <label for="female">Female</label><br />
+                            </div>
+                            <div class="block">
+                              <label> What can you say about your experience on our <em>Webpage</em> <br />
+                                <textarea required="required" name="comment" cols="25" rows="8">Comment here!</textarea></label>
+                            </div>
+                            <div id="last" >   
+                              <label for="submit">Click here to send your information</label>
+                              <input type="submit" value="SEND" id="submit" />
+                            </div>
+                  </form>
+                  <div id="logofoot">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="auto" height="400">
+                  <!-- Background with Stars and Space Theme -->
+                  <defs>
+                    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+                      <stop offset="0%" stop-color="#1a237e"/>
+                      <stop offset="100%" stop-color="#0d47a1"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="300" cy="300" r="300" fill="url(#bgGradient)"/>
+
+                  <!-- Stars -->
+                  <g>
+                    <circle cx="80" cy="100" r="4" fill="#ffffff" opacity="0.9"/>
+                    <circle cx="500" cy="150" r="5" fill="#ffffff" opacity="0.8"/>
+                    <circle cx="250" cy="500" r="6" fill="#ffffff" opacity="0.8"/>
+                    <circle cx="50" cy="300" r="3" fill="#ffffff" opacity="0.7"/>
+                    <circle cx="550" cy="400" r="4" fill="#ffffff" opacity="0.9"/>
+                    <circle cx="400" cy="100" r="5" fill="#ffffff" opacity="0.8"/>
+                    <circle cx="200" cy="200" r="3" fill="#ffffff" opacity="0.8"/>
+                  </g>
+
+                  <!-- Central Orbital Design with Atom -->
+                  <circle cx="300" cy="300" r="100" fill="#ffffff"/>
+                  <circle cx="300" cy="300" r="80" fill="#ffca28"/>
+                  <circle cx="220" cy="300" r="20" fill="#4db6ac"/>
+                  <circle cx="380" cy="300" r="20" fill="#4db6ac"/>
+                  <circle cx="300" cy="220" r="20" fill="#4db6ac"/>
+                  <circle cx="300" cy="380" r="20" fill="#4db6ac"/>
+                  <path d="M220 300 A80 80 0 0 1 300 380" fill="none" stroke="#ff5252" stroke-width="5"/>
+                  <path d="M300 220 A80 80 0 0 1 380 300" fill="none" stroke="#ff5252" stroke-width="5"/>
+
+                  <!-- Subject Labels Aligned Horizontally with Proper Spacing -->
+                  <text x="50" y="300" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+                    Mathematik.
+                  </text>
+                  <text x="100" y="400" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+                    Informatik.
+                  </text>
+                  <text x="400" y="250" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+                    Chemie.
+                  </text>
+                  <text x="300" y="450" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+                    Naturwissenschaft.
+                  </text>
+
+                  <!-- Science Formulas Reorganized -->
+                  <text x="150" y="100" font-family="Courier New, monospace" font-size="24" fill="#ffffff">E=mc²</text>
+                  <text x="400" y="100" font-family="Courier New, monospace" font-size="20" fill="#ffffff">H₂O</text>
+                  <text x="100" y="200" font-family="Courier New, monospace" font-size="20" fill="#ffffff">a² + b² = c²</text>
+                  <text x="500" y="300" font-family="Courier New, monospace" font-size="20" fill="#ffffff">F=ma</text>
+                  <text x="100" y="500" font-family="Courier New, monospace" font-size="20" fill="#ffffff">PV=nRT</text>
+                  <text x="300" y="150" font-family="Courier New, monospace" font-size="20" fill="#ffffff">ΔE=hν</text>
+
+                  <!-- Title -->
+                  <text x="300" y="550" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="48" fill="#ffca28" stroke="#0288d1" stroke-width="2">
+                    MINTopia
+                  </text>
+                  </svg>
+                  </div>
+
+                  <div class="contact">
+                    <div>CONTACT US</div>
+                    <div>
+                      <a href=""><span>WhatsApp</span><i class="fa-brands fa-whatsapp"></i></a>
+                      <a href=""><span>Email</span><i class="fa-regular fa-envelope"></i></a>
+                      <a href=""><span>Phone</span><i class="fa-solid fa-phone"></i></a>
+                    </div>
+                    
+                  </div>
+
+                  <div class="folgen">
+                    <div>FOLGE UNS</div>
+                    <div>
+                      <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fa-brands fa-google"></i>
+                      </a>
+                      <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div>&copy; 2024 MINTopia. Alle Rechte vorbehalten.</div>
       </footer>
     </div>
-  -->
-    <script src="styles/skript.js"></script>
+  <script src="styles/skript.js"></script>
+
+  <button id="go_up_button" aria-label="Scroll to top">
+    <i class="far fa-arrow-alt-circle-up"></i>
+  </button>
   </body>
 </html>
