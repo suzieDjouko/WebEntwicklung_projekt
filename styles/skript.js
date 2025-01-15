@@ -1,10 +1,26 @@
- 
- let hamburgerMenu = document.querySelector(".fa-bars");
- let headerMenu = document.querySelector(".header_menu");
+ /**STYLE COMMUN  ET FUNCTION COMMUNE  */
+
+
+
+let hamburgerMenu = document.querySelector(".header_hamburger-menu");
+let headerMenu = document.querySelector(".header_menu");
+let fabars = hamburgerMenu.querySelector(".fa-bars");
+let form_natur = document.querySelector('#form_natur_quiz');
+let result = document.getElementById("quiz_result");
+let reset = document.getElementById('quiz_reset');
+let submit = document.getElementById("natur_quiz_submit");
+
 
  hamburgerMenu.addEventListener("click", function () {
     let isMenuActive = headerMenu.classList.toggle("active");
     /*Ajoute la classe active  si elle n'est pas definie et la supprine si elle l'est */
+    if (isMenuActive ) {
+        fabars.classList.replace("fa-bars", "fa-close"); 
+    }
+    else {
+        fabars.classList.replace("fa-close", "fa-bars");
+    }
+
 
     hamburgerMenu.setAttribute("aria-expanded", isMenuActive);
     headerMenu.setAttribute("aria-hidden", !isMenuActive);
@@ -15,79 +31,29 @@ document.addEventListener("click", function(event){
      // Vérifie si le clic est en dehors du menu et du bouton hamburger
       //event.target contient l'element sur lequel on clique
       //La propriété target dans un événement JavaScript représente l'élément sur lequel l'événement a été déclenché.
-    
     if(!headerMenu.contains(event.target) && !hamburgerMenu.contains(event.target)){
         headerMenu.classList.remove("active");
-        hamburgerMenu.classList.setAttribute("aria-expanded",false);
-        headerMenu.classList.setAttribute("aria-hidden",true);
+        fabars.classList.replace("fa-close", "fa-bars");
+        hamburgerMenu.setAttribute("aria-expanded",false);
+        headerMenu.setAttribute("aria-hidden",true);
     }
     console.log(event.target);
 
 });
 
- /*----------------------------------------start_naturwissenschaft--------------------------------------------*/
-if(document.body.id === 'naturwissenschaft_page' ){
-
-let lightCandleButton = document.getElementById('lightCandle');
-let resetButton = document.getElementById('resetExperiment');
-let flame = document.getElementById('flame');
-let glass = document.getElementById('glass');
-let resultText = document.getElementById('result_text');
-let water = document.querySelector('.water'); 
-let isCandleLight = false;
-let goupbtn = document.querySelector('#go_up_button')
-let form_natur = document.querySelector('#form_natur_quiz')
-
-
-if(document.body.id === 'naturwissenschaft_page'){
-
-    document.addEventListener('DOMContentLoaded', function(){
-        try{
-            audio.play();
-        }catch(e){
-            console.log('Autoplay nicht erfolgreich');
-        }
-    });
-    
-    
-    let audio = new Audio('Audio\\Carefree(chosic.com).mp3');
-    audio.volume = 0.1; // Définit le volume à 10 % de sa capacité maximale
-    audio.loop = true;
-    let isPalying = true;
-    
-    let toggleButtonAudio = document.getElementById("audio-toggle");
-    let audioIcon = document.getElementById("audio-icon");
-    let statusText = document.getElementById("audio-status");
-    
-    toggleButtonAudio.addEventListener('click', function(){
-        if(isPalying){
-            audio.pause();
-            audioIcon.classList.replace("fa-volume-up", "fa-volume-mute");
-            statusText.textContent = "Musik ausgeschaltet";
-        }
-        else{
-            audio.play();
-            audioIcon.classList.replace("fa-volume-mute", "fa-volume-up");
-            statusText.textContent = "Musik eingeschaltet";
-        }
-        isPalying=!isPalying;
-    });
-
-    let revealButton = document.getElementById('reveal-button');
-    let answer = document.getElementById('answer');
-
-    revealButton.addEventListener('click', function(){
-        answer.classList.toggle('hidden'); // ajoute ou enleve le hidden si il est present
-        if(answer.classList.contains('hidden')){
-            revealButton.textContent = "Antwort zeigen";
-        }else{
-            revealButton.textContent = "Antwort vertecken"; 
-        }
-        
-    });
-
-}
-
+window.addEventListener("resize", function () {
+  if (window.matchMedia("(min-width: 768px)").matches) {
+    headerMenu.classList.remove("active");
+    fabars.classList.replace("fa-close", "fa-bars");
+    hamburgerMenu.setAttribute("aria-expanded", false);
+    headerMenu.setAttribute("aria-hidden", false);
+  } else {
+    if (!headerMenu.classList.contains("active")) {
+      headerMenu.setAttribute("aria-hidden", true);
+    }
+  }
+});
+/*FUNCTION DE QUIZ */
 
 function funcQuiz(submit, answers, result, reset) {
     submit.addEventListener("click", () => {
@@ -118,57 +84,69 @@ function funcQuiz(submit, answers, result, reset) {
       
 };
 
-if(document.body.id === 'naturwissenschaft_page'){
-    let submit = document.getElementById("quiz_submit");
+
+ /*----------------------------------------start_naturwissenschaft--------------------------------------------*/
+if(document.body.id === 'naturwissenschaft_page' ){
+
+let lightCandleButton = document.getElementById('lightCandle');
+let resetButton = document.getElementById('resetExperiment');
+let flame = document.getElementById('flame');
+let glass = document.getElementById('glass');
+let resultText = document.getElementById('result_text');
+let water = document.querySelector('.water'); 
+let isCandleLight = false;
+let goupbtn = document.querySelector('#go_up_button')
+
+    let audio = new Audio('Audio\\Carefree(chosic.com).mp3');
+    audio.volume = 0.01; // Définit le volume à 10 % de sa capacité maximale
+    audio.loop = true;
+    
+    let toggleButtonAudio = document.getElementById("audio-toggle");
+    let audioIcon = document.getElementById("audio-icon");
+    let statusText = document.getElementById("audio-status");
+    
+    toggleButtonAudio.addEventListener('click', function(){
+        if(!audio.paused){
+            audio.pause();
+            audioIcon.classList.replace("fa-volume-up", "fa-volume-mute");
+            statusText.textContent = "Musik ausgeschaltet";
+        }
+        else{
+            audio.play()
+            audioIcon.classList.replace("fa-volume-mute", "fa-volume-up");
+            statusText.textContent = "Musik eingeschaltet";
+        }
+    });
+
+    let revealButton = document.getElementById('reveal-button');
+    let answer = document.getElementById('answer');
+
+    revealButton.addEventListener('click', function(){
+        answer.classList.toggle('hidden'); // ajoute ou enleve le hidden si il est present
+        if(answer.classList.contains('hidden')){
+            revealButton.textContent = "Antwort zeigen";
+        }else{
+            revealButton.textContent = "Antwort vertecken"; 
+        }
+        
+    });
     let answers = {
         q1: "b",
         q2: "b", 
         q3: "b", 
         q4: "b"
-};
-    let result = document.getElementById("quiz_result");
-    let reset = document.getElementById('quiz_reset');
-
+    };
+    
     funcQuiz(submit, answers, result, reset);
     
-
-}else if(document.body.id === 'mathe_body'){
-    let submit1 = document.getElementById("mathe_quiz_submit");
-    let answers1 = {
-        u1q1: "Halb",
-        u1q2: "Drittel", 
-        u1q3: "Viertel", 
-        u1q4: "Fünftel",
-        u1q5: "Sechstel",
-        u1q6: "Siebtel",
-        u2q1: "zwei_Halbe",
-        u2q2: "zwei_Drittel", 
-        u2q3: "drei_Viertel", 
-        u2q4: "fünf_Sechstel",
-        u2q5: "sieben_Achtel",
-        u3q1: "D",
-        u3q2: "B", 
-        u3q3: "D", 
-        u3q4: "C",
-        u4q1: "Kreis",
-        u4q2: "dreieck", 
-        u4q3: "rechteck", 
-     
-    };
-    let result1 = document.getElementById("mathe_quiz_result");
-    funcQuiz(submit1, answers1, result1);
-}
-
-
-
 lightCandleButton.addEventListener("click", function(){
     if (!isCandleLight){
         // allume la flamme
         flame.style.display = "block";
         isCandleLight = true
-        lightCandleButton.textContent = 'Glas darüber stellen';
     }else{
         putGlass();
+
     }
 });
 
@@ -176,14 +154,15 @@ resetButton.addEventListener("click",resetExperiment);
 //setTimeout(callbackFunction, delay); deslay en milliseconde
 
 function putGlass(){
-
+    lightCandleButton.disabled = true;
     glass.style.width = '120px'
     glass.style.height = '200px'
     setTimeout(function() {
         water.style.height = '150px'; 
         resultText.classList.remove('hidden');
         resetButton.style.display = 'inline-block';
-        lightCandleButton.style.display = 'none';
+        lightCandleButton.style.display ="none"
+        flame.style.display = 'none';
     }, 2000); 
     
 }
@@ -226,10 +205,10 @@ goupbtn.addEventListener("click", function(){
 /*----------------------------------------start_informatik--------------------------------------------*/
  if(document.body.id === 'informatik_body'){
     document.addEventListener('DOMContentLoaded', () => {
-        const submitButton = document.getElementById('submit');
-        const feedback = document.getElementById('feedback');
-        const successSound = document.getElementById('successSound');
-        const failureSound = document.getElementById('failureSound');
+        let submitButton = document.getElementById('submit');
+        let feedback = document.getElementById('feedback');
+        let successSound = document.getElementById('successSound');
+        let failureSound = document.getElementById('failureSound');
     
         function playSound(sound) {
             sound.currentTime = 0;
@@ -238,10 +217,10 @@ goupbtn.addEventListener("click", function(){
     
         submitButton.addEventListener('click', () => {
             let correctCount = 0;
-            const totalQuestions = 10;
+            let totalQuestions = 10;
     
             for (let i = 1; i <= totalQuestions; i++) {
-                const answers = document.getElementsByName(`q${i}`);
+                let answers = document.getElementsByName(`q${i}`);
                 answers.forEach(answer => {
                     if (answer.checked && answer.value === 'correct') {
                         correctCount++;
@@ -265,13 +244,13 @@ goupbtn.addEventListener("click", function(){
     });
     
     function runCode() {
-        const htmlCode = document.getElementById("html-code").value;
-        const cssCode = document.getElementById("css-code").value;
-        const jsCode = document.getElementById("js-code").value;
+        let htmlCode = document.getElementById("html-code").value;
+        let cssCode = document.getElementById("css-code").value;
+        let jsCode = document.getElementById("js-code").value;
     
-        const output = document.getElementById("output").contentWindow.document;
+        let output = document.getElementById("output").contentWindow.document;
     
-        const fullCode = `
+        let fullCode = `
           <html>
             <head>
               <style>${cssCode}</style>
@@ -294,15 +273,33 @@ goupbtn.addEventListener("click", function(){
 /*---------------------------------------------------start_mathe-----------------------------------------------------------*/
 if(document.body.id === 'mathe_body'){
 
-const show = document.querySelector("#show");
-const btnsum = document.getElementById("btnsum");
-const sticky = document.getElementById("stick");
+let show = document.querySelector("#show");
+let btnsum = document.getElementById("btnsum");
+let sticky = document.getElementById("stick");
+let submit1 = document.getElementById("mathe_quiz_submit");
+    let answers1 = {
+        u1q1: "Halb",
+        u1q2: "Drittel", 
+        u1q3: "Viertel", 
+        u1q4: "Fünftel",
+        u1q5: "Sechstel",
+        u1q6: "Siebtel",
+        u1q7:"Achtel",
+        u4q1: "Kreis",
+        u4q2: "dreieck", 
+        u4q3: "rechteck", 
+     
+    };
+    let result1 = document.getElementById("mathe_quiz_result");
+    funcQuiz(submit1, answers1, result1);
+
+
 btnsum.addEventListener('click', (e)=> {
 
                 e.preventDefault();
                 console.log("inside 1")
-                const n1=document.getElementById("l1").value;
-                const n2=document.getElementById("l2").value;
+                let n1=document.getElementById("l1").value;
+                let n2=document.getElementById("l2").value;
                 let sum = parseInt(n1)+parseInt(n2);
 
                 if((n1=="")||(n2=="")){
@@ -347,8 +344,8 @@ btnsum.addEventListener('click', (e)=> {
             });
     }
 
-            const submitBtn = document.getElementById("mathe_quiz_submit");
-            const answers = [
+            let submitBtn = document.getElementById("mathe_quiz_submit");
+            let answers = [
                      "Halb",
                      "Drittel", 
                      "Viertel", 
@@ -357,7 +354,7 @@ btnsum.addEventListener('click', (e)=> {
                      "Siebtel",
                      "Achtel"
             ];
-            const result = document.getElementById("mathe_quiz_result");
+            let result = document.getElementById("mathe_quiz_result");
             let answerEls = document.querySelectorAll(".answer");
             //let selectedInput = document.querySelector();
             currentQuiz = 0;
@@ -375,7 +372,7 @@ btnsum.addEventListener('click', (e)=> {
             };
 
 submitBtn.addEventListener('click',()=> {
-    const answer = getSelected();
+    let answer = getSelected();
     console.log(answers[currentQuiz])
     if(answer === answers[currentQuiz]){
         
@@ -383,7 +380,7 @@ submitBtn.addEventListener('click',()=> {
     }
 
     currentQuiz++
-    if(currentQuiz = answers.length ){
+    if(currentQuiz === answers.length ){
         result.textContent = `Du hast ${score} von ${answers.length} Fragen richtig beantwortet!`;
         result.classList.remove("hidden");
     }
