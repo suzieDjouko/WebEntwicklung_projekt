@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- Background Circle -->
+  <circle cx="300" cy="300" r="300" fill="#ffffff"/>
+
+  <!-- Central Text -->
+  <text x="300" y="320" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="80" fill="#0000FF">
+    MINTopia
+  </text>
+
+  <!-- Planet Ring -->
+  <ellipse cx="300" cy="320" rx="250" ry="50" fill="none" stroke="#0000FF" stroke-width="8" transform="rotate(-15, 300, 320)"/>
+</svg>

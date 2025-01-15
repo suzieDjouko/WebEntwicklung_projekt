@@ -298,12 +298,12 @@ const show = document.querySelector("#show");
 const btnsum = document.getElementById("btnsum");
 const sticky = document.getElementById("stick");
 btnsum.addEventListener('click', (e)=> {
-
                 e.preventDefault();
                 console.log("inside 1")
                 const n1=document.getElementById("l1").value;
                 const n2=document.getElementById("l2").value;
                 let sum = parseInt(n1)+parseInt(n2);
+                let min,max;
 
                 if((n1=="")||(n2=="")){
                     if((isNaN(n1)) || (isNaN(n2))) {
@@ -316,7 +316,7 @@ btnsum.addEventListener('click', (e)=> {
                         <div class="inal"><button id="btnres" type="button">Reset</button>`;
                         resetAlgebra();
                         return 0;
-                    }else if((isNaN(n1)) || (isNaN(n2))) {
+                    }else if((isNaN(n1)) &&  (isNaN(n2))) {
                         show.innerHTML = `attention il y a un champ non numerique!!
                         <div class="inal"><button id="btnres" type="button">Reset</button>`;
                         resetAlgebra();
@@ -324,10 +324,12 @@ btnsum.addEventListener('click', (e)=> {
                     }
 
                 if( n1>n2){
-                    var max = n1;
+                    max = n1;
+                    min = n2;
                 }
                 else{
-                    var min = n2;
+                    max = n2;
+                    min = n1
                 }
                         
                 show.innerHTML = `<p>Summe = ${sum}</p> <p>max = ${max}</p> <p>min = ${min}</p>

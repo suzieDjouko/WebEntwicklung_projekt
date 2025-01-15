@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- Background with Stars and Space Theme -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1a237e"/>
+      <stop offset="100%" stop-color="#0d47a1"/>
+    </radialGradient>
+  </defs>
+  <circle cx="300" cy="300" r="300" fill="url(#bgGradient)"/>
+  
+  <!-- Stars -->
+  <g>
+    <circle cx="80" cy="100" r="4" fill="#ffffff" opacity="0.9"/>
+    <circle cx="500" cy="150" r="5" fill="#ffffff" opacity="0.8"/>
+    <circle cx="250" cy="500" r="6" fill="#ffffff" opacity="0.8"/>
+    <circle cx="50" cy="300" r="3" fill="#ffffff" opacity="0.7"/>
+    <circle cx="550" cy="400" r="4" fill="#ffffff" opacity="0.9"/>
+    <circle cx="400" cy="100" r="5" fill="#ffffff" opacity="0.8"/>
+    <circle cx="200" y="200" r="3" fill="#ffffff" opacity="0.8"/>
+  </g>
+  
+  <!-- Central Title -->
+  <text x="300" y="320" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="120" fill="#ffca28" stroke="#0288d1" stroke-width="3">
+    MINTopia
+  </text>
+  
+  <!-- Subject Labels -->
+  <text x="50" y="300" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+    Mathematik.
+  </text>
+  <text x="100" y="400" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+    Informatik.
+  </text>
+  <text x="400" y="250" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+    Chemie.
+  </text>
+  <text x="300" y="450" font-family="Comic Sans MS, sans-serif" font-size="20" fill="#ffca28" stroke="#ffffff" stroke-width="0.5">
+    Naturwissenschaft.
+  </text>
+  
+  <!-- Science Formulas -->
+  <text x="150" y="100" font-family="Courier New, monospace" font-size="24" fill="#ffffff">E=mc²</text>
+  <text x="400" y="100" font-family="Courier New, monospace" font-size="20" fill="#ffffff">H₂O</text>
+  <text x="100" y="200" font-family="Courier New, monospace" font-size="20" fill="#ffffff">a² + b² = c²</text>
+  <text x="500" y="300" font-family="Courier New, monospace" font-size="20" fill="#ffffff">F=ma</text>
+  <text x="100" y="500" font-family="Courier New, monospace" font-size="20" fill="#ffffff">PV=nRT</text>
+  <text x="300" y="150" font-family="Courier New, monospace" font-size="20" fill="#ffffff">ΔE=hν</text>
+</svg>

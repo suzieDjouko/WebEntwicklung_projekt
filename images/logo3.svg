@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- Background -->
+  <rect width="600" height="600" fill="#ffffff"/>
+  
+  <!-- Central Letter -->
+  <text x="300" y="350" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="400" fill="#0000FF">
+    M
+  </text>
+</svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600">
+  <!-- Background Circle -->
+  <circle cx="300" cy="300" r="300" fill="#ffffff"/>
+
+  <!-- Central Letter -->
+  <text x="300" y="350" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="300" fill="#0000FF">
+    M
+  </text>
+</svg>

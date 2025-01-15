@@ -3,6 +3,20 @@ const footer = document.getElementById("footer");
 
 footer.innerHTML = 
       ` 
+    <div id="svgfoot">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="300" height="150">
+  <!-- Background -->
+  <circle cx="300" cy="300" r="300" fill="transparent"/>
+
+  <!-- Central Title -->
+  <text x="300" y="350" text-anchor="middle" font-family="Comic Sans MS, sans-serif" font-size="120" fill="#ffca28" stroke="#0288d1" stroke-width="3">
+    MINTopia
+  </text>
+
+  <!-- Planet Ring -->
+  <ellipse cx="300" cy="320" rx="250" ry="50" fill="none" stroke="#0288d1" stroke-width="8" transform="rotate(-15, 300, 320)"/>
+</svg>
+</div>
       <div class="contact">
       <div>CONTACT US</div>
       <div>
@@ -13,9 +27,9 @@ footer.innerHTML =
       
       </div>
       <div class="folgen">
+  
            <div>FOLGE UNS</div>
           <div>
-          
             <a href="#">
               <i class="fa-brands fa-facebook"></i>
             </a>
