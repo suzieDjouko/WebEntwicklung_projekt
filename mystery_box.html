@@ -10,6 +10,7 @@
   <meta name="author" content="Enigma">
 
   <title>MINTopia – Erlebe MINT: Experimente und Spaß für Kinder</title>
+  <link rel="icon" href="images/logo_title.svg" type="image/svg+xml">
   <script type="module" src="styles/main.js"></script>
   <link rel="stylesheet" href="styles/reset.css" />
   <link rel="stylesheet" href="styles/style.css" />
@@ -23,13 +24,17 @@
     <!--   HEADER   -->
     <header class="mystery-box_header">
       <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
-      <button
-          class="header_hamburger-menu"
-          aria-label="Menu"
-          aria-expanded="false"
-        >
-          <span class="fa fa-bars"></span>
-        </button>
+      <div>
+        <img src="images/logo.svg " alt="logo im header">
+
+        <button
+        class="header_hamburger-menu"
+        aria-label="Menu"
+        aria-expanded="false"
+      >
+        <span class="fa fa-bars"></span>
+      </button>
+      </div>
       <nav class="header_menu" aria-hidden="true">
         <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
         <a href="mathe.html"><i class="fa fa-calculator"></i> Mathe</a>
@@ -56,7 +61,7 @@
     </section>
 
     
-    <form class="formfoot" id="form_mystry-box">
+    <form class="formfoot" id="form_mystery-box">
       <div>Jetzt sich anmelden!</div>
       <div class="block">
         <label for="Nachname" class="">Nachname:</label>
@@ -105,7 +110,7 @@
 
       <div id="last">
         <label for="submit">Melde dich jetzt kostenlos an und starte dein Abenteuer!</label>
-        <input type="submit" value="Jetzt Mitglied werden" id="submit" />
+        <input type="submit" value="Jetzt Mitglied " id="submit" >
       </div>
     </form>
   
