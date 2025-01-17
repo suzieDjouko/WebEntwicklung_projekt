@@ -15,3 +15,7 @@ Crawl-delay: 10  # Gibt Googlebot eine kleine Verzögerung, um den Server nicht 
 # Weitere Anweisungen für Bingbot 
 User-agent: Bingbot
 Crawl-delay: 15  
+
+
+
+
