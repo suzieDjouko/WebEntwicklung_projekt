@@ -73,12 +73,12 @@ body {
   background-size: cover;
 }
 #logo{
-  background: url('../images/image_logo.svg');
+  background: url('../images/logo10.svg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .header_menu {
@@ -300,7 +300,7 @@ div.d-flex {
   display: grid;
   width: 100%;
   height: auto;
-  background: url(../images/imagefooter.svg);
+  background: #323a56;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -321,10 +321,13 @@ div.d-flex {
 }
 
 /*Logo*/
-#svgfoot,.folgen,.contact {
+.folgen,.contact {
   width: 100%;
+  display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   text-align: center;
+  padding: 0;
 }
 .folgen a,
 .contact a {
@@ -1606,11 +1609,10 @@ ul {
   /*----------------------start_footer_all----------------------*/
 
   #footer {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr 2fr;
     grid-template-areas:
-      "svgfoot svgfoot"
-      "contactfoot  folgenfoot"
-      "endfoot endfoot"
+      "svgfoot contactfoot  folgenfoot"
+      "endfoot endfoot endfoot"
     ;
     padding: 3rem 1.5rem 0;
     font-size: larger;
