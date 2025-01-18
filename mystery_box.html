@@ -11,11 +11,11 @@
 
   <title>MINTopia – Erlebe MINT: Experimente und Spaß für Kinder</title>
   <script type="module" src="styles/main.js"></script>
-  <link rel="stylesheet" href="styles/reset.css" >
-  <link rel="stylesheet" href="styles/style.css" >
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" >
+    crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body id="mystery_body/6">
@@ -24,20 +24,21 @@
 
     <header class="mystery-box_header">
       <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
-       <div>
+      <div>
         <img src="images/logo.svg " alt="logo im header">
 
-      <button class="header_hamburger-menu" aria-label="Menu" aria-expanded="false">
-        <span class="fa fa-bars"></span>
-       </div>
-      
-      </button>
+        <button class="header_hamburger-menu" aria-label="Menu" aria-expanded="false">
+          <span class="fa fa-bars"></span>
+        </button>
+      </div>
+
+
       <nav class="header_menu" aria-hidden="true">
         <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
         <a href="mathe.html"><i class="fa fa-calculator"></i> Mathe</a>
         <a href="Naturwissenschaft.html"><i class="fa fa-flask"></i> Naturwissenschaft</a>
         <a href="informatik.html"><i class="fa fa-laptop-code"></i> Informatik</a>
-       
+
       </nav>
 
     </header>
@@ -57,30 +58,33 @@
       </p>
     </section>
 
-    
+
     <form class="formfoot" id="form_mystry-box">
       <div>Jetzt sich anmelden!</div>
       <div class="block">
         <label for="Nachname" class="">Nachname:</label>
-        <input type="text" class="same" id="Nachname" required="required" placeholder="enter your Name......" name="Nachname">
+        <input type="text" class="same" id="Nachname" required="required" placeholder="enter your Name......"
+          name="Nachname">
       </div>
 
       <div class="block">
         <label for="Vorname" class="">Vorname:</label>
-        <input type="text" class="same" id="Vorname" required="required" placeholder="enter your Lastname......" name="Vorname">
+        <input type="text" class="same" id="Vorname" required="required" placeholder="enter your Lastname......"
+          name="Vorname">
       </div>
 
       <div class="block">
         <label for="email" class="">Email:</label>
-        <input type="email" class="same" id="email" required="required" placeholder="enter your Email....." name="email">
+        <input type="email" class="same" id="email" required="required" placeholder="enter your Email....."
+          name="email">
       </div>
 
       <div class="block">
         <span class="Gender">Gender:</span>
-        <input type="radio" required name="gender" id="male" value="M" >
+        <input type="radio" required name="gender" id="male" value="M">
         <label for="male">Male</label>
-        <input type="radio" name="gender" id="female" value="F" >
-        <label for="female">Female</label><br >
+        <input type="radio" name="gender" id="female" value="F">
+        <label for="female">Female</label><br>
       </div>
 
       <div class="block">
@@ -89,7 +93,7 @@
       <div class="block">
         <label>Place of birth:
           <select id="mystery_birth" required="required" name="region">
-  
+
             <option value="">Baden-Württemberg</option>
             <option value="B">Berlin</option>
             <option value="H" selected="selected">Hamburg</option>
@@ -108,11 +112,11 @@
       </div>
 
       <div id="last">
-        <label for="submit">Melde dich jetzt kostenlos an und starte dein Abenteuer!</label>
+        <label for="mystery_submit">Melde dich jetzt kostenlos an und starte dein Abenteuer!</label>
         <input type="submit" value="Jetzt Mitglied werden" id="mystery_submit">
       </div>
     </form>
-  
+
     <!--  FOOTER-->
     <footer id="footer"></footer>
   </div>
