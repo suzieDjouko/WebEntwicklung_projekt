@@ -10,7 +10,7 @@
   <meta name="author" content="Enigma">
 
   <title>MINTopia – Erlebe MINT: Experimente und Spaß für Kinder</title>
-  <script type="module" src="styles/main.js"></script>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
@@ -24,19 +24,18 @@
 
     <header class="mystery-box_header">
       <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
-      <div>
-        <img src="images/logo.svg " alt="logo im header">
+      <a href="index.html">
+        <img src="images/logo.svg " alt="Mintopia logo">
+        </a>
 
         <button class="header_hamburger-menu" aria-label="Menu" aria-expanded="false">
           <span class="fa fa-bars"></span>
         </button>
-      </div>
-
 
       <nav class="header_menu" aria-hidden="true">
         <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
         <a href="mathe.html"><i class="fa fa-calculator"></i> Mathe</a>
-        <a href="Naturwissenschaft.html"><i class="fa fa-flask"></i> Naturwissenschaft</a>
+        <a href="naturwissenschaft.html"><i class="fa fa-flask"></i> Naturwissenschaft</a>
         <a href="informatik.html"><i class="fa fa-laptop-code"></i> Informatik</a>
 
       </nav>
@@ -59,7 +58,7 @@
     </section>
 
 
-    <form class="formfoot" id="form_mystry-box">
+    <form class="form_mystery" id="form_mystry-box" action="result.html" method="GET">
       <div>Jetzt sich anmelden!</div>
       <div class="block">
         <label for="Nachname" class="">Nachname:</label>
@@ -74,41 +73,41 @@
       </div>
 
       <div class="block">
-        <label for="email" class="">Email:</label>
-        <input type="email" class="same" id="email" required="required" placeholder="enter your Email....."
-          name="email">
+        <label for="Email" class="">Email:</label>
+        <input type="Email" class="same" id="Email" required="required" placeholder="enter your Email....."
+          name="Email">
       </div>
 
       <div class="block">
         <span class="Gender">Gender:</span>
-        <input type="radio" required name="gender" id="male" value="M">
+        <input type="radio" required name="Gender" id="male" value="M">
         <label for="male">Male</label>
-        <input type="radio" name="gender" id="female" value="F">
+        <input type="radio" name="Gender" id="female" value="F">
         <label for="female">Female</label><br>
       </div>
 
       <div class="block">
-        <label>Date of birth:<input id="DOB" required="required" type="Date" name="DOB"></label><br>
+        <label>Date of birth:<input id="DOB" required="required" type="Date" name="Date Of Birth"></label><br>
       </div>
       <div class="block">
         <label>Place of birth:
-          <select id="mystery_birth" required="required" name="region">
+          <select id="mystery_birth" required="required" name="Region">
 
             <option value="">Baden-Württemberg</option>
-            <option value="B">Berlin</option>
-            <option value="H" selected="selected">Hamburg</option>
-            <option value="He">Hessen</option>
-            <option value="N">Niedersachsen</option>
-            <option value="R">Rheinland-Pfalz</option>
-            <option value="S">Saarland</option>
-            <option value="L">Thüringen</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Hamburg" selected="selected">Hamburg</option>
+            <option value="Hessen">Hessen</option>
+            <option value="Niedersachsen">Niedersachsen</option>
+            <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+            <option value="Saarland">Saarland</option>
+            <option value="Thüringen">Thüringen</option>
           </select>
         </label>
       </div>
 
       <div class="block">
         <label><em>Wenn du ein verrücktes MINT-Erfindung bauen könntest, was wäre das?</em> <br>
-          <textarea>Comment here!</textarea></label>
+          <textarea placeholder="Comment here!"></textarea></label>
       </div>
 
       <div id="last">
