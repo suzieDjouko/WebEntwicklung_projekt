@@ -1,11 +1,570 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="🔢 Entdecke die Welt der Zahlen mit Spiel und Spaß! Lass uns zusammen lernen! 🎉">
+  <meta name="keywords" content="MINT, Mathematik,Zahlen, Bruchzahl, Geometrie">
+  <meta name="autor" content="Enigma">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <title>Mathematik - Spielend Zahlen entdecken</title>
 </head>
-<body>
-    
+
+<body id="mathe_body">
+  <div class="mathe_container">
+    <!--   HEADER -->
+    <header class="mathe_header">
+      
+      <a href="index.html">
+        <img src="images/logo.svg " alt="Mintopia logo">
+        </a>
+
+        <button class="header_hamburger-menu" aria-label="Menu" aria-expanded="false">
+          <span class="fa fa-bars"></span>
+        </button>
+      
+      <nav class="header_menu" aria-hidden="true">
+        <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
+        <a href="naturwissenschaft.html"><i class="fa fa-flask"></i> Naturwissenschaft</a>
+
+        <a href="informatik.html"><i class="fa fa-laptop-code"></i> Informatik</a>
+        <a href="mystery_box.html"><i class="fa fa-gift"></i> Join Us</a>
+      </nav>
+    </header>
+
+    <!--   Description   -->
+
+    <article class="mathe_beschreibung">
+      <div class="mathe_title">Welt der Mathematik</div>
+      <h1>mathe-Spaß für Kinder 🎲✨</h1>
+
+      <h2>Entdecke die Welt der Zahlen mit Spiel und Spaß!</h2>
+      Unsere Webseite bietet Kindern von 7 bis 10 Jahren:
+
+      <details>
+        <summary>Einfache Erklärungen</summary>
+        <ul>
+          <li><a href="#bruchzahl">Bruchzahl</a></li>
+          <li><a href="#geometrie">Geometrie</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Tolle Videos</summary>
+        <ul>
+          <li><a href="#video_1">Bruchzahl Video 1</a></li>
+          <li><a href="#video_2">Bruchzahl Video_2</a></li>
+          <li><a href="#video_3">Geometrie Video_1</a></li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Einfache Übungen 🧮</summary>
+        <ul>
+          <li><a href="#Uebung_1">Übung 1</a></li>
+          <li><a href="#Uebung_4">Übung 2</a></li>
+        </ul>
+      </details>
+
+      Hier wird Lernen zum Abenteuer – probier es aus und werde zum
+      mathe-Profi! 🚀
+    </article>
+
+    <aside class="content_mathe" id="algebra">
+      <div class="mathe_title">Algebra</div>
+      <form id="stick">
+        <div class="inal">
+          <h2>
+            Hier gehts um addition, subtraction und vergleichen von zahlen
+          </h2>
+          <p>Propieren sie so oft wie möglich....</p>
+        </div>
+
+        <div>
+          <div class="inal">
+            <label for="l1">Zahl1</label>
+            <input type="text" id="l1" >
+          </div>
+          <div class="inal">
+            <label for="l2">Zahl2</label>
+            <input type="text" id="l2" >
+          </div>
+
+          <div class="inal" id="mathe_quiz_buttons">
+            <button id="btnsum" type="button">Ergebnis</button>
+            <button id="btnres" type="button">reset</button>
+          </div>
+        </div>
+
+        <div id="show"></div>
+      </form>
+    </aside>
+
+    <!--   CONTENT  grid -->
+
+    <!-- Einleitung an Bruchzahl -->
+    <section class="content_mathe" id="bruchzahl">
+      <div class="mathe_title">Bruchzahl</div>
+      <div>
+        <h1>Ziel des Kurses</h1>
+        <strong>Nach diesem Kurs weiß das Kind:</strong>
+        <ul>
+          <li>Was ein Bruch ist (Teile eines Ganzen).</li>
+          <li>Wie man Brüche schreibt (Zähler/Nenner)</li>
+          <li>Wie man Brüche vergleicht (größer/kleiner)</li>
+        </ul>
+        <ol>
+          <li>
+            <h2>Was ist ein Bruch?</h2>
+
+            <ul>
+              <li>
+                <span>Erklärung</span>: Ein Bruch zeigt, wie man etwas teilt.
+                oder Teile etwas Ganzes in gleiche Stücke, z. B. einen Apfel
+                oder eine Pizza
+              </li>
+              <li>
+                <span>Beispiel</span>: Schneide eine Pizza in 2 Hälften und
+                erkläre:
+              </li>
+              <li>"Ein Stück ist 1/2 (ein Halb)."</li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>Die Teile bennenen</h2>
+
+            <ul>
+              <li>Zähler (oben): Wie viele Stücke du hast.</li>
+              <li>
+                Nenner (unten): In wie viele Stücke das Ganze geteilt ist.
+              </li>
+              <li>
+                <span>Beispiel</span>: "Wenn du 3 Stücke von 4 nimmst, heißt
+                das 3/4 (drei Viertel)."
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2>Brüche vergleichen</h2>
+            Brüche vergleichen
+
+            <ul>
+              <li>
+                <span>Erklärung:</span> Ein größeres Stück bedeutet, der
+                Nenner ist kleiner 1/2 (ein Halb) ist größer als 1/4 (ein
+                Viertel).
+              </li>
+              <li>
+                <span>Beispiel</span>: Schneide einen Kreis in 2 Teile
+                (Hälften) und einen anderen in 4 Teile (Viertel). Zeig, dass
+                die Hälften größer sind.
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Video 1 -->
+      <figure class="mathe_video_1" id="video_1">
+        <figcaption>Bruchzahl video 1</figcaption>
+        <iframe src="https://www.youtube.com/embed/tdLHf9-sHuw" title="Bruchrechnen – Einstieg &amp; Grundlagen einfach erklärt | mathematik 
+                            | Silicon Valley Kids" allow="accelerometer; autoplay; 
+                            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </figure>
+
+      <!-- Video 2 -->
+      <figure class="mathe_video_2" id="video_2">
+        <figcaption>Bruchzahl Video 2</figcaption>
+        <iframe width="672" height="378" src="https://www.youtube.com/embed/thbQ6mVgULY"
+          title="Brüche erweitern und kürzen | Bruchrechnung | Mathematik | Silicon Valley Kids"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </figure>
+    </section>
+
+    <!-- Einleitung an Geometrie -->
+    <section class="content_mathe" id="geometrie">
+      <div class="mathe_title">Geometrie</div>
+      <div>
+        <h1>Ziel des Kurses</h1>
+        <strong>Nach diesem Kurs weiß das Kind:</strong>
+        <ul>
+          <li>Wie Grundformen heißen (Kreis, Dreieck, Quadrat, Rechteck).</li>
+          <li>Wie Formen aussehen und gezeichnet werden.</li>
+          <li>Wie Formen aussehen und gezeichnet werden.</li>
+        </ul>
+        <ol>
+          <li>
+            <h2>Was ist Geometrie?</h2>
+            <ul>
+              <li>
+                <span>Erklärung</span>: Geometrie beschäftigt sich mit Formen,
+                Linien und Flächen, die wir überall sehen können.
+              </li>
+              <li>
+                <span>Beispiele</span>:
+                <ul>
+                  <li>Ein Ball ist rund (Kreis)</li>
+                  <li>Ein Tisch ist eckig (Rechteck).</li>
+                  <li>Ein Dach hat eine Spitze (Dreieck)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h2>Grundformen kennenlernen</h2>
+
+            <ul>
+              <li>Kreis 🟡: Rund, keine Ecken.</li>
+              <li>Dreieck 🔺: 3 Seiten, 3 Ecken.</li>
+              <li>Quadrat ◼: 4 gleichlange Seiten, 4 Ecken.</li>
+              <li>Rechteck ▭: 4 Seiten, aber nicht alle gleich lang</li>
+            </ul>
+          </li>
+          <li>
+            <h2>Geometrie im Alltag entdecken</h2>
+
+            <ul>
+              <li>Teller = Kreis.</li>
+              <li>Tür = Rechteck.</li>
+              <li>Pyramide = Dreieck</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+
+      <!-- Video 3 -->
+      <figure class="mathe_video_3" id="video_3">
+        <figcaption>Geometrie video 1</figcaption>
+        <iframe src="https://www.youtube.com/embed/r6OBgFetm_A"
+          title="Geometrische Formen &amp; Körper – blitzschnell verstehen | mathematik | Silicon Valley Kids"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+      </figure>
+    </section>
+
+    <section class="content_mathe_uebung" id="Uebung_1">
+      <div class="mathe_title">Übungen 1</div>
+
+      <h1>Was ist richtig?</h1>
+      <form id="form_mathe_u1">
+        <ol>
+          <li>
+            1/2 =
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q1sechstel" name="q1" value="incorrect">
+                <label for="q1sechstel">ein Sechstel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q1Halb" name="q1" value="correct">
+                <label for="q1Halb">ein Halb</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q1Fünftel" name="q1" value="incorrect">
+                <label for="q1Fünftel">ein Fünftel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q1Drittel" name="q1" value="incorrect">
+                <label for="q1Drittel">ein Drittel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q1Viertel" name="q1" value="incorrect">
+                <label for="q1Viertel">ein Viertel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q1Achtel" name="q1" value="incorrect">
+                <label for="q1Achtel">ein Achtel</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            1/3 =
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q2sechstel" name="q2" value="incorrect">
+                <label for="q2sechstel">ein Sechstel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q2Halb" name="q2" value="incorrect">
+                <label for="q2Halb">ein Halb</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q2Fünftel" name="q2" value="incorrect">
+                <label for="q2Fünftel">ein Fünftel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q2Drittel" name="q2" value="correct">
+                <label for="q2Drittel">ein Drittel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q2Viertel" name="q2" value="incorrect">
+                <label for="q2Viertel">ein Viertel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q2Achtel" name="q2" value="incorrect">
+                <label for="q2Achtel">ein Achtel</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            1/4 =
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q3sechstel" name="q3" value="incorrect">
+                <label for="q3sechstel">ein Sechstel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q3Halb" name="q3" value="incorrect">
+                <label for="q3Halb">ein Halb</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q3Fünftel" name="q3" value="incorrect">
+                <label for="q3Fünftel">ein Fünftel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q3Drittel" name="q3" value="incorrect">
+                <label for="q3Drittel">ein Drittel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q3Viertel" name="q3" value="correct">
+                <label for="q3Viertel">ein Viertel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q3Achtel" name="q3" value="incorrect">
+                <label for="q3Achtel">ein Achtel</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            1/5 =
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q4sechstel" name="q4" value="incorrect">
+                <label for="q4sechstel">ein Sechstel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q4Halb" name="q4" value="incorrect">
+                <label for="q4Halb">ein Halb</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q4Fünftel" name="q4" value="correct">
+                <label for="q4Fünftel">ein Fünftel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q4Drittel" name="q4" value="incorrect">
+                <label for="q4Drittel">ein Drittel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q4Viertel" name="q4" value="incorrect">
+                <label for="q4Viertel">ein Viertel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q4Achtel" name="q4" value="incorrect">
+                <label for="q4Achtel">ein Achtel</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            1/6
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q5sechstel" name="q5" value="correct">
+                <label for="q5sechstel">ein Sechstel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q5Halb" name="q5" value="incorrect">
+                <label for="q5Halb">ein Halb</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q5Fünftel" name="q5" value="incorrect">
+                <label for="q5Fünftel">ein Fünftel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q5Drittel" name="q5" value="incorrect">
+                <label for="q5Drittel">ein Drittel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q5Viertel" name="q5" value="incorrect">
+                <label for="q5Viertel">ein Viertel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q5Achtel" name="q5" value="incorrect">
+                <label for="q5Achtel">ein Achtel</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            1/7 =
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q6sechstel" name="q6" value="incorrect">
+                <label for="q6sechstel">ein Sechstel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q6Halb" name="q6" value="incorrect">
+                <label for="q6Halb">ein Halb</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q6Fünftel" name="q6" value="incorrect">
+                <label for="q6Fünftel">ein Fünftel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q6Siebtel" name="q6" value="correct">
+                <label for="q6Siebtel">ein Siebtel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q6Viertel" name="q6" value="incorrect">
+                <label for="q6Viertel">ein Viertel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q6Achtel" name="q6" value="incorrect">
+                <label for="q6Achtel">ein Achtel</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            1/8 =
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q7sechstel" name="q7" value="incorrect">
+                <label for="q7sechstel">ein Sechstel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q7Halb" name="q7" value="incorrect">
+                <label for="q7Halb">ein Halb</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q7Fünftel" name="q7" value="incorrect">
+                <label for="q7Fünftel">ein Fünftel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q7Drittel" name="q7" value="incorrect">
+                <label for="q7Drittel">ein Drittel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q7Viertel" name="q7" value="incorrect">
+                <label for="q7Viertel">ein Viertel</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q7Achtel" name="q7" value="correct">
+                <label for="q7Achtel">ein Achtel</label>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </form>
+    </section>
+
+    <section class="content_mathe_uebung" id="Uebung_4">
+      <div class="mathe_title">Übungen 2</div>
+
+      <h1>Wählen Sie die richtige Figuren</h1>
+      <form id="form_mathe_u2">
+        <ol start="8">
+          <li>
+            Das ist ein
+            <div id="circle"></div>
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q8kreis" name="q8" value="correct">
+                <label for="q8kreis">kreis</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q8dreieck" name="q8" value="incorrect">
+                <label for="q8dreieck">dreieck</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q8trapez" name="q8" value="incorrect">
+                <label for="q8trapez">Trapez</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q8rechteck" name="q8" value="incorrect">
+                <label for="q8rechteck">Rechteck</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q8quadrat" name="q8" value="incorrect">
+                <label for="q8quadrat">Quadrat</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Das ist ein
+            <div id="triangle"></div>
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q9kreis" name="q9" value="incorrect">
+                <label for="q9kreis">kreis</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q9dreieck" name="q9" value="correct">
+                <label for="q9dreieck">dreieck</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q9trapez" name="q9" value="incorrect">
+                <label for="q9trapez">Trapez</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q9rechteck" name="q9" value="incorrect">
+                <label for="q9rechteck">Rechteck</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q9quadrat" name="q9" value="incorrect">
+                <label for="q9quadrat">Quadrat</label>
+              </li>
+            </ul>
+          </li>
+          <li>
+            Das ist ein
+            <div id="square"></div>
+            <ul>
+              <li>
+                <input type="radio" class="answer" id="q10kreis" name="q10" value="incorrect">
+                <label for="q10kreis">kreis</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q10dreieck" name="q10" value="incorrect">
+                <label for="q10dreieck">dreieck</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q10trapez" name="q10" value="incorrect">
+                <label for="q10trapez">Trapez</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q10rechteck" name="q10" value="incorrect">
+                <label for="q10rechteck">Rechteck</label>
+              </li>
+              <li>
+                <input type="radio" class="answer" id="q10quadrat" name="q10" value="correct">
+                <label for="q10quadrat">Quadrat</label>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </form>
+      <button id="mathe_quiz_submit">Abschließen</button>
+      <p id="mathe_quiz_result" class="hidden"></p>
+      <button id="mathe_quiz_reset">Reset</button>
+      <audio id="successSound" src=" Audio/success.mp3"></audio>
+      <audio id="failureSound" src="Audio/failure.mp3"></audio>
+    </section>
+
+    <!--   FOOTER   -->
+    <footer id="footer"></footer>
+  </div>
+
+  <button id="go_up_button" aria-label="Scroll to top">
+    <i class="far fa-arrow-alt-circle-up"></i>
+  </button>
+  <script src="styles/skript.js"></script>
 </body>
+
 </html>

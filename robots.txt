@@ -1,0 +1,21 @@
+#robots.txt zu http://www.lien_du_site/
+
+User-agent: *
+# Erlaubt allen Suchmaschinen, alle öffentlichen Seiten zu durchsuchen
+
+Allow: /
+
+# Sitemap
+Sitemap: https://mintopia.com/sitemap.xml  
+
+# Hinweis für Googlebot, der mehr Frequenz bei bestimmten Bereichen hat
+User-agent: Googlebot
+Crawl-delay: 10  # Gibt Googlebot eine kleine Verzögerung, um den Server nicht zu überlasten
+
+# Weitere Anweisungen für Bingbot 
+User-agent: Bingbot
+Crawl-delay: 15  
+
+
+
+

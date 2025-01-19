@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Entdecke die Welt der MINT-Fächer🌍 für Grundschüler🧑‍🏫 mit spannenden Experimenten🔬, Quizzen🧠 und interaktiven Inhalten.">
+  <meta name="keywords" content="Club, Mystery, Mitglied, Entdecker, anmeldung">
+  <meta name="author" content="Enigma">
+
+  <title>MINTopia – Erlebe MINT: Experimente und Spaß für Kinder</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body id="mystery_body/6">
+  <div class="mystery-box_container">
+    <!--   HEADER   -->
+
+    <header class="mystery-box_header">
+      <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
+      <a href="index.html">
+        <img src="images/logo.svg " alt="Mintopia logo">
+        </a>
+
+        <button class="header_hamburger-menu" aria-label="Menu" aria-expanded="false">
+          <span class="fa fa-bars"></span>
+        </button>
+
+      <nav class="header_menu" aria-hidden="true">
+        <a href="index.html"><i class="fa fa-home"></i> Homepage</a>
+        <a href="mathe.html"><i class="fa fa-calculator"></i> Mathe</a>
+        <a href="naturwissenschaft.html"><i class="fa fa-flask"></i> Naturwissenschaft</a>
+        <a href="informatik.html"><i class="fa fa-laptop-code"></i> Informatik</a>
+
+      </nav>
+
+    </header>
+
+    <!--   BECHREIBUNG   -->
+
+    <section class="mystery-box_beschreibung">
+      <h2 class="mystery-box_header-title">MINT-Club für junge Entdecker!</h2>
+      <p>
+        Im MINT-Club für junge Entdecker erwarten dich spannende Abenteuer, knifflige Rätsel und faszinierende
+        Experimente. Lerne, wie du Raketen startest, Codes knackst und die Technik der Zukunft verstehst – alles mit
+        einer großen Portion Spaß!
+
+        Werde Teil einer Gemeinschaft von neugierigen Forschern und erlebe, wie aufregend die Welt der Wissenschaft sein
+        kann.Melde dich jetzt an und starte dein Abenteuer!
+
+      </p>
+    </section>
+
+
+    <form class="form_mystery" id="form_mystry-box" action="result.html" method="GET">
+      <div>Jetzt sich anmelden!</div>
+      <div class="block">
+        <label for="Nachname" class="">Nachname:</label>
+        <input type="text" class="same" id="Nachname" required="required" placeholder="enter your Name......"
+          name="Nachname">
+      </div>
+
+      <div class="block">
+        <label for="Vorname" class="">Vorname:</label>
+        <input type="text" class="same" id="Vorname" required="required" placeholder="enter your Lastname......"
+          name="Vorname">
+      </div>
+
+      <div class="block">
+        <label for="Email" class="">Email:</label>
+        <input type="Email" class="same" id="Email" required="required" placeholder="enter your Email....."
+          name="Email">
+      </div>
+
+      <div class="block">
+        <span class="Gender">Gender:</span>
+        <input type="radio" required name="Gender" id="male" value="M">
+        <label for="male">Male</label>
+        <input type="radio" name="Gender" id="female" value="F">
+        <label for="female">Female</label><br>
+      </div>
+
+      <div class="block">
+        <label>Date of birth:<input id="DOB" required="required" type="Date" name="Date Of Birth"></label><br>
+      </div>
+      <div class="block">
+        <label>Place of birth:
+          <select id="mystery_birth" required="required" name="Region">
+
+            <option value="">Baden-Württemberg</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Hamburg" selected="selected">Hamburg</option>
+            <option value="Hessen">Hessen</option>
+            <option value="Niedersachsen">Niedersachsen</option>
+            <option value="Rheinland-Pfalz">Rheinland-Pfalz</option>
+            <option value="Saarland">Saarland</option>
+            <option value="Thüringen">Thüringen</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="block">
+        <label><em>Wenn du ein verrücktes MINT-Erfindung bauen könntest, was wäre das?</em> <br>
+          <textarea placeholder="Comment here!"></textarea></label>
+      </div>
+
+      <div id="last">
+        <label for="mystery_submit">Melde dich jetzt kostenlos an und starte dein Abenteuer!</label>
+        <input type="submit" value="Jetzt Mitglied werden" id="mystery_submit">
+      </div>
+    </form>
+
+    <!--  FOOTER-->
+    <footer id="footer"></footer>
+  </div>
+  <script src="styles/skript.js"></script>
+</body>
+
+</html>

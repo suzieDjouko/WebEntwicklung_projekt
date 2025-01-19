@@ -15,91 +15,101 @@ ul {
   list-style: disc;
   margin-left: 1.5rem;
 }
-
 li {
   margin-bottom: 0.5rem;
 }
 
 body {
-
-  font-family: 'Comic Sans MS', 'Poppins', sans-serif;
+ /* font-family: "Comic Sans MS", "Poppins", sans-serif;*/
+ min-width: 375px;
   font-size: 16px;
   width: 100%;
   height: 100vh;
   background-color: #fef6e4;
-
 }
 
-.container {
+[class$="_container"]{
+  width: 100%;
+  gap: 4rem;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  letter-spacing: 0.03rem;
+  line-height: 1.5; /* 1.5 times the font size for body text */
+  }
+  /*correct and incorrect*/
+.correct{
+  background-color: green;
+}
+.incorrect{
+  background-color: red;
+}
+
+/*-----------------------start_index---------------------------------*/
+.index_container {
   display: grid;
-  grid-template-rows: auto auto auto 1fr auto;
   grid-template-areas:
     "header"
     "beschreibung"
-    "mint"
+    "mint_1"
+    "mint_2"
+    "mint_3"
+    "mint_4"
     "fun-fact"
-    "footer"
-  ;
-  gap: 1rem;
+    "footer";
+  gap: 2rem;
   background-color: rgb(166, 183, 210);
   width: 100%;
-  height: 100vh;
-
-
+  height: auto;
+  justify-content: space-around;
 }
-
-/*Header*/
+/*index_all_header*/
 [class$="header"] {
   grid-area: header;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: start;
   width: 100%;
-  padding: 0.5rem 1rem;
-  background-image: url('../images/headerbackground.jpg');
+  padding: 1rem;
+  background-image: url("../images/headerbackground.jpg");
   height: 18rem;
   background-position: center;
   background-size: cover;
-
 }
 
+[class$="header"] img{
+width: 50px;
+height: 50px;
+}
 .header_menu {
   display: none;
   flex-direction: column;
   position: absolute;
   align-items: flex-start;
-  top: 3rem;
-  right: 1rem;
+  top: 4rem;
   padding: 1rem;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.95);
-  /* Fond blanc semi-transparent */
+  background: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 70%;
+  width: auto;
   z-index: 1000;
-
 }
 
 .header_menu.active {
   display: flex;
-
 }
-
 .header_menu a {
   color: #1e1d1d;
   text-decoration: none;
   font-weight: bold;
-  padding: 0.5rem 0;
+  padding: 0;
   margin-left: 1em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: color 0.3s ease, transform 0.3s ease;
   position: relative;
   font-size: 1.3rem;
-
+  white-space: nowrap;
 }
-
 
 .header_menu a::after {
   content: "";
@@ -112,12 +122,10 @@ body {
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-
 .header_menu a:hover::after {
   width: 100%;
   left: 0;
 }
-
 
 .header_menu a:hover {
   color: #f87619;
@@ -132,25 +140,29 @@ body {
   margin-right: 0.5rem;
   color: #f87619;
   transition: color 0.3s ease;
-
 }
 
-.header_menu a:hover i {
-  color: #ffffff;
+.header_hamburger-menu .fa {
+  transition: transform 0.3s ease, color 0.3s ease;
+  border-radius:20px;
+  border:none;
+  font-size: 1.6rem;
+  color: rgb(106, 100, 100);
+  padding: 4px;
+  
 }
-
-.fa-bars {
-  font-size: 2rem;
-  color: rgb(62, 57, 57);
+.header_hamburger-menu{
+  border: none;
   cursor: pointer;
-  transition: color 0.3s ease;
+  margin-top: 0.5rem;
 
 }
 
-.fa-bars:hover {
+.fa-bars:hover, .fa-close:hover {
   color: #f87619;
+ 
 }
-
+/*index_all_title*/
 [class$="title"] {
   position: absolute;
   top: -1.5em;
@@ -161,35 +173,40 @@ body {
   color: white;
   transform: rotate(-3deg);
   /*-3 rote dans le sens contraire d'une montre et +3 dans le sens des aiguilles du montre*/
-
 }
 
-/*Beschreibung*/
+/*index_all_Beschreibung*/
 
 [class$="beschreibung"] {
-  position: relative;
   grid-area: beschreibung;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  position: relative;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   padding: 1rem;
   border-radius: 10px;
   line-height: 1.3em;
-  border: 1.5px groove #333;
+  border: 1.5px groove #1b1a1a;
   background-color: bisque;
   margin-top: 1.5em;
   height: auto;
-
 }
 
 /*Mint Section*/
 
-.mint-section {
-  grid-area: mint;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1em;
-  padding: 1rem 1.5rem;
+#mint_1 {
+  grid-area: mint_1;
+}
 
+#mint_2 {
+  grid-area: mint_2;
+}
+
+#mint_3 {
+  grid-area: mint_3;
+}
+
+#mint_4 {
+  grid-area: mint_4;
 }
 
 .mint-item {
@@ -198,6 +215,7 @@ body {
   padding-bottom: 1em;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 2rem;
 }
 
 .mint-item:hover {
@@ -211,9 +229,7 @@ body {
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
 }
-
-
-.mint-item figcaption {
+[class^="mint"] figcaption {
   margin-top: 10px;
   font-size: 0.9rem;
   color: #333;
@@ -221,58 +237,165 @@ body {
 
 .fun-fact {
   grid-area: fun-fact;
-  background-color: #cfcfcf;
-  padding: 1rem;
+  background-color: #dcdcdc;
+  padding: 0.5rem;
   border-radius: 8px;
   text-align: center;
-  width: 100%;
-
 }
 
+.carousel-item {
+  font-size: 1.2rem;
+  padding: 20px;
+  color: #333;
+  text-align: center;
+}
+div.d-flex {
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  width: auto;
+}
 
-/*Naturvissenschaft*/
+.carousel-indicators button {
+  background-color: #c7bdbd;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #8b8989;
+  border-radius: 50%;
+  height: 24px;
+  width: 24px;
+}
+.carousel-control-next,
+.carousel-control-prev {
+  top: 4em;
+}
+
+/*----------------------end_index------------------------*/
+
+/*----------------start_footer_all-------------------------------------*/
+#footer {
+  grid-area: footer;
+  display: grid;
+  width: 100%;
+  height: auto;
+  background: url(../images/imagefooter.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  gap: 1.5rem;
+  text-align: center;
+  padding-top: 1.5rem;
+  font-size: 2rem;
+}
+
+/*form in footer*/
+#footer:last-child{
+  font-size: small;
+}
+#folgen div:first-of-type,
+#contact div:first-of-type {
+  padding-bottom: 5px;
+}
+
+/*Logo*/
+#svgfoot,#folgen,#contact {
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+}
+#folgen a,
+#contact a {
+  color: #ffffff;
+  padding-left: 1rem;
+  padding-top: 5px;
+  transition: 0.3s ease;
+  text-decoration: none;
+}
+
+#contact span {
+  font-size: 0.8rem;
+  margin-right: 5px;
+}
+
+#folgen a:hover,
+#contact a:hover {
+  color: rgba(255, 223, 0, 1);
+  /* Jaune soleil */
+}
+
+#svgfoot:hover{
+  cursor: pointer;
+}
+/*----------------------end_footer-------------------------------------*/
+
+/*----------------------start_naturwissenschaft----------------*/
 
 .naturwissenschaft_container {
-  grid-template-columns: 1fr;
+  display: grid;
   grid-template-areas:
     "header"
     "beschreibung"
     "experiment"
     "mint"
     "quiz"
-    "fun-fact"
+    "fun_fact"
     "footer";
   background-color: rgb(245, 245, 245);
+  background-color: white;
   width: 100%;
-  height: 100vh;
-
-
+  height: auto;
 }
 
 .naturwissenschaft_header {
-  background-image: url('../images/scientist3.jpg');
-  height: 18rem;
-
-
+  background-image: url("../images/scientist1.jpg");
 }
 
 .naturwissenschaft_beschreibung {
-  grid-area: beschreibung;
   padding: 1rem;
   margin: 2rem auto;
   text-align: center;
-
 }
-
 .naturwissenschaft_mint {
-  display: flex;
-  flex-direction: column;
+  grid-area: mint;
+  display: grid;
+  grid-template-areas:
+    "mint1"
+    "mint2"
+    "mint3"
+    "mint4"
+    ;
   gap: 2rem;
   padding: 2rem 1.5rem;
   background-color: #dedcde;
   margin-top: 3rem;
   width: 100%;
+}
 
+.experiment_content1{
+  grid-area: mint1;
+}
+
+.experiment_content2{
+  grid-area: mint2;
+}
+
+.experiment_content3{
+  grid-area: mint3;
+}
+
+.experiment_content4{
+  grid-area: mint4;
+}
+
+h1#naturwissenschaft_exp_title{
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 1rem;
 }
 
 .water_rise {
@@ -284,6 +407,8 @@ body {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
+  font-size: 1.4rem;
+
 }
 
 .naturwissenschaft_quiz {
@@ -295,11 +420,10 @@ body {
   margin: 2rem auto;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
 }
 
 .naturwissenschaft_funfact {
-  grid-area: fun-fact;
+  grid-area: fun_fact;
   background-color: #f4f9fd;
   padding: 2rem;
   margin-top: 2rem;
@@ -310,26 +434,21 @@ body {
 }
 
 .naturwissenschaft_container .fa-bars:hover,
+.naturwissenschaft_container .fa-close:hover,
 .naturwissenschaft_container .header_menu a:hover {
   color: green;
-
 }
-
 .naturwissenschaft_container .header_menu a::after {
   background-color: green;
 }
-
 .naturwissenschaft_container .header_menu a i {
   color: #077a37;
 }
-
 .naturwissenschaft_title {
   background-color: green;
   color: white;
   top: 0;
-
 }
-
 h1.naturwissenschaft_title {
   top: -2em;
 }
@@ -340,17 +459,14 @@ h1.naturwissenschaft_title {
 
 /* Section spécifique à l'expérience */
 
-
-
 .water_rise h2 {
   font-size: 1.8rem;
-  color: #2e7d32;
-  /* Vert foncé */
+  color: #2e7d32; /* Vert foncé */
   margin-bottom: 2rem;
 }
 
 .water_rise p {
-  color: #333;
+  color: #1e1e1e;
   font-size: 1rem;
   margin-bottom: 1.5rem;
 }
@@ -365,8 +481,7 @@ h1.naturwissenschaft_title {
   position: relative;
   width: 200px;
   height: 250px;
-  background-color: #cfe2f3;
-  /* Bleu clair */
+  background-color: #cfe2f3; /* Bleu clair */
   border: 2px solid #333;
   margin: 0 auto;
   border-radius: 10px;
@@ -403,8 +518,7 @@ h1.naturwissenschaft_title {
   height: 20px;
   background-color: #ff4500;
   border-radius: 50%;
-  display: none;
-  /* La flamme est éteinte par défaut */
+  display: none; /* La flamme est éteinte par défaut */
   animation: flicker 0.2s infinite alternate;
 }
 
@@ -421,19 +535,13 @@ h1.naturwissenschaft_title {
   transition: width 1s, height 1s;
 }
 
-.hidden {
-  display: none;
-}
-
 .water_rise_buttons {
   display: flex;
   flex-direction: row;
-  gap: 1.5rem
+  gap: 1.5rem;
 }
-
-.water_rise_buttons>button {
-  flex: 1;
-  /*les boutons prennet la meme largeur*/
+.water_rise_buttons > button {
+  flex: 1; /*les boutons prennet la meme largeur*/
   margin: 1rem auto;
   padding: 0.5rem 1rem;
   font-size: 1rem;
@@ -442,7 +550,6 @@ h1.naturwissenschaft_title {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s ease;
 }
-
 button#lightCandle {
   background-color: #ffcc00;
 }
@@ -452,19 +559,15 @@ button#resetExperiment {
   background-color: #007acc;
 }
 
-
 button#lightCandle:hover {
   background-color: #ffae00;
   transform: translateY(-3px);
-
-
 }
 
 button#resetExperiment:hover {
   background-color: #005f99;
   transform: translateY(-3px);
 }
-
 
 #answer {
   background-color: #e3f2fd;
@@ -476,42 +579,48 @@ button#resetExperiment:hover {
   line-height: 1.6;
   border-radius: 5px;
   margin-bottom: 0.8em;
-  transition: all 0.3 ease;
+  transition: all 0.3s ease;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   animation: fadeIn 0.5s ease-in-out;
 }
 
-#reveal-button {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#reveal_button {
   background-color: #077a37;
   color: white;
   border: none;
   border-radius: 0.5em;
   padding: 0.5em 0.7em;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
-
 }
-
-#reveal-button:hover {
+#reveal_button:hover {
   background-color: #08642e;
 }
-
 
 [class^="experiment_content"] {
   position: relative;
 
 }
 
-
-.experiment_description>h4,
+.experiment_description > h4,
 .naturwissenschaft_lektion h4,
 .instructions,
 .observation {
   font-size: 1em;
   font-weight: bold;
   margin: 0.8em 0;
-
 }
 
 p.intro-text {
@@ -519,37 +628,29 @@ p.intro-text {
   margin: 1em auto;
 }
 
-iframe {
+.naturwissenschaft_container iframe {
   border: 5px solid green;
   border-radius: 15px;
   width: 100%;
   height: 315px;
 }
-
-footer {
-  background-color: bisque;
-  color: rgb(7, 7, 7);
-  padding: 1em;
-  font-size: 1.2rem;
-}
-
-#audio-container {
+#audio_container {
   position: absolute;
   right: 1em;
+  top: -1.9em;
   background-color: #f8c471;
   border-radius: 1.5em;
-  padding: 0.6rem;
+  padding: 0.2rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
 }
-
-#audio-container button {
+#audio_container button {
   background-color: #3498db;
   border: none;
   border-radius: 50%;
   width: 50px;
-  height: 50px;
+  height: 45px;
   margin-right: 0.5rem;
   display: flex;
   align-items: center;
@@ -559,25 +660,40 @@ footer {
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   transition: transform 0.2s;
-
 }
-
-#audio-container button:hover {
+#audio_container button:hover {
   transform: scale(1.1);
 }
+/*sowohl fuer Naturwissenschaft,informatik,Mathe und mystery*/
+#go_up_button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1172b3;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
 
-/* Section Quiz */
+#go_up_button:hover {
+  background-color: #d6dee4;
+}
 
-
-
+/* Section Quiz naturwissenschaft*/
 .quiz_title {
   font-size: 1.5rem;
 }
-
 .quiz_item {
   margin-bottom: 1.5rem;
 }
-
 .quiz_item p {
   margin-bottom: 1rem;
 }
@@ -587,25 +703,28 @@ footer {
   margin-bottom: 0.5rem;
   color: #333;
 }
-
 .quiz_item ul {
   list-style: none;
   padding: 0;
 }
-
 .quiz_item li {
   margin-bottom: 0.8rem;
 }
-
 .quiz_item input {
   margin-right: 0.5rem;
-  transform: scale(1.5);
-  /*agrandit les cercles du radio btn*/
+  transform: scale(1.5); /*agrandit les cercles du radio btn*/
   cursor: pointer;
 }
-
-#quiz_submit {
-  display: block;
+/*sowohl fuer Naturwissenschaft,informatik und Mathe als basis*/
+#quiz_buttons,#info_quiz_buttons,#mathe_quiz_buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+/*sowohl fuer Naturwissenschaft,informatik und Mathe als basis*/
+#natur_quiz_submit,#mathe_quiz_submit,#info_quiz_submit,
+#natur_quiz_reset,#mathe_quiz_reset,#info_quiz_reset {
   margin: 3em auto;
   padding: 0.8rem 2rem;
   background-color: #4caf50;
@@ -616,26 +735,32 @@ footer {
   font-size: 1rem;
   transition: background-color 0.3s;
 }
-
-#quiz_submit:hover {
+#natur_quiz_submit:hover {
   background-color: #388e3c;
 }
+#natur_quiz_reset,#info_quiz_reset {
+  background-color: #9ca09c;
+}
+#natur_quiz_reset:hover {
+  background-color: #646564;
+}
 
-#quiz_result {
+#natur_quiz_result,#mathe_quiz_result {
   text-align: center;
   margin-top: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
   color: #333;
 }
+#info_quiz_reset{
+  border-radius: 1rem;
 
+}
 /* Fun Fact Section */
-
 .funfact_title {
   font-size: 1.8rem;
   color: #007acc;
   margin-bottom: 1.5rem;
-
 }
 
 .funfact_list {
@@ -660,163 +785,61 @@ footer {
 .funfact_list li:nth-child(even) {
   background-color: #dff0fc;
 }
+/*----------------------end_naturvissenschaft----------------*/
 
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media screen and (min-width:768px) {
-  .fa-bars {
-    display: none !important;
-  }
-
-  [class$="header"] {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-
-  .header_menu {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    gap: 1rem;
-    width: auto;
-    background-color: #fff;
-    margin-left: 1em;
-    box-shadow: none;
-    padding: 1.2rem;
-
-  }
-
-  .header_menu a {
-    border: none;
-    white-space: nowrap;
-  }
-
-  .naturwissenschaft_mint {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-    margin: 0 auto;
-    padding: 2rem;
-
-  }
-
-  .water_rise {
-    margin-bottom: 2rem;
-  }
-
-
-
-}
-
-
-
-@media screen and (min-width: 1024px) {
-  body {
-    font-size: 18px;
-    margin: 0 auto;
-
-  }
-
-  [class$="beschreibung"] {
-    font-size: 1.6em;
-  }
-
-  .naturwissenschaft_mint {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-
-  .naturwissenschaft_beschreibung>* {
-    margin-bottom: 2rem;
-  }
-
-
-  .experiment_content {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 0 1.5rem;
-    padding: 1.5rem;
-    gap: 2rem;
-    grid-column: 1 / -1;
-    /* Prend toute la largeur */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    background-color: #f8f9fa;
-    border-radius: 10px;
-
-  }
-
-
-
-}
-
-@media screen and (min-width: 1440px) {
-
-  .naturwissenschaft_container {
-    max-width: 1400px;
-    margin: 0 auto;
-
-  }
-
-
-
-}
-
-
-
-.container_informatik {
+/*---------------------------------start_informatik---------------------------*/
+.informatik_container {
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1fr;
   grid-template-areas:
     "header"
     "beschreibung"
     "Inhalt"
     "Lern-check"
-    "footer"
-  ;
-
+    "Quiz"
+    "footer";
   background-color: rgb(166, 183, 210);
   gap: 1rem;
+}
 
+.informatik_container .videos {
+  display: grid;
+  grid-template-areas:
+    "item1"
+    "item2";
+  gap: 1rem;
+  margin: 2em;
+}
+
+.informatik_container .item1 {
+  grid-area: item1;
+}
+
+.informatik_container .item2 {
+  grid-area: item2;
 }
 
 .informatik_header {
-  background-image: url('../images/background_informatik.webp');
-  width: 100%;
-  height: 10em;
-
+  background-image: url("../images/background_informatik.webp");
 }
 
-.informatik {
+.informatik_beschreibung {
   position: relative;
   /*background-color:#f5f5f5;
-  top: 2em;
-  border-radius: 12px;
-  margin-bottom: 3em;*/
+    top: 2em;
+    border-radius: 12px;
+    margin-bottom: 3em;*/
 
   background-color: #ffffff;
   border: 3px solid #ffa500;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   border-radius: 24px;
-  margin: 2em auto;
+  /*margin: 2em auto;*/
   padding: 1.5em;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.Einführung {
+.informatik_container .Einführung {
   position: relative;
   text-align: center;
   font-weight: bold;
@@ -826,27 +849,37 @@ footer {
   color: #2b4d79;
 }
 
+.informatik_container .Inhalt_Informatik {
+  grid-area: Inhalt;
+}
 
-.Inhalt,
-.Lern-Check,
-.Quiz {
+.informatik_container .Quiz {
+  grid-area: Quiz;
+}
+
+.informatik_container .Lern-check {
+  grid-area: Lern-Check;
+}
+
+.informatik_container .Inhalt,
+.informatik_container .Lern-Check,
+.informatik_container .Quiz {
   position: relative;
   background-color: #fffbe6;
   border-radius: 16px;
   border: 2px dashed #ffa500;
   padding: 1em;
-  margin: 2em 0;
+  margin: 1em;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 }
 
-.Inhalt:hover {
+.informatik_container .Inhalt:hover {
   transform: translateY(-5px);
   background-color: #fff2cc;
 }
 
-
-.Inhaltsverzeichnis {
+.informatik_container .Inhaltsverzeichnis {
   position: relative;
   top: 1em;
   margin-bottom: 2em;
@@ -854,14 +887,14 @@ footer {
   text-decoration: underline;
 }
 
-* .mint-item iframe {
+.informatik_container [class^="item"] img ,  .informatik_container [class^="item"] iframe{
+  border: 5px solid #ffa500;
+  border-radius: 15px;
   width: 100%;
-  height: auto;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  height: 20rem;
 }
 
-.Inhalt {
+.informatik_container .Inhalt {
   position: relative;
   margin-bottom: 1em;
   margin-top: 1em;
@@ -869,7 +902,7 @@ footer {
   border: 1px dotted black;
 }
 
-ul {
+.informatik_container ul {
   /* list-style-type: square;*/
 
   list-style-type: disc;
@@ -877,39 +910,52 @@ ul {
   color: #444;
 }
 
-.editors {
+.informatik_container .editors {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-areas:
+    "html"
+    "css"
+    "JavaScript";
   gap: 1.2em;
 }
 
-.editor-container {
+.informatik_container #html-code {
+  grid-area: html;
+}
+
+.informatik_container #css-code {
+  grid-area: css;
+}
+
+.informatik_container #js-code {
+  grid-area: JavaScript;
+}
+
+.informatik_container .editor-container {
   /*margin-top: 2em;*/
   background-color: #ffffff;
   border: 2px solid #2b4d79;
   border-radius: 12px;
   padding: 1em;
-
 }
 
-.editor-container button {
+.informatik_container .editor-container button {
   font-weight: bold;
   /* background-color: rgb(166, 183, 210);*/
   width: 100%;
   background-color: #ffa500;
-  color: white;
+  color: #ffffffb0;
   padding: 0.8em 1.2em;
   border: none;
   border-radius: 16px;
 }
 
-.editor-container button:active {
+.informatik_container .editor-container button:active {
   background-color: #ff5500;
 }
 
-
-textarea {
-  height: 120px;
+.informatik_container .Lern-Check textarea {
+  height: 24em;
   width: 100%;
   font-family: monospace;
   border-radius: 12px;
@@ -917,37 +963,800 @@ textarea {
   background-color: #fff8e4;
 }
 
-#output {
+.informatik_container #output {
   border: 2px dotted #ffa500;
   width: 100%;
+  height: 18em;
   margin-top: 2em;
   background-color: #fff2cc;
   border-radius: 12px;
   font-size: 1em;
 }
 
-form {
+.informatik_container form {
   margin-bottom: 1em;
 }
 
-summary{
+.informatik_container summary {
   font-weight: bold;
 }
 
-summary~p{
-  background:#fff;
+.informatik_container summary ~ p {
+  background: #fff;
   border: 3px solid #ffa500;
   border-radius: 15px;
   margin: 1em;
+  padding: 1.5em;
 }
 
-@media (max-width: 768px) {
-  .editors {
-    grid-template-columns: 1fr;
+.informatik_container .Quiz p {
+  margin-top: 2em;
+}
+
+.informatik_container #info_quiz_submit {
+  background-color: #ffa500;
+  border: none;
+  border-radius: 1rem;
+
+}
+
+/*END-------------------------------- Informatik---------------------------*/
+
+/*--------------------------start_mystery_box-----------------------------------------*/
+.mystery-box_container{
+  display: grid;
+  grid-template-areas: 
+  "mystery-box_header"
+  "mystery-box_beschreibung"
+  "form_mystery"
+  "footer"
+  ;
+  background-color: #ffffff;
+}
+
+.mystery-box_header{
+  grid-area: mystery-box_header;
+  background-image: url("../images/mystery.webp");
+  
+}
+
+.mystery-box_header-title{
+  top: -2.3rem;
+}
+
+
+.mystery-box_beschreibung{
+  grid-area: mystery-box_beschreibung;
+  padding: 1em;
+  background-color: hsl(350, 90%, 90%);
+ 
+}
+
+.form_mystery{
+  grid-area: form_mystery;
+  justify-self: center;
+  width: 80%;
+  padding: 1.5rem;
+  background: rgba(240,241,255,0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form_mystery div:first-of-type{
+font-size: 1.5rem;
+margin: 1em;
+/*padding-bottom:1.5rem ;*/
+text-align: center;
+}
+
+#form_mystry-box .block{
+margin-top: 2.5rem;
+}
+
+.mystery-box_container .block input{
+  width: 100%;
+  padding: 1em;
+}
+
+.mystery-box_container span ~ input{
+  width: 10%;
+}
+
+.mystery-box_container .block textarea{
+  width: 100%;
+  padding: 5em;
+  margin: 2em auto;
+}
+
+.mystery-box_container #last input{
+  background-color:rgba(248, 76, 19, 0.9); 
+  margin: 2em auto;
+  border-radius: 1em;
+  width:100%;
+  color: white;
+  border: none;
+  padding: 1em;
+
+}
+
+#form_mystry-box #submit:hover{
+  color: white;
+  background-color: rgba(255, 223, 0, 1); /* Jaune soleil */
   }
 
-  button {
-    font-size: 1em;
-    padding: 0.6em 1em;
+.mystery-box_container label{
+  font-weight: bold;
+}
+
+.mystery-box_container .block #male, .mystery-box_container .block #female{
+  width: 5%;
+}
+
+
+/*------------------end_mystery-box--------------------------*/
+
+/*--------------------start_mathe----------------------------*/
+.mathe_title {
+  background-color: #007bff;
+  top:-1.8em
+}
+#mathe_quiz_submit,#mathe_quiz_reset {
+  background-color:  #390dff;
+  color:#ffffff;
+  cursor: pointer;
+}
+#mathe_quiz_submit{
+  display: block;
+}
+#mathe_quiz_reset,#btnres {
+  display: none;
+}
+
+#mathe_quiz_submit:hover,#mathe_quiz_reset:hover {
+  background-color: rgb(255, 114, 0);
+}
+
+/*----Main-container_Box------------------*/
+
+.mathe_container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "beschreibung"
+    "algebra"
+    "bruchzahl"
+    "geometrie"
+    "u1"
+    "u4"
+    "footer";
+  background-color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+
+  
+}
+
+/*change menu color*/
+.mathe_container .fa-bars:hover,
+.mathe_container .fa-close:hover,
+.mathe_container .header_menu a:hover {
+  color: rgba(0, 123, 255, 1);
+}
+
+.mathe_container .header_menu a::after {
+  background-color: rgba(0, 123, 255, 1);
+}
+.mathe_container .header_menu a i {
+  color: rgba(0, 123, 255, 1);
+}
+
+/*styling header*/
+.mathe_container h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 2rem 0 ;
+}
+.mathe_container h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.mathe_container ul > li {
+  display: list-item;
+  list-style-type: disc;
+}
+/*ul in geometrie,bruchzahl,beschreibung have a start margin of 2em*/
+[class$="content_mathe"] ul, .mathe_beschreibung ul,.mathe_beschreibung summary{
+  margin-inline-start: 2em;
+}
+
+/*Header_Box*/
+.mathe_header {
+  background: linear-gradient(to top,rgba(0, 0, 0, 0.5) 50%,rgba(0, 0, 0, 0.5) 50%),url(../images/bild05.jpg);
+}
+
+/*Beschreibung_Box*/
+.mathe_beschreibung {
+  background-color: hsl(174, 90%, 90%);
+  border-left: 4px solid rgba(0, 123, 255, 1); /* Accent bleu vif */
+  border-top: 4px solid rgba(0, 123, 255, 1);
+  font-family: "Quicksand", sans-serif;
+  padding-top: 2rem;
+}
+
+.mathe_beschreibung details:hover {
+  cursor: pointer;
+}
+/*.mathe_beschreibun lists have no styling*/
+.mathe_beschreibung  ul li {
+  list-style-type: circle;
+}
+.mathe_beschreibung ul li a {
+  text-decoration: none;
+  color: #2e7d32;
+  transition: 0.4s ease-in-out;
+}
+.mathe_beschreibung > ul li a:hover {
+  text-decoration: underline;
+  color: rgba(65, 105, 225, 1);
+  font-family: arial;
+  font-weight: bold;
+  transition: 0.4s ease-in-out;
+}
+
+/*---------------Content_Box------------------*/
+
+/*for all boxes together in mathe_content*/
+[class^="content_mathe"] {
+  position: relative;
+  height: auto;
+  border-top: 5px solid rgba(0, 123, 255, 1);
+  line-height: 1.6;
+}
+
+/*change second div in Content Geometrie and Bruchzahl*/
+.mathe_container #geometrie div:nth-of-type(2),
+.mathe_container #bruchzahl div:nth-of-type(2),
+.mathe_container #stick {
+  margin-top: 3rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: hsl(300, 90%, 90%);
+}
+
+.mathe_container #geometrie div:nth-of-type(2) h1,
+.mathe_container #bruchzahl div:nth-of-type(2) h1 {
+  text-align: start;
+  padding-top: 1.5rem;
+}
+
+/*underline span in mathe_content*/
+[class^="content_mathe"] span {
+  text-decoration: underline;
+}
+
+
+/*for uniq content element in Math_content*/
+/*part aside (algebra) */
+.mathe_container #algebra {
+  grid-area: algebra;
+  border-radius: 1rem;
+}
+/*second div in algebra*/
+.mathe_container #stick {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(240, 100%, 90%);
+  gap: 1.5rem;
+  height: auto;
+  align-items: center;
+  text-align: center;
+}
+/*Zahl1 Zahl2 algebra*/
+.mathe_container .inal {
+  margin-top: 1rem;
+}
+
+.mathe_container .inal input {
+  width: 100px;
+  height: 20px;
+  padding: 12px;
+  border-radius: 6px;
+  border-color: transparent;
+  border-bottom: 2px solid;
+  border-left: 1px solid;
+  margin-left: 1rem;
+}
+
+.mathe_container .inal button {
+  padding: 0.3rem 1.5rem;
+  background-color: hsl(120, 100%, 90%);
+  border-radius: 6px;
+}
+
+.mathe_container #show {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  display: none;
+}
+.mathe_container #bruchzahl {
+  grid-area: bruchzahl;
+}
+.mathe_container #geometrie {
+  grid-area: geometrie;
+}
+.mathe_container #Uebung_1 {
+  grid-area: u1;
+}
+.mathe_container #Uebung_4 {
+  grid-area: u4;
+}
+
+
+/*for the Uebung teil in mathe*/
+/*padding: top right bottom left*/
+[class$="mathe_uebung"] {
+  padding: 1.5rem 1rem 0 2.5rem  ;
+}
+
+
+[class$="mathe_uebung"] input {
+  transform: scale(1.3);
+}
+
+/*making ol grid*/
+[class$="mathe_uebung"]  ol {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+[class$="mathe_uebung"] ol, [class$="mathe_uebung"] ul {
+  padding: 0;
+  margin: 0;
+}
+
+[class$="mathe_uebung"] ol > li {
+  background-color: rgba(57, 205, 255, 0.895);
+  border-radius: 6px;
+  border: 2px solid transparent;
+  padding-left: 1rem;
+}
+
+[class$="mathe_uebung"] ol>li:nth-child(even) {
+  background-color: hsl(120, 90%, 90%);
+}
+
+/*ol > li > ul > li*/
+[class$="mathe_uebung"] ol ul > li {
+  border-radius: 10px;
+  padding-left: 1em;
+  list-style: none;
+  padding-left: 2rem;
+}
+
+[class$="mathe_uebung"] ul > li:hover {
+  background-color: hsl(299, 59%, 65%);
+}
+
+
+
+/*Geometrie Figuren*/
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid green;
+}
+#square {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+}
+#circle {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+/*Videos in mathe_content*/
+[class*="mathe_video"] {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: rgb(255, 69, 0);
+  height: auto;
+}
+[class*="mathe_video"] iframe {
+  width: 100%;
+  min-height: 20rem;
+  border-radius: 1rem;
+}
+
+/*END---------------------mathe.css-------------------------------*/
+
+@media screen and (min-width: 768px) {
+  .index_container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "header header"
+      "beschreibung beschreibung"
+      "mint_1 mint_2"
+      "mint_3 mint_4"
+      "fun-fact fun-fact"
+      "footer footer";
+  }
+ 
+
+  #mint_1,
+  #mint_3 {
+    margin-left: 5rem;
+    margin-right: 0;
+  }
+ 
+  #mint_2,
+  #mint_4 {
+    margin-right: 5rem;
+    margin-left: 0rem;
+  }
+
+  .fa-bars {
+    display: none !important;
+  }
+
+  [class$="header"] img{
+    margin-top: 1.5rem;
+    width: 80px;
+    height: 80px;
+  }
+
+  [class$="header"] {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .naturwissenschaft_header .header_menu{
+    gap: 1rem;
+  }
+ 
+  .header_menu {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    right: -0.1px;
+    align-items: center;
+    justify-self: center;
+    background-color: #fff;
+    box-shadow: none;
+    top:3rem;
+    
+
+  }
+  
+  .header_menu a {
+    border: none;
+    font-size: 1rem;
+  }
+
+  /*--------------------start_naturwissenschaft----------------------------*/
+  .naturwissenschaft_mint {
+    background-color: beige;
+  }
+ 
+  
+  /*--------------------end_naturwissenschaft----------------------------*/
+
+  /*--------------------start_informatik----------------------------*/
+
+  .informatik_container .videos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "item1 item2";
+  }
+
+  .informatik_container .editors {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "html" "css" "JavaScript";
+  }
+  /*--------------------end_informatik----------------------------*/
+
+  /*--------------------start_mathe----------------------------*/
+
+
+  [class*="content_mathe"] {
+    margin: 2rem;
+  }
+
+  /*Videos in mathe_content*/
+  [class*="mathe_video"] {
+    margin: 2rem;
+  }
+
+  [class*="mathe_video"] iframe {
+    height: 30rem;
+  }
+
+  /*--------------------end_mathe----------------------------*/
+
+  /*----------------------start_footer_all----------------------*/
+
+  #footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "svgfoot svgfoot"
+      "contactfoot  folgenfoot"
+      "endfoot endfoot"
+    ;
+    padding: 3rem 1.5rem 0;
+    font-size: larger;
+  }
+
+  /*Logo*/
+  #folgen {
+    grid-area: folgenfoot;
+  }
+
+  #contact {
+    grid-area: contactfoot;
+  }
+
+  #footer div:last-of-type {
+    grid-area: endfoot;
+  }
+#svgfoot{
+  grid-area: svgfoot;
+}
+  /*------------------end_foote_all--------------------*/
+}
+
+@media screen and (min-width: 920px) {
+  
+  /*----------------------start Naturwissenschaft---------------------------------------------*/
+  [class^="experiment_content"] {
+
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  
+}
+  /*---------------------- End Naturwissenschaft---------------------------------------------*/
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 18px;
+    margin: 0 auto;
+  }
+  [class$="beschreibung"] {
+    font-size: 1.6em;
+  }
+ 
+
+  .header_menu a {
+    font-size: 1.4rem;
+  }
+  #mint_1,
+  #mint_3 {
+    margin-left: 10rem;
+    margin-right: 0;
+  }
+
+  #mint_2,
+  #mint_4 {
+    margin-right: 10rem;
+    margin-left: 0rem;
+  }
+  [class$="header"]{
+    height: 22rem;
+  }
+
+  [class$="header"] img{
+    margin-top: 1.6rem;
+    
+  }
+  .header_title{
+    top: -2.7em
+  }
+
+  /*-------------------------start_naturwissensschaft--------------------------------*/
+  .water_rise p {
+    font-size: 1.2rem;
+  }
+  .naturwissenschaft_mint {
+    gap: 1rem;
+  }
+  
+
+  .naturwissenschaft_beschreibung > * {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    line-height: 1.8;
+
+  }
+  
+  .funfact_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 2em;
+  }
+  .funfact_list li{
+    font-size: 1.2rem;
+  }
+  .experiment_content1 iframe, .experiment_content2 iframe,.experiment_content3 iframe,.experiment_content4 iframe{
+    height: 500px;
+  }
+  /*-------------------------end_naturwissensschaft--------------------------------*/
+
+  /*--------------------start_mathe.css----------------------------*/
+  .mathe_container {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "header header"
+      "beschreibung beschreibung"
+      "algebra bruchzahl"
+      "algebra bruchzahl"
+      "algebra geometrie"
+      "u1 u1"
+      "u4 u4"
+      "footer footer";
+    column-gap: 1rem;
+    row-gap: 5rem;
+  }
+  /*second div in algebra should be sticky*/
+  .mathe_container #stick {
+    min-height: 100vh;
+    position: sticky;
+    top: 0;
+    
+  }
+ 
+
+  /*-----------Content_Box------------------*/
+  .mathe_container #algebra {
+    height: 100%;
+    margin-left: 2rem;
+    line-height: 1.6rem;
+  }
+  
+
+  .mathe_container #bruchzahl,
+  .mathe_container #geometrie {
+    margin-right: 2rem;
+  }
+
+  [class*="content_mathe"] {
+    margin: 0rem;
+  }
+
+  [class*="mathe_uebung"] {
+    margin: 0rem 2rem;
+    border: 5px solid rgba(0, 123, 255, 1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .mathe_container #geometrie div:nth-of-type(2),
+  .mathe_container #bruchzahl div:nth-of-type(2),
+  .mathe_container #stick {
+    padding: 4rem;
+    padding-top: 0;
+  }
+
+  [class*="mathe_video"] {
+    margin: 1em 0 0;
+  }
+  /*-------------------------end_mathe--------------------------------*/
+  /*------------------------Mystery_box-------------------------------*/
+  .mystery-box_beschreibung .header_title {
+    top: -3rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    font-size: 24px;
+    background-color: white;
+
+  }
+  [class$="header"]{
+    height: 24rem;
+  }
+
+  
+ 
+
+  /*-------------------------start_naturwissensschaft--------------------------------*/
+  .naturwissenschaft_beschreibung > * {
+    font-size: 1.5rem;
+    line-height: 2;
+
+  }
+  button#reveal_button{
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+    
+  }
+  .naturwissenschaft_container .water_rise , .naturwissenschaft_quiz {
+    margin: 1rem;
+  }
+
+  .naturwissenschaft_container .water_rise p {
+    font-size: 1.5rem;
+  }
+  .naturwissenschaft_mint {
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-areas: 
+    "mint1 mint1"
+    "mint2 mint2"
+    "mint3 mint4"
+    ;
+  }
+
+  .experiment_content1 iframe, .experiment_content2 iframe{
+    height: 400px;
+  }
+
+
+  .funfact_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .funfact_list li{
+    font-size: 1.6rem;
+  }
+  
+  
+  /*-------------------------end_naturwissensschaft--------------------------------*/
+
+  /*-------------------------start_mathe--------------------------------*/
+  .mathe_header nav.header_menu a{
+    font-size: 1.4rem;  
+  }
+  
+  [class$="_container"] {
+    font-size: larger;
+  }
+  /*-------------------------end_mathe--------------------------------*/
+
+}
+
+@media screen and (min-width: 2560px) {
+  
+  [class$="header"]{
+    height: 26rem;
+  }
+  /*-------------------------start_mathe--------------------------------*/
+
+  
+  [class$="_container"] {
+    font-size: 30px;
+  }
+  
+  .mathe_container h1 {
+    font-size: 70px;
+  }
+  [class*="mathe_video"] iframe {
+    height: 50rem;
+  }
+  .mathe_title {
+    font-size: 40px;
+  }
+  
+
+  /*-------------------------end_mathe--------------------------------*/
+  /*-----------------------------Naturwissenschaft---------------*/
+  .experiment_content1 iframe, .experiment_content2 iframe{
+    height: 650px;
+  }
+ 
+  .naturwissenschaft_container section.water_rise{
+    padding: 0rem;
+    font-size: 64px;
   }
 }

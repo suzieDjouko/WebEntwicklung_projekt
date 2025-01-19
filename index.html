@@ -1,24 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Entdecke die Welt der MINT-Fächer für Grundschüler mit spannenden Experimenten, Quizzen und interaktiven Inhalten.">
-    <meta name="keywords" content="MINT, Mathematik, Informatik, Naturwissenschaften, Technik, Grundschüler">
-    <meta name="author" content="Enigma">
+<html lang="de">
 
-    <title>MINTopia - Begeisterung für MINT</title>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Entdecke die Welt der MINT-Fächer für Grundschüler mit spannenden Experimenten, Quizzen und interaktiven Inhalten.">
+  <meta name="keywords" content="MINT, Mathematik, Informatik, Naturwissenschaften, Technik, Grundschüler">
+  <meta name="author" content="Enigma">
+ 
+  <title>MINTopia - Begeisterung für MINT</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+    integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="styles/reset.css" />
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <div class="container">
-      <!--   HEADER   -->
-      <header class="header">
-        <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
+<body>
+  <div class="index_container">
+    <!--   HEADER   -->
+    <header class="index_header">
+      <!-- caractere unicode <button class="header_hamburger-menu">☰</button>-->
+      
+      <a href="index.html">
+        <img src="images/logo.svg " alt="Mintopia logo">
+        </a>
         <button class="header_hamburger-menu" aria-label="Menu" aria-expanded="false">
           <span class="fa fa-bars"></span>
         </button>
@@ -28,72 +37,237 @@
           <a href="informatik.html" target="blank"><i class="fa fa-laptop-code"></i> Informatik</a>
           <a href="mystery_box.html"><i class="fa fa-gift"></i> Mystery-box</a>
         </nav>
+      
+    </header>
 
-      </header>
+    <!--   BECHREIBUNG   -->
+    <section class="index_beschreibung">
+      <h2 class="header_title">MINTopia</h2>
+      <p>
+        Willst du der nächste Einstein werden? Auf unserer Seite kannst du die
+        Welt der MINT-Fächer entdecken – und das mit Spaß! Lass uns gemeinsam
+        die Geheimnisse der Wissenschaft entschlüsseln und vielleicht wirst du
+        eines Tages der Genialste unter den Genies.“
+      </p>
+    </section>
 
-      <!--   BECHREIBUNG   -->
-      <section class="beschreibung">
-        <div class="header_title">MINTopia</div>
-        <p>
-          Willst du der nächste Einstein werden? Auf unserer Seite kannst du die
-          Welt der MINT-Fächer entdecken – und das mit Spaß! Lass uns gemeinsam
-          die Geheimnisse der Wissenschaft entschlüsseln und vielleicht wirst du
-          eines Tages der Genialste unter den Genies.“
-        </p>
-      </section>
-
-      <!--   MINT-ELEMENTE   -->
-      <section class="mint-section">
-        <article class="mint-item">
-            <figure>
-              <a href="mathe.html">
-                <img src="images/Mathe.jpg" alt="Mathe" />
-              </a>
-              <figcaption>
-                <a href="mathe.html">Mathe</a>
-              </figcaption>
-            </figure>
-        </article>
-        <article class="mint-item">
-          <figure>
-            <a href="naturwissenschaft.html">
-              <img src="images/Naturwissenschaft.jpg" alt="Naturwissenschaft" />
-            </a>
-            <figcaption>
-              <a href="naturwissenschaft.html"> Naturwissenschaft</a>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="mint-item">
-          <figure>
-            <a href="informatik.html">
-              <img src="images/informatik.jpg" alt="Informatik" />
-            </a>
-            <figcaption>
-              <a href="informatik.html"> Informatik </a>
-            </figcaption>
-          </figure>
-        </article>
-        <article class="mint-item">
-          <figure>
-            <a href="mystery-box.html">
-              <img src="images/mystery-box.jpg" alt="Mystery-box" />
-            </a>
-            <figcaption>
-              <a href="mystery-box.html">Mystery-box</a>
-            </figcaption>
-          </figure>
-        </article>
-      </section>
-
-      <!-- FUN FACT SECTION -->
-      <section class="fun-fact">
-        <p>Wusstest du Das ?</p>
-      </section>
-
-      <!--  FOOTER-->
-      <footer>Footer</footer>
+    <!--   MINT-ELEMENTE   -->
+    <div class="mint-item" id="mint_1">
+      <figure>
+        <a href="mathe.html">
+          <img src="images/bild01.jpg" alt="Illustration mit mathematischen Werkzeugen und dem Schrifzug 'Mathe' ">
+        </a>
+        <figcaption>
+          <a href="mathe.html">Mathe</a>
+        </figcaption>
+      </figure>
     </div>
-    <script src="styles/style.js"></script>
-  </body>
+    <div class="mint-item" id="mint_2">
+      <figure>
+        <a href="naturwissenschaft.html">
+          <img src="images/scientist2.jpg" alt="Zwei Kinder in Laborkitteln , die Experimente durchführen , mit dem Schrifzug 'Naturwissenschaft' ">
+        </a>
+        <figcaption>
+          <a href="naturwissenschaft.html"> Naturwissenschaft</a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="mint-item" id="mint_3">
+      <figure>
+        <a href="informatik.html">
+          <img src="images/Bild13.jpg" alt="Illustration eines Laptos mit Programmier-und IT-Elemnente wie SQL , Python  und Java">
+        </a>
+        <figcaption>
+          <a href="informatik.html"> Informatik </a>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="mint-item" id="mint_4">
+      <figure>
+        <a href="mystery_box.html">
+          <img src="images/mystery-box.jpg" alt="Mystery-box mit farbenfrohen Fragezeichen und Sternen">
+        </a>
+        <figcaption>
+          <a href="mystery_box.html">Join Us</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- FUN FACT SECTION -->
+    <section class="fun-fact">
+      <h2>Wusstest du Das ?</h2>
+      <div id="funFactCarousel" class="carousel slide" data-bs-ride="carousel">
+        <!-- Indicateurs (points de navigation) -->
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="12" aria-label="Slide 13"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="13" aria-label="Slide 14"></button>
+          <button type="button" data-bs-target="#funFactCarousel" data-bs-slide-to="14" aria-label="Slide 0"></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex">
+              <p>
+                <strong>🔢 Wusstest du?</strong> Die Zahl Pi (π) hat unendlich
+                viele Stellen und wiederholt sich nie!
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🌌 Wusstest du?</strong> Es gibt mehr Sterne im
+                Universum, als es Sandkörner auf allen Stränden der Erde gibt.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🤖 Wusstest du?</strong> Der erste programmierbare
+                Computer, der Z3, wurde 1941 in Deutschland gebaut.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🔭 Wusstest du?</strong> Wenn du einen Spiegel auf den
+                Mond stellen würdest, würde es etwa 2,5 Sekunden dauern, bis
+                ein Laserstrahl hin- und zurückgeschickt wird.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>📊 Wusstest du?</strong> Die Fibonacci-Zahlen kommen
+                nicht nur in der Mathematik vor, sondern auch in der Natur, z.
+                B. bei Sonnenblumen und Tannenzapfen.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🧬 Wusstest du?</strong> Dein DNA-Strang ist so lang,
+                dass er, wenn man ihn ausdehnen würde, etwa 2 Meter lang wäre
+                – und das nur aus einer Zelle!
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🖥️ Wusstest du?</strong> Der Begriff "Bug" für einen
+                Computerfehler stammt aus den 1940er Jahren, als ein echter
+                Käfer einen Computer störte.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>⚡ Wusstest du?</strong> Blitze sind fünfmal heißer
+                als die Oberfläche der Sonne!
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🌐 Wusstest du?</strong> Das erste Foto, das jemals im
+                Internet hochgeladen wurde, war 1992 – es zeigte eine Band
+                namens „Les Horribles Cernettes“.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🪐 Wusstest du?</strong> Der Saturn könnte auf Wasser
+                schwimmen, weil er hauptsächlich aus Gas besteht und eine
+                geringe Dichte hat.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🔬 Wusstest du?</strong> Dein Körper hat etwa 37,2
+                Billionen Zellen, die alle miteinander zusammenarbeiten, um
+                dich am Leben zu erhalten.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>⏳ Wusstest du?</strong> Ein Tag auf dem Mars dauert
+                24 Stunden und 37 Minuten – fast genauso lang wie ein Tag auf
+                der Erde.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>💻 Wusstest du?</strong> Das erste Computervirus wurde
+                1986 in Pakistan entwickelt und hieß „Brain“.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>🌋 Wusstest du?</strong> Der größte Vulkan im
+                Sonnensystem ist der Olympus Mons auf dem Mars. Er ist etwa
+                dreimal so hoch wie der Mount Everest!
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <p>
+                <strong>☀️ Wusstest du?</strong> Die Sonne ist so groß, dass
+                sie etwa 1,3 Millionen Erden aufnehmen könnte!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contrôles (Précédent et Suivant) -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#funFactCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#funFactCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <!--  FOOTER-->
+    <footer id="footer"></footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  <script src="styles/skript.js"></script>
+
+</body>
+
 </html>

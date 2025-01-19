@@ -1,44 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://lien du site/</loc>
-    <lastmod>2024-12-17</lastmod>
+    <loc>https://lien du site/index.html</loc>
+    <lastmod>2024-01-13</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
 
   <url>
-    <loc>https://lien du site/index.html</loc>
-    <lastmod>2024-12-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <url>
     <loc>https://lien du site/Informatik.html</loc>
-    <lastmod>2024-12-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://lien du site/mathe.html</loc>
-    <lastmod>2024-12-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://lien du site/Naturwissenschaft.html</loc>
-    <lastmod>2024-12-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.60</priority>
   </url>
 
   <url>
     <loc>https://lien du site/Mystery_box.html</loc>
-    <lastmod>2024-12-16</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2024-01-13</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.40</priority>
   </url>
 
