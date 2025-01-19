@@ -81,8 +81,8 @@ justify-content: space-between;
 align-items: center;
 }
 [class$="header"] img{
-width: 80px;
-height: 70px;
+width: 50px;
+height: 50px;
 }
 .header_menu {
   display: none;
@@ -1035,11 +1035,11 @@ p.intro-text {
   grid-area: formfoot;
   justify-self: center;
   width: 80%;
+  background: rgba(240, 241, 255, 0.9);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 2rem;
 }
 
-#footer{
-  grid-area: footer;
-}
 
 .formfoot div:first-of-type{
 font-size: 1.5rem;
@@ -1140,7 +1140,7 @@ span ~ input{
 }
 
 .mathe_container .header_menu a::after {
-  background-color: rgba(0, 123, 255, 1);
+  background-color: #007bff;
 }
 .mathe_container .header_menu a i {
   color: rgba(0, 123, 255, 1);
