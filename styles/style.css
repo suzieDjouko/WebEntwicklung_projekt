@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
 }
+
 ol {
   list-style: decimal;
   margin-left: 1.5rem;
@@ -93,6 +94,7 @@ height: 50px;
   width: auto;
   z-index: 1000;
 }
+
 .header_menu.active {
   display: flex;
 }
@@ -408,6 +410,7 @@ h1#naturwissenschaft_exp_title{
   font-size: 1.4rem;
 
 }
+
 .naturwissenschaft_quiz {
   position: relative;
   grid-area: quiz;
@@ -418,6 +421,7 @@ h1#naturwissenschaft_exp_title{
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
 .naturwissenschaft_funfact {
   grid-area: fun_fact;
   background-color: #f4f9fd;
@@ -559,6 +563,7 @@ button#lightCandle:hover {
   background-color: #ffae00;
   transform: translateY(-3px);
 }
+
 button#resetExperiment:hover {
   background-color: #005f99;
   transform: translateY(-3px);
