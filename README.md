@@ -1,7 +1,7 @@
 
 # WebEntwicklung_projekt
 Website für die Zielgruppe"Grundschueler" entwickeln , auf welche Begeisterung für MINT vermittelt werden soll
-!(https://github.com/0xSharlyne/Mintopia.github.io)
+!(https://0xsharlyne.github.io/Mintopia.github.io/)
 
 ## Anforderungen
 
@@ -57,3 +57,7 @@ Website für die Zielgruppe"Grundschueler" entwickeln , auf welche Begeisterung 
 ### Join Seite 
 
 ![JoinUs](images/join_us.png)
+
+
+!(https://github.com/0xSharlyne/Mintopia.github.io)
+
